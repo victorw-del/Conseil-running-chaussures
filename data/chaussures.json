@@ -1,56 +1,472 @@
 [
   {
-    "id": "exemple-1",
-    "exemple": true,
-    "marque": "EXEMPLE",
-    "modele": "EXEMPLE 1 (route amortie)",
-    "terrain": ["route"],
+    "id": "nike-pegasus-42",
+    "exemple": false,
+    "marque": "Nike",
+    "modele": "Pegasus 42",
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 3,
+    "drop_mm": 10,
+    "poids_g": 300,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 140,
+      "max": 140
+    },
+    "lien_officiel": "https://www.nike.com/fr/t/chaussure-de-running-sur-route-nike-pegasus-42-pour-homme-M9ckDyR3/IB1873-020",
+    "source": "Site officiel Nike FR, fiche Pegasus 42 homme, consulté le 19/10/2026. Poids : env. 300 g en pointure 44. Prix public 139,99 €.",
+    "verifie": true
+  },
+  {
+    "id": "asics-novablast-6",
+    "exemple": false,
+    "marque": "Asics",
+    "modele": "Novablast 6",
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 4,
+    "drop_mm": 8,
+    "poids_g": 253,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 160,
+      "max": 160
+    },
+    "lien_officiel": "https://www.asics.com/ca/fr-ca/novablast-6-1011c243-403",
+    "source": "Site officiel Asics (Canada, français), fiche Novablast 6 homme, consulté le 19/10/2026. Poids 253 g, taille de référence non précisée. Prix FR non trouvé sur le site officiel : 160 € relevé sur The Running Collective.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-clifton-11",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Clifton 11",
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 3,
+    "drop_mm": 8,
+    "poids_g": 283,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 160,
+      "max": 160
+    },
+    "lien_officiel": "https://www.hoka.com/en/es/men-road/clifton-11/1176572.html",
+    "source": "Site officiel Hoka (Espagne), fiche Clifton 11 homme, consulté le 19/10/2026. Poids 283 g en EU 44. Prix 160 €.",
+    "verifie": true
+  },
+  {
+    "id": "asics-gel-nimbus-28",
+    "exemple": false,
+    "marque": "Asics",
+    "modele": "Gel-Nimbus 28",
+    "terrain": [
+      "route"
+    ],
     "type": "neutre",
     "amorti": 5,
     "dynamisme": 2,
+    "drop_mm": 8,
+    "poids_g": 281,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 200,
+      "max": 200
+    },
+    "lien_officiel": "https://www.asics.com/ca/fr-ca/gel-nimbus-28-1011c127-403",
+    "source": "Site officiel Asics (Canada, français), fiche Gel-Nimbus 28 homme, consulté le 19/10/2026. Poids 281 g, taille non précisée. Prix FR : 200 € relevé sur The Running Collective.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-bondi-9",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Bondi 9",
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 5,
+    "dynamisme": 2,
+    "drop_mm": 5,
+    "poids_g": 297,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 185,
+      "max": 185
+    },
+    "lien_officiel": "https://www.hoka.com/en/pt/men-road/bondi-9/1162011.html",
+    "source": "Site officiel Hoka (Portugal), fiche Bondi 9 homme, consulté le 19/10/2026. Poids 297 g, taille non précisée. Prix 185 €.",
+    "verifie": true
+  },
+  {
+    "id": "new-balance-1080-v15",
+    "exemple": false,
+    "marque": "New Balance",
+    "modele": "Fresh Foam X 1080 v15",
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 5,
+    "dynamisme": 3,
+    "drop_mm": 6,
+    "poids_g": 261,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 180,
+      "max": 180
+    },
+    "lien_officiel": "https://www.newbalance.co.uk/pd/1080v15-mens/M1080V15_RU-FTW-802829.html",
+    "source": "Site officiel New Balance (Royaume-Uni), fiche 1080v15 homme, consulté le 19/10/2026. Poids 261 g, taille non précisée. Prix FR : 180 € relevé sur The Running Collective (155 £ au Royaume-Uni).",
+    "verifie": true
+  },
+  {
+    "id": "brooks-adrenaline-gts-25",
+    "exemple": false,
+    "marque": "Brooks",
+    "modele": "Adrenaline GTS 25",
+    "terrain": [
+      "route"
+    ],
+    "type": "stable",
+    "amorti": 3,
+    "dynamisme": 2,
     "drop_mm": 10,
     "poids_g": 300,
-    "largeur_disponible": ["normale", "large"],
-    "usage": ["plaisir", "semi", "marathon"],
-    "prix": { "min": 130, "max": 160 },
-    "lien_officiel": "",
-    "source": "Donnée fictive pour les tests",
-    "verifie": false
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 155,
+      "max": 155
+    },
+    "lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/adrenaline-gts-25/110454.html",
+    "source": "Site officiel Brooks (Italie et États-Unis), fiche Adrenaline GTS 25 homme, consultée le 19/10/2026. Poids 300,5 g, taille non précisée. Prix FR : 155 € relevé sur The Running Collective.",
+    "verifie": true
   },
   {
-    "id": "exemple-2",
-    "exemple": true,
-    "marque": "EXEMPLE",
-    "modele": "EXEMPLE 2 (route dynamique)",
-    "terrain": ["route"],
-    "type": "neutre",
-    "amorti": 2,
-    "dynamisme": 5,
-    "drop_mm": 6,
-    "poids_g": 210,
-    "largeur_disponible": ["normale"],
-    "usage": ["10km", "semi"],
-    "prix": { "min": 150, "max": 180 },
-    "lien_officiel": "",
-    "source": "Donnée fictive pour les tests",
-    "verifie": false
+    "id": "asics-gt-2000-14",
+    "exemple": false,
+    "marque": "Asics",
+    "modele": "GT-2000 14",
+    "terrain": [
+      "route"
+    ],
+    "type": "stable",
+    "amorti": 4,
+    "dynamisme": 3,
+    "drop_mm": 8,
+    "poids_g": 270,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 160,
+      "max": 160
+    },
+    "lien_officiel": "https://www.asics.com/us/en-us/gt-2000-14/p/ANA_1011C056-406.html",
+    "source": "Site officiel Asics (États-Unis), fiche GT-2000 14, consulté le 19/10/2026. Poids 270 g, taille non précisée. Version « GT-2000 14 WIDE » vue sur asics.com. Prix FR : 160 € relevé sur The Running Collective.",
+    "verifie": true
   },
   {
-    "id": "exemple-3",
-    "exemple": true,
-    "marque": "EXEMPLE",
-    "modele": "EXEMPLE 3 (trail stable)",
-    "terrain": ["trail", "mixte"],
+    "id": "asics-gel-kayano-33",
+    "exemple": false,
+    "marque": "Asics",
+    "modele": "Gel-Kayano 33",
+    "terrain": [
+      "route"
+    ],
+    "type": "stable",
+    "amorti": 5,
+    "dynamisme": 2,
+    "drop_mm": 8,
+    "poids_g": 298,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 200,
+      "max": 200
+    },
+    "lien_officiel": "https://www.asics.com/us/en-us/gel-kayano-33/p/ANA_1011C167-100.html",
+    "source": "Site officiel Asics (États-Unis), fiche Gel-Kayano 33 homme, consultée le 19/10/2026. Poids 298 g, taille non précisée. Version « GEL-KAYANO 33 WIDE » vue sur asics.com. Prix FR : 200 € relevé sur The Running Collective.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-arahi-9",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Arahi 9",
+    "terrain": [
+      "route"
+    ],
     "type": "stable",
     "amorti": 3,
     "dynamisme": 3,
     "drop_mm": 8,
-    "poids_g": 290,
-    "largeur_disponible": ["normale", "large"],
-    "usage": ["plaisir", "ultra"],
-    "prix": { "min": 100, "max": 130 },
-    "lien_officiel": "",
-    "source": "Donnée fictive pour les tests",
-    "verifie": false
+    "poids_g": 284,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 160,
+      "max": 160
+    },
+    "lien_officiel": "https://www.hoka.com/en/gb/men-road/arahi-9/1176531.html",
+    "source": "Site officiel Hoka (Royaume-Uni), fiche Arahi 9 homme, consultée le 19/10/2026. Poids 284 g, taille non précisée. Prix FR : 160 € relevé sur The Running Collective (140 £ au Royaume-Uni).",
+    "verifie": true
+  },
+  {
+    "id": "nike-vaporfly-4",
+    "exemple": false,
+    "marque": "Nike",
+    "modele": "Vaporfly 4",
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 5,
+    "drop_mm": 6,
+    "poids_g": 190,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 260,
+      "max": 260
+    },
+    "lien_officiel": "https://www.nike.com/fr/t/chaussure-de-course-sur-route-nike-vaporfly-4-pour-homme-DeKC4kdI",
+    "source": "Site officiel Nike FR, fiche Vaporfly 4 homme, consultée le 19/10/2026. Poids env. 190 g en pointure 44. Prix public 259,99 €.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-speedgoat-7",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Speedgoat 7",
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 4,
+    "drop_mm": 5,
+    "poids_g": 275,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "ultra"
+    ],
+    "prix": {
+      "min": 170,
+      "max": 170
+    },
+    "lien_officiel": "https://www.hoka.com/en/gr/men-trail/speedgoat-7/1171928.html",
+    "source": "Site officiel Hoka (Grèce), fiche Speedgoat 7 homme, consultée le 19/10/2026. Poids 275 g en UK 9. Prix 170 €.",
+    "verifie": true
+  },
+  {
+    "id": "brooks-cascadia-20",
+    "exemple": false,
+    "marque": "Brooks",
+    "modele": "Cascadia 20",
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 2,
+    "drop_mm": 6,
+    "poids_g": 306,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "ultra"
+    ],
+    "prix": {
+      "min": 160,
+      "max": 160
+    },
+    "lien_officiel": "https://www.brooksrunning.com/en_it/mens/trail-running-shoes/cascadia-20/110489.html",
+    "source": "Site officiel Brooks (Italie et États-Unis), fiche Cascadia 20 homme, consultée le 19/10/2026. Poids 306,2 g, taille non précisée. Prix FR : 160 € relevé sur The Running Collective.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-challenger-8",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Challenger 8",
+    "terrain": [
+      "mixte"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 3,
+    "drop_mm": 8,
+    "poids_g": 287,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "semi"
+    ],
+    "prix": {
+      "min": 150,
+      "max": 150
+    },
+    "lien_officiel": "https://www.hoka.com/en/gb/men-trail/challenger-8/1168716.html",
+    "source": "Site officiel Hoka (Royaume-Uni), fiche Challenger 8 homme, consultée le 19/10/2026. Poids 287 g, taille non précisée. Prix FR : 150 € relevé sur The Running Collective (130 £ au Royaume-Uni).",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-ks500-2",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "KS500 2",
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 2,
+    "drop_mm": 6,
+    "poids_g": 280,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km"
+    ],
+    "prix": {
+      "min": 60,
+      "max": 60
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussure-de-running-homme-kiprun-ks500-2/_/R-p-341860",
+    "source": "Site officiel Decathlon, fiche Kiprun KS500 2 homme, consultée le 19/10/2026. Poids 280 g en 42. Prix 59,99 €.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kipsummit",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipsummit",
+    "terrain": [
+      "trail",
+      "mixte"
+    ],
+    "type": "neutre",
+    "amorti": 5,
+    "dynamisme": 2,
+    "drop_mm": 6,
+    "poids_g": 295,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir"
+    ],
+    "prix": {
+      "min": 90,
+      "max": 90
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-trail-running-homme-kiprun-kipsummit/_/R-p-361994",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipsummit homme, consultée le 19/10/2026. Poids 295 g en 42 (la fiche technique indique aussi 298 g). Prix 89,99 €.",
+    "verifie": true
   }
 ]
