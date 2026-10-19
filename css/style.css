@@ -187,3 +187,124 @@ footer {
     padding-top: 64px;
   }
 }
+
+/* =========================================================
+   11. LES RÉSULTATS (ajouté à l'étape 9)
+   Ces classes sont créées par le JavaScript dans la section #resultats.
+   ========================================================= */
+
+/* Une carte par chaussure, sur le même modèle que les blocs de questions. */
+.carte-chaussure {
+  background-color: var(--couleur-carte);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--arrondi);
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+/* L'en-tête de la carte : rang, nom et score sur une même ligne.
+   display: flex aligne les éléments côte à côte ; gap les espace. */
+.carte-entete {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Le numéro dans un rond orange. */
+.rang {
+  flex-shrink: 0;                 /* empêche le rond de s'écraser sur petit écran */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;             /* 50 % d'arrondi transforme un carré en cercle */
+  background-color: var(--couleur-principale);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* margin-left: auto pousse le score tout à droite de la ligne. */
+.score {
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--couleur-principale);
+  white-space: nowrap;            /* "90 %" ne se coupe jamais en deux lignes */
+}
+
+.marque {
+  margin: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;      /* écrit la marque en majuscules */
+  letter-spacing: 0.05em;
+  color: var(--couleur-texte-doux);
+}
+
+.carte-chaussure h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.badge-exemple {
+  font-size: 0.7rem;
+  background-color: #fff4e6;
+  color: var(--couleur-principale);
+  border-radius: 999px;
+  padding: 2px 8px;
+  margin-left: 6px;
+}
+
+.intro {
+  font-weight: 600;
+  margin: 14px 0 6px;
+}
+
+.carte-chaussure h4 {
+  margin: 14px 0 4px;
+  font-size: 0.95rem;
+}
+
+.carte-chaussure ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Les alertes en gris, pour les distinguer des points forts. */
+.alertes {
+  color: var(--couleur-texte-doux);
+}
+
+/* Les caractéristiques en petite grille : autant de colonnes que la place le permet.
+   repeat(auto-fit, minmax(100px, 1fr)) : "des colonnes d'au moins 100px, réparties
+   sur toute la largeur". Sur téléphone, elles passent à la ligne toutes seules. */
+.caracteristiques {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin: 16px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--couleur-bordure);
+}
+
+.caracteristiques dt {
+  font-size: 0.75rem;
+  color: var(--couleur-texte-doux);
+}
+
+.caracteristiques dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.lien-fiche {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--couleur-principale);
+  font-weight: 600;
+}
+
+.conseil-essai {
+  font-size: 0.9rem;
+  color: var(--couleur-texte-doux);
+}

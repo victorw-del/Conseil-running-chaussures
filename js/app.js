@@ -2,6 +2,7 @@
    APP.JS : LA LOGIQUE DU SITE
    Partie 1 : charger les chaussures et lire les réponses
    Partie 2 : calculer un score pour chaque chaussure
+   Partie 3 : afficher les 3 meilleures dans la page
    ========================================================= */
 
 
@@ -271,24 +272,128 @@ function recommander(reponses) {
 }
 
 
-/* ---------- 8. Réagir au clic sur "Voir mes chaussures" ---------- */
+/* =========================================================
+   PARTIE 3 : L'AFFICHAGE DES RÉSULTATS
+   ========================================================= */
+
+
+/* ---------- 8. Transformer une liste de phrases en liste HTML ----------
+   Exemple : ["A", "B"] devient "<li>A</li><li>B</li>".
+   join("") colle tous les morceaux ensemble, sans rien entre eux. */
+function listeHTML(phrases) {
+  return phrases.map(function (phrase) {
+    return "<li>" + phrase + "</li>";
+  }).join("");
+}
+
+
+/* ---------- 9. Fabriquer la "carte" HTML d'une chaussure ----------
+   On utilise des accents graves ` ` (AltGr + 7 sur un clavier français) :
+   ils permettent d'écrire du texte sur plusieurs lignes et d'y insérer
+   des valeurs avec ${...}. C'est bien plus lisible que d'enchaîner des +. */
+function carteChaussure(resultat, position) {
+  const c = resultat.chaussure;
+
+  // Une phrase d'introduction différente selon la place dans le classement.
+  const introductions = [
+    "Mon premier choix pour toi.",
+    "Une excellente alternative.",
+    "Une autre option à essayer."
+  ];
+
+  // Le lien vers la fiche officielle, seulement s'il est renseigné.
+  // Si lien_officiel est vide (""), on n'affiche rien.
+  let lien = "";
+  if (c.lien_officiel !== "") {
+    lien = `<a class="lien-fiche" href="${c.lien_officiel}" target="_blank" rel="noopener">Voir la fiche officielle</a>`;
+  }
+
+  // Un badge pour signaler clairement les chaussures fictives.
+  let badge = "";
+  if (c.exemple === true) {
+    badge = `<span class="badge-exemple">Donnée fictive</span>`;
+  }
+
+  // Le bloc "À savoir" n'apparaît que s'il y a des alertes.
+  let blocAlertes = "";
+  if (resultat.alertes.length > 0) {
+    blocAlertes = `
+      <h4>À savoir</h4>
+      <ul class="alertes">${listeHTML(resultat.alertes)}</ul>`;
+  }
+
+  return `
+    <article class="carte-chaussure">
+      <div class="carte-entete">
+        <span class="rang">${position + 1}</span>
+        <div>
+          <p class="marque">${c.marque} ${badge}</p>
+          <h3>${c.modele}</h3>
+        </div>
+        <span class="score">${resultat.score} %</span>
+      </div>
+
+      <p class="intro">${introductions[position]}</p>
+
+      <h4>Pourquoi elle te correspond</h4>
+      <ul class="raisons">${listeHTML(resultat.raisons)}</ul>
+      ${blocAlertes}
+
+      <dl class="caracteristiques">
+        <div><dt>Type</dt><dd>${c.type === "stable" ? "Stable" : "Neutre"}</dd></div>
+        <div><dt>Amorti</dt><dd>${c.amorti} / 5</dd></div>
+        <div><dt>Drop</dt><dd>${c.drop_mm} mm</dd></div>
+        <div><dt>Poids</dt><dd>${c.poids_g} g</dd></div>
+        <div><dt>Prix</dt><dd>${c.prix.min} à ${c.prix.max} €</dd></div>
+      </dl>
+      ${lien}
+    </article>`;
+}
+
+
+/* ---------- 10. Afficher les résultats dans la section #resultats ---------- */
+function afficherResultats(meilleures) {
+  // Cas particulier : aucune chaussure ne convient (budget trop bas, terrain...).
+  if (meilleures.length === 0) {
+    zoneResultats.innerHTML = `
+      <h2>Tes chaussures recommandées</h2>
+      <p>Aucune chaussure de notre sélection ne correspond à tous tes critères.
+      Essaie d'augmenter ton budget ou de choisir le terrain « mixte ».</p>`;
+    return;
+  }
+
+  // On fabrique une carte par chaussure, puis on les colle ensemble.
+  // map() reçoit aussi la position (0, 1, 2) en deuxième paramètre.
+  const cartes = meilleures.map(function (resultat, position) {
+    return carteChaussure(resultat, position);
+  }).join("");
+
+  zoneResultats.innerHTML = `
+    <h2>Tes chaussures recommandées</h2>
+    ${cartes}
+    <p class="conseil-essai">Conseil de vendeur : essaie toujours une chaussure avant de l'acheter,
+    de préférence en fin de journée, quand le pied est un peu gonflé.</p>`;
+
+  // On fait défiler la page jusqu'aux résultats, en douceur.
+  zoneResultats.scrollIntoView({ behavior: "smooth" });
+}
+
+
+/* ---------- 11. Réagir au clic sur "Voir mes chaussures" ---------- */
 formulaire.addEventListener("submit", function (evenement) {
   evenement.preventDefault();
 
   const reponses = lireReponses();
-  console.log("Réponses du coureur :", reponses);
-
   const meilleures = recommander(reponses);
 
-  // console.table() affiche un joli tableau dans la console.
+  // On garde un petit contrôle dans la console, utile pour vérifier les scores.
   console.table(meilleures.map(function (resultat) {
     return { modele: resultat.chaussure.modele, score: resultat.score };
   }));
-  console.log("Détail des 3 meilleures :", meilleures);
 
-  // À l'étape 9, on affichera ces résultats dans la page.
+  afficherResultats(meilleures);
 });
 
 
-/* ---------- 9. Démarrage ---------- */
+/* ---------- 12. Démarrage ---------- */
 chargerChaussures();
