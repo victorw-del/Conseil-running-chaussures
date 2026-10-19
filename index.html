@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Conseil chaussures running</title>
     <meta name="description" content="Réponds à quelques questions et découvre les chaussures de running les plus adaptées à ta foulée, ton terrain et ton budget.">
-        <!-- Relie la page à sa feuille de style. href = le chemin du fichier CSS. -->
-    <link rel="stylesheet" href="css/style.css">
+        <!-- L'icône de l'onglet (favicon). Ici, un emoji chaussure dessiné en SVG directement dans le lien :
+         pas besoin de fichier image. -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👟</text></svg>">
+    <!-- Relie la page à sa feuille de style. href = le chemin du fichier CSS. -->
+        <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
@@ -172,7 +175,9 @@
       </section>
 
       <!-- ========== SECTION RÉSULTATS ========== -->
-      <section id="resultats">
+            <!-- aria-live="polite" : quand le contenu de cette section change, les lecteurs d'écran
+           l'annoncent à voix haute, sans couper ce qu'ils sont en train de lire. -->
+      <section id="resultats" aria-live="polite">
         <h2>Tes chaussures recommandées</h2>
         <p>Les recommandations s'afficheront ici.</p>
       </section>

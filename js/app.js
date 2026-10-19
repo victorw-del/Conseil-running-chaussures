@@ -353,28 +353,53 @@ function carteChaussure(resultat, position) {
 
 /* ---------- 10. Afficher les résultats dans la section #resultats ---------- */
 function afficherResultats(meilleures) {
-  // Cas particulier : aucune chaussure ne convient (budget trop bas, terrain...).
-  if (meilleures.length === 0) {
+  // Cas 1 : la liste des chaussures est vide, le chargement a échoué.
+  // On ne dit pas "aucune chaussure ne te correspond" : ce serait faux.
+  if (chaussures.length === 0) {
     zoneResultats.innerHTML = `
-      <h2>Tes chaussures recommandées</h2>
-      <p>Aucune chaussure de notre sélection ne correspond à tous tes critères.
-      Essaie d'augmenter ton budget ou de choisir le terrain « mixte ».</p>`;
+      <h2 tabindex="-1">Oups</h2>
+      <p>Les chaussures n'ont pas encore pu être chargées. Recharge la page et réessaie.</p>`;
+    zoneResultats.querySelector("h2").focus();
     return;
   }
 
-  // On fabrique une carte par chaussure, puis on les colle ensemble.
-  // map() reçoit aussi la position (0, 1, 2) en deuxième paramètre.
-  const cartes = meilleures.map(function (resultat, position) {
-    return carteChaussure(resultat, position);
-  }).join("");
+  // Le bouton pour revenir au questionnaire, affiché dans les deux cas suivants.
+  // type="button" : ce bouton ne doit PAS envoyer le formulaire.
+  const boutonModifier = `<button type="button" class="bouton-secondaire" id="bouton-modifier">Modifier mes réponses</button>`;
 
-  zoneResultats.innerHTML = `
-    <h2>Tes chaussures recommandées</h2>
-    ${cartes}
-    <p class="conseil-essai">Conseil de vendeur : essaie toujours une chaussure avant de l'acheter,
-    de préférence en fin de journée, quand le pied est un peu gonflé.</p>`;
+  if (meilleures.length === 0) {
+    // Cas 2 : aucune chaussure ne convient (budget trop bas, terrain...).
+    zoneResultats.innerHTML = `
+      <h2 tabindex="-1">Tes chaussures recommandées</h2>
+      <p>Aucune chaussure de notre sélection ne correspond à tous tes critères.
+      Essaie d'augmenter ton budget ou de choisir le terrain « mixte ».</p>
+      ${boutonModifier}`;
+  } else {
+    // Cas 3 : on a des résultats, on fabrique une carte par chaussure.
+    const cartes = meilleures.map(function (resultat, position) {
+      return carteChaussure(resultat, position);
+    }).join("");
 
-  // On fait défiler la page jusqu'aux résultats, en douceur.
+    zoneResultats.innerHTML = `
+      <h2 tabindex="-1">Tes chaussures recommandées</h2>
+      ${cartes}
+      <p class="conseil-essai">Conseil de vendeur : essaie toujours une chaussure avant de l'acheter,
+      de préférence en fin de journée, quand le pied est un peu gonflé.</p>
+      ${boutonModifier}`;
+  }
+
+  // Le bouton vient d'être créé : on lui dit quoi faire quand on clique dessus.
+  // Ici : remonter en douceur jusqu'au questionnaire. Les réponses restent remplies.
+  document.getElementById("bouton-modifier").addEventListener("click", function () {
+    formulaire.scrollIntoView({ behavior: "smooth" });
+  });
+
+  // On fait défiler jusqu'aux résultats, et on place le "focus" sur le titre.
+  // Le focus, c'est l'endroit où se trouve le clavier. Ainsi, une personne qui navigue
+  // au clavier ou avec un lecteur d'écran arrive directement sur les résultats.
+  // tabindex="-1" (dans le HTML ci-dessus) autorise un titre à recevoir le focus.
+  const titre = zoneResultats.querySelector("h2");
+  titre.focus({ preventScroll: true });
   zoneResultats.scrollIntoView({ behavior: "smooth" });
 }
 
