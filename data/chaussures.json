@@ -486,6 +486,641 @@
     "lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/ghost-amp/110497.html?dwvar_110497_color=414",
     "source": "Site officiel Brooks, fiche brooks ghost Amp homme, consultée le 19/10/2026.",
     "verifie": true
-  }
+  },
+   
+{
+    
+"id": "brooks-glycerin-flex",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Glycerin Flex",
+    
+"terrain": [
+      
+"route"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 5,
+    
+"dynamisme": 3,
+    
+"drop_mm": 6,
+    
+"poids_g": 258,
+    
+"largeur_disponible": [
+      
+"normale"
+    
+],
+    
+"usage": [
+      
+"plaisir",
+      
+"semi",
+      
+"marathon"
+    
+],
+    
+"prix": {
+      
+"min": 180,
+      
+"max": 180
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/glycerin-flex/110478.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. Drop 6 mm, 258,0 g (pointure non précisée), « Flexible support » (FlexZone), amorti « Plush », Best for : road running, everyday runs, long runs. Prix : liste officielle brooksrunning.com/en_it.",
+    
+"verifie": false
+  
+},
+  
+{
+    
+"id": "brooks-glycerin-23",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Glycerin 23",
+    
+"terrain": [
+      
+"route"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 5,
+    
+"dynamisme": 2,
+    
+"drop_mm": 8,
+    
+"poids_g": 300,
+    
+"largeur_disponible": [
+      
+"normale",
+      
+"large"
+    
+],
+    
+"usage": [
+      
+"plaisir",
+      
+"semi",
+      
+"marathon"
+    
+],
+    
+"prix": {
+      
+"min": 180,
+      
+"max": 180
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/glycerin-23/110476.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. Drop 8 mm, 300,5 g (pointure non précisée), « Balanced support », amorti « Plush », Best for : everyday runs, long runs. Largeurs 1D/2E/4E (site US). Prix : liste officielle brooksrunning.com/en_it.",
+    
+"verifie": false
+  
+},
+  
+{
+    
+"id": "brooks-glycerin-gts-23",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Glycerin GTS 23",
+    
+"terrain": [
+      
+"route"
+    
+],
+    
+"type": "stable",
+    
+"amorti": 5,
+    
+"dynamisme": 2,
+    
+"drop_mm": 8,
+    
+"poids_g": 312,
+    
+"largeur_disponible": [
+      
+"normale",
+      
+"large"
+    
+],
+    
+"usage": [
+      
+"plaisir",
+      
+"semi",
+      
+"marathon"
+    
+],
+    
+"prix": {
+      
+"min": 180,
+      
+"max": 180
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/glycerin-gts-23/110503.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. Drop 8 mm, 311,8 g (pointure non précisée), « Structured support » avec GuideRails, amorti « Plush », Best for : everyday runs, long runs. Largeurs 1D/2E/4E (site US). Prix : liste officielle brooksrunning.com/en_it.",
+    
+"verifie": false
+  
+},
+  
+{
+    
+"id": "brooks-ghost-max-4",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Ghost Max 4",
+    
+"terrain": [
+      
+"route"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 5,
+    
+"dynamisme": 2,
+    
+"drop_mm": 6,
+    
+"poids_g": 292,
+    
+"largeur_disponible": [
+      
+"normale",
+      
+"large"
+    
+],
+    
+"usage": [
+      
+"plaisir",
+      
+"semi",
+      
+"marathon"
+    
+],
+    
+"prix": {
+      
+"min": 160,
+      
+"max": 160
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/ghost-max-4/110496.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. Drop 6 mm, 292,0 g (pointure non précisée), « Max support » (catégorie Brooks, sans GuideRails), amorti « Balanced », Best for : daily runs, long runs. Largeurs 1D/2E/4E (site US). Prix : liste officielle brooksrunning.com/en_it.",
+    
+"verifie": false
+  
+},
+  
+{
+    
+"id": "brooks-ghost-trail",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Ghost Trail",
+    
+"terrain": [
+      
+"trail",
+      
+"mixte"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 3,
+    
+"dynamisme": 3,
+    
+"drop_mm": 8,
+    
+"poids_g": 300,
+    
+"largeur_disponible": [
+      
+"normale",
+      
+"large"
+    
+],
+    
+"usage": [
+      
+"plaisir"
+    
+],
+    
+"prix": {
+      
+"min": 150,
+      
+"max": 150
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/trail-running-shoes/ghost-trail/110475.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. Drop 8 mm, 300,5 g (pointure non précisée), « Balanced support », amorti « Balanced », Best for : off-road running, city parks, gravel, groomed trails ; « from road to trail » (site US). Largeurs 1D/2E. Prix : liste officielle brooksrunning.com/en_it.",
+    
+"verifie": false
+  
+},
+  
+{
+    
+"id": "brooks-revel-9",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Revel 9",
+    
+"terrain": [
+      
+"route"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 3,
+    
+"dynamisme": 2,
+    
+"drop_mm": 8,
+    
+"poids_g": 269,
+    
+"largeur_disponible": [
+      
+"normale",
+      
+"large"
+    
+],
+    
+"usage": [
+      
+"plaisir",
+      
+"10km"
+    
+],
+    
+"prix": {
+      
+"min": 100,
+      
+"max": 100
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/revel-9/110499.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. Drop 8 mm, 269,3 g (pointure non précisée), « Balanced support », amorti « Balanced », Best for : daily runs, everyday wear. Largeurs 1D/2E (site US). Prix : liste officielle brooksrunning.com/en_it.",
+    
+"verifie": false
+  
+},
+  
+{
+    
+"id": "brooks-hyperion-max-4",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Hyperion Max 4",
+    
+"terrain": [
+      
+"route"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 4,
+    
+"dynamisme": 4,
+    
+"drop_mm": 6,
+    
+"poids_g": 286,
+    
+"largeur_disponible": [
+      
+"normale"
+    
+],
+    
+"usage": [
+      
+"10km",
+      
+"semi",
+      
+"marathon"
+    
+],
+    
+"prix": {
+      
+"min": 190,
+      
+"max": 190
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/hyperion-max-4/110498.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. Drop 6 mm, 286,3 g (pointure non précisée), « Max support » (catégorie Brooks, sans GuideRails), amorti « Responsive », plaque nylon SpeedVault, Best for : fast workouts, training runs, long runs. Prix : liste officielle brooksrunning.com/en_it.",
+    
+"verifie": false
+  
+},
+  
+{
+    
+"id": "brooks-launch-12",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Launch 12",
+    
+"terrain": [
+      
+"route"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 2,
+    
+"dynamisme": 4,
+    
+"drop_mm": 8,
+    
+"poids_g": 252,
+    
+"largeur_disponible": [
+      
+"normale"
+    
+],
+    
+"usage": [
+      
+"plaisir",
+      
+"10km"
+    
+],
+    
+"prix": {
+      
+"min": 120,
+      
+"max": 120
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/launch-12/110481.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. Drop 8 mm, 252,3 g (pointure non précisée), « Balanced support », amorti « Responsive », Best for : everyday runs, faster runs. Prix : liste officielle brooksrunning.com/en_it.",
+    
+"verifie": false
+  
+},
+  
+{
+    
+"id": "brooks-cascadia-elite",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Cascadia Elite (unisexe)",
+    
+"terrain": [
+      
+"trail"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 3,
+    
+"dynamisme": 5,
+    
+"drop_mm": 6,
+    
+"poids_g": 267,
+    
+"largeur_disponible": [
+      
+"normale"
+    
+],
+    
+"usage": [
+      
+"ultra"
+    
+],
+    
+"prix": {
+      
+"min": 250,
+      
+"max": 250
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/unisex/trail-running-shoes/cascadia-elite/100055.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. Modèle unisexe. Fiche technique lue sur brooksrunning.com/en_us/cascadia-elite : drop 6 mm, 266,5 g (pointure non précisée), amorti « Responsive », plaque « carbon-infused Pebax SpeedVault+ », Best for : competitive trail racing, sub-ultras to ultras. Prix : liste officielle brooksrunning.com/en_it.",
+    
+"verifie": false
+  
+},
+  
+{
+    
+"id": "brooks-anthem-8",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Anthem 8",
+    
+"terrain": [
+      
+"route"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 3,
+    
+"dynamisme": 2,
+    
+"drop_mm": 10,
+    
+"poids_g": 269,
+    
+"largeur_disponible": [
+      
+"normale",
+      
+"large"
+    
+],
+    
+"usage": [
+      
+"plaisir",
+      
+"10km"
+    
+],
+    
+"prix": {
+      
+"min": 100,
+      
+"max": 100
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/anthem-8/110472.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. Drop 10 mm, 269,3 g (pointure non précisée), « Balanced support », amorti « Balanced », Best for : daily runs, everyday wear, newer runners. Largeurs Medium/Wide (site US). Prix : liste officielle brooksrunning.com/en_it.",
+    
+"verifie": false
+  
+},
+  
+{
+    
+"id": "brooks-catamount-4",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Catamount 4",
+    
+"terrain": [
+      
+"trail"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 2,
+    
+"dynamisme": 5,
+    
+"drop_mm": 6,
+    
+"poids_g": 269,
+    
+"largeur_disponible": [
+      
+"normale"
+    
+],
+    
+"usage": [
+      
+"ultra"
+    
+],
+    
+"prix": {
+      
+"min": 170,
+      
+"max": 170
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/trail-running-shoes/catamount-4/110441.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. Drop 6 mm, 269,3 g (pointure non précisée), amorti « Responsive », plaque SkyVault, Best for : competing in trail races, uphill efficiency ; « our fastest long-distance trail shoe ». Prix : liste officielle brooksrunning.com/en_it.",
+    
+"verifie": false
+  
+}
+
   
 ]
