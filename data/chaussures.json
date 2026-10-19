@@ -468,5 +468,24 @@
     "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-trail-running-homme-kiprun-kipsummit/_/R-p-361994",
     "source": "Site officiel Decathlon, fiche Kiprun Kipsummit homme, consultée le 19/10/2026. Poids 295 g en 42 (la fiche technique indique aussi 298 g). Prix 89,99 €.",
     "verifie": true
+  },
+ {
+    "id": "Brooks Ghost Amp",
+    "exemple": false,
+    "marque": "Brooks",
+    "modele": "Ghost Amp",
+    "terrain": ["route"],
+    "type": "stable",
+    "amorti": 3,
+    "dynamisme": 3,
+    "drop_mm": 6,
+    "poids_g": 255,
+    "largeur_disponible": ["normale"],
+    "usage": ["plaisir", "10km"],
+    "prix": { "min": 150, "max": 150 },
+    "lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/ghost-amp/110497.html?dwvar_110497_color=414",
+    "source": "Site officiel Brooks, fiche brooks ghost Amp homme, consultée le 19/10/2026.",
+    "verifie": true
   }
+  
 ]
