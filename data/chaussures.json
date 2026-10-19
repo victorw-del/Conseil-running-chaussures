@@ -1120,6 +1120,520 @@
     
 "verifie": false
   
+},
+ 
+{
+    
+"id": "brooks-ghost-18",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Ghost 18",
+    
+"terrain": [
+      
+"route"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 3,
+    
+"dynamisme": 3,
+    
+"drop_mm": 10,
+    
+"poids_g": 289,
+    
+"largeur_disponible": [
+      
+"normale",
+      
+"large"
+    
+],
+    
+"usage": [
+      
+"plaisir",
+      
+"10km",
+      
+"semi"
+    
+],
+    
+"prix": {
+      
+"min": 150,
+      
+"max": 150
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/ghost-18/110493.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. « Trusted ride for daily miles », « soft and dynamic cushioning ». Drop 10 mm et « Balanced Support » d'après le blog officiel Brooks (ghost-evolution, best-ghost-for-you). Largeurs 1B/1D/2E/4E (site US). Prix : liste officielle brooksrunning.com/en_it. À COMPLÉTER : poids.",
+    
+"verifie": true
+  
+},
+  
+{
+    
+"id": "brooks-beast-gts-26",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Beast GTS 26",
+    
+"terrain": [
+      
+"route"
+    
+],
+    
+"type": "stable",
+    
+"amorti": 4,
+    
+"dynamisme": 2,
+    
+"drop_mm": 12,
+    
+"poids_g": 354,
+    
+"largeur_disponible": [
+      
+"normale",
+      
+"large"
+    
+],
+    
+"usage": [
+      
+"plaisir",
+      
+"semi",
+      
+"marathon"
+    
+],
+    
+"prix": {
+      
+"min": 160,
+      
+"max": 160
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/beast-gts-26/110455.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. GuideRails, « maximum support and durable cushioning », compatible semelles orthopédiques. Largeurs 1D/2E/4E (site US). Prix : liste officielle brooksrunning.com/en_it. À COMPLÉTER : drop, poids.",
+    
+"verifie": true
+  
+},
+  
+{
+    
+"id": "brooks-addiction-gts-15",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Addiction GTS 15",
+    
+"terrain": [
+      
+"route"
+    
+],
+    
+"type": "stable",
+    
+"amorti": 3,
+    
+"dynamisme": 2,
+    
+"drop_mm": 12,
+    
+"poids_g": 345,
+    
+"largeur_disponible": [
+      
+"normale",
+      
+"large"
+    
+],
+    
+"usage": [
+      
+"plaisir",
+      
+"10km"
+    
+],
+    
+"prix": {
+      
+"min": 140,
+      
+"max": 140
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/addiction-gts-15/110365.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. « Soft, supportive, and super protective », GuideRails, place pour semelles orthopédiques. Largeurs 1B/1D/2E/4E (site US). Prix : liste officielle brooksrunning.com/en_it. À COMPLÉTER : drop, poids.",
+    
+"verifie": true
+  
+},
+  
+{
+    
+"id": "brooks-glycerin-max-2",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Glycerin Max 2",
+    
+"terrain": [
+      
+"route"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 5,
+    
+"dynamisme": 3,
+    
+"drop_mm": 6,
+    
+"poids_g": 320,
+    
+"largeur_disponible": [
+      
+"normale"
+    
+],
+    
+"usage": [
+      
+"plaisir",
+      
+"semi",
+      
+"marathon"
+    
+],
+    
+"prix": {
+      
+"min": 200,
+      
+"max": 200
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/glycerin-max-2/110479.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. « Max softness. Max energy. Max run. », « Best for runners seeking maximum cushioning and impact protection », GlideRoll Rocker. Type non écrit sur la fiche (pas de GuideRails). Prix : liste officielle brooksrunning.com/en_it. À COMPLÉTER : drop, poids.",
+    
+"verifie": true
+  
+},
+  
+{
+    
+"id": "brooks-hyperion-elite-6",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Hyperion Elite 6 (unisexe)",
+    
+"terrain": [
+      
+"route"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 3,
+    
+"dynamisme": 5,
+    
+"drop_mm": 7,
+    
+"poids_g": 193,
+    
+"largeur_disponible": [
+      
+"normale"
+    
+],
+    
+"usage": [
+      
+"10km",
+      
+"semi",
+      
+"marathon"
+    
+],
+    
+"prix": {
+      
+"min": 275,
+      
+"max": 275
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/unisex-running-shoes/hyperion-elite-6/100054.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. Modèle unisexe. « Designed for race day », plaque carbone SpeedVault+, mousse DNA GOLD. Prix : liste officielle brooksrunning.com/en_it. À COMPLÉTER : drop, poids.",
+    
+"verifie": true
+  
+},
+  
+{
+    
+"id": "brooks-revel-max",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Revel Max",
+    
+"terrain": [
+      
+"route"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 5,
+    
+"dynamisme": 2,
+    
+"drop_mm": 6,
+    
+"poids_g": 278,
+    
+"largeur_disponible": [
+      
+"normale"
+    
+],
+    
+"usage": [
+      
+"plaisir"
+    
+],
+    
+"prix": {
+      
+"min": 120,
+      
+"max": 120
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/revel-max/110482.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. « Surprisingly lightweight cushion », DNA LOFT v2 « soft and lightweight », GlideRoll Rocker. Type non écrit sur la fiche (pas de GuideRails). Prix : liste officielle brooksrunning.com/en_it. À COMPLÉTER : drop, poids.",
+    
+"verifie": true
+  
+},
+  
+{
+    
+"id": "brooks-trace-4",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Trace 4",
+    
+"terrain": [
+      
+"route"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 3,
+    
+"dynamisme": 2,
+    
+"drop_mm": 12,
+    
+"poids_g": 263,
+    
+"largeur_disponible": [
+      
+"normale"
+    
+],
+    
+"usage": [
+      
+"plaisir",
+      
+"10km"
+    
+],
+    
+"prix": {
+      
+"min": 110,
+      
+"max": 110
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/road-running-shoes/trace-4/110452.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. DNA LOFT v2 « soft, smooth cushioning », catégorie Road Running. Type non écrit sur la fiche (pas de GuideRails). Prix : liste officielle brooksrunning.com/en_it. À COMPLÉTER : drop, poids.",
+    
+"verifie": true
+  
+},
+  
+{
+    
+"id": "brooks-divide-6",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Divide 6",
+    
+"terrain": [
+      
+"trail",
+      
+"mixte"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 3,
+    
+"dynamisme": 2,
+    
+"drop_mm": 8,
+    
+"poids_g": 297,
+    
+"largeur_disponible": [
+      
+"normale"
+    
+],
+    
+"usage": [
+      
+"plaisir"
+    
+],
+    
+"prix": {
+      
+"min": 110,
+      
+"max": 110
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/trail-running-shoes/divide-6/110460.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. « Road or trail? Yes. », « soft DNA LOFT v2 cushioning provides a smooth ride on roads and trails ». Type non écrit sur la fiche (pas de GuideRails). Prix : liste officielle brooksrunning.com/en_it. À COMPLÉTER : drop, poids.",
+    
+"verifie": true
+  
+},
+  
+{
+    
+"id": "brooks-range",
+    
+"exemple": false,
+    
+"marque": "Brooks",
+    
+"modele": "Range",
+    
+"terrain": [
+      
+"trail"
+    
+],
+    
+"type": "neutre",
+    
+"amorti": 3,
+    
+"dynamisme": 3,
+    
+"drop_mm": 6,
+    
+"poids_g": 303,
+    
+"largeur_disponible": [
+      
+"normale"
+    
+],
+    
+"usage": [
+      
+"plaisir"
+    
+],
+    
+"prix": {
+      
+"min": 130,
+      
+"max": 130
+    
+},
+    
+"lien_officiel": "https://www.brooksrunning.com/en_it/mens/trail-running-shoes/range/110560.html",
+    
+"source": "Site officiel Brooks, consulté le 19/10/2026. Seule description : « A stable and adaptable shoe for varying terrains with comfort for any trail ». Type non écrit sur la fiche (pas de GuideRails). Prix : liste officielle brooksrunning.com/en_it. À COMPLÉTER : drop, poids.",
+    
+"verifie": true
+  
 }
 
   
