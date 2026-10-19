@@ -1,24 +1,57 @@
 <!DOCTYPE html>
-<!-- Cette ligne dit au navigateur : « ce fichier est une page web moderne (HTML5) ». -->
 <html lang="fr">
-<!-- <html> englobe toute la page. lang="fr" indique que le texte est en français. -->
 
   <head>
-    <!-- <head> contient les infos SUR la page, invisibles dans la page elle-même. -->
     <meta charset="UTF-8">
-    <!-- UTF-8 permet d'afficher correctement les accents (é, è, à...). -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Cette ligne rend la page lisible sur téléphone (sans zoom arrière). -->
     <title>Conseil chaussures running</title>
-    <!-- Le texte affiché dans l'onglet du navigateur. -->
+    <!-- La "description" est le petit texte que Google affiche sous le titre dans ses résultats. -->
+    <meta name="description" content="Réponds à quelques questions et découvre les chaussures de running les plus adaptées à ta foulée, ton terrain et ton budget.">
   </head>
 
   <body>
-    <!-- <body> contient tout ce qui est VISIBLE dans la page. -->
-    <h1>Bonjour !</h1>
-    <!-- <h1> est le titre principal de la page. -->
-    <p>Bientôt ici : un conseiller pour choisir tes chaussures de running.</p>
-    <!-- <p> est un paragraphe de texte. -->
-  </body>
 
+    <!-- ===================== EN-TÊTE ===================== -->
+    <!-- <header> : le haut de la page, avec le nom du site. -->
+    <header>
+      <h1>Conseil chaussures running</h1>
+      <p>Réponds à quelques questions, comme avec un vendeur en magasin, et découvre les 3 chaussures les plus adaptées à ta façon de courir.</p>
+    </header>
+
+    <!-- ===================== CONTENU PRINCIPAL ===================== -->
+    <!-- <main> : le cœur de la page. Il ne doit y en avoir qu'un seul. -->
+    <main>
+
+      <!-- Section 1 : le questionnaire.
+           id="questionnaire" donne un nom unique à cette section.
+           Le JavaScript s'en servira plus tard pour la retrouver. -->
+      <section id="questionnaire">
+        <h2>Ton profil de coureur</h2>
+        <p>Le questionnaire arrivera à l'étape 4.</p>
+      </section>
+
+      <!-- Section 2 : les résultats.
+           Pour l'instant vide : c'est le JavaScript qui la remplira avec les 3 chaussures. -->
+      <section id="resultats">
+        <h2>Tes chaussures recommandées</h2>
+        <p>Les recommandations s'afficheront ici.</p>
+      </section>
+
+      <!-- Section 3 : l'avertissement.
+           <aside> désigne un contenu "à côté" du sujet principal, ici une mise en garde importante. -->
+      <aside id="avertissement">
+        <h2>Important</h2>
+        <!-- <strong> met un mot en valeur : le navigateur l'affiche en gras. -->
+        <p>Ce site donne un <strong>conseil</strong>, pas un avis médical. En cas de douleur ou de blessure, consulte un médecin ou un podologue avant de choisir tes chaussures.</p>
+      </aside>
+
+    </main>
+
+    <!-- ===================== PIED DE PAGE ===================== -->
+    <!-- <footer> : le bas de la page, pour les mentions secondaires. -->
+    <footer>
+      <p>Site gratuit et indépendant. Les caractéristiques des chaussures proviennent des sites officiels des marques.</p>
+    </footer>
+
+  </body>
 </html>
