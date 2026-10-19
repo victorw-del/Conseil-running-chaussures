@@ -5,50 +5,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Conseil chaussures running</title>
-    <!-- La "description" est le petit texte que Google affiche sous le titre dans ses résultats. -->
     <meta name="description" content="Réponds à quelques questions et découvre les chaussures de running les plus adaptées à ta foulée, ton terrain et ton budget.">
   </head>
 
   <body>
 
     <!-- ===================== EN-TÊTE ===================== -->
-    <!-- <header> : le haut de la page, avec le nom du site. -->
     <header>
       <h1>Conseil chaussures running</h1>
       <p>Réponds à quelques questions, comme avec un vendeur en magasin, et découvre les 3 chaussures les plus adaptées à ta façon de courir.</p>
     </header>
 
     <!-- ===================== CONTENU PRINCIPAL ===================== -->
-    <!-- <main> : le cœur de la page. Il ne doit y en avoir qu'un seul. -->
     <main>
 
-      <!-- Section 1 : le questionnaire.
-           id="questionnaire" donne un nom unique à cette section.
-           Le JavaScript s'en servira plus tard pour la retrouver. -->
+      <!-- ========== SECTION QUESTIONNAIRE ========== -->
       <section id="questionnaire">
         <h2>Ton profil de coureur</h2>
-        <p>Le questionnaire arrivera à l'étape 4.</p>
+
+        <!-- <form> regroupe toutes les questions.
+             id="formulaire" permettra au JavaScript de le retrouver. -->
+        <form id="formulaire">
+
+          <!-- ----- Question 1 : le niveau -----
+               Les 3 boutons ont le même name="niveau" : on ne peut en cocher qu'un.
+               "required" sur le premier oblige à répondre avant d'envoyer. -->
+          <fieldset>
+            <legend>1. Quel est ton niveau ?</legend>
+            <input type="radio" id="niveau-debutant" name="niveau" value="debutant" required>
+            <label for="niveau-debutant">Débutant (moins d'un an de course)</label><br>
+            <input type="radio" id="niveau-intermediaire" name="niveau" value="intermediaire">
+            <label for="niveau-intermediaire">Intermédiaire (je cours régulièrement)</label><br>
+            <input type="radio" id="niveau-confirme" name="niveau" value="confirme">
+            <label for="niveau-confirme">Confirmé (je m'entraîne avec des objectifs de temps)</label>
+          </fieldset>
+
+          <!-- ----- Question 2 : le kilométrage -----
+               <select> crée une liste déroulante. Chaque <option> est un choix.
+               La première option, vide (value=""), oblige à faire un vrai choix grâce à "required". -->
+          <fieldset>
+            <legend>2. Combien de kilomètres cours-tu par semaine ?</legend>
+            <label for="km">Kilométrage hebdomadaire</label>
+            <select id="km" name="km" required>
+              <option value="">Choisis une réponse</option>
+              <option value="moins15">Moins de 15 km</option>
+              <option value="15a30">De 15 à 30 km</option>
+              <option value="30a50">De 30 à 50 km</option>
+              <option value="plus50">Plus de 50 km</option>
+            </select>
+          </fieldset>
+
+          <!-- ----- Question 3 : l'objectif ----- -->
+          <fieldset>
+            <legend>3. Quel est ton objectif principal ?</legend>
+            <input type="radio" id="objectif-plaisir" name="objectif" value="plaisir" required>
+            <label for="objectif-plaisir">Courir pour le plaisir et la forme</label><br>
+            <input type="radio" id="objectif-10km" name="objectif" value="10km">
+            <label for="objectif-10km">Courses de 5 à 10 km</label><br>
+            <input type="radio" id="objectif-semi" name="objectif" value="semi">
+            <label for="objectif-semi">Semi-marathon</label><br>
+            <input type="radio" id="objectif-marathon" name="objectif" value="marathon">
+            <label for="objectif-marathon">Marathon</label><br>
+            <input type="radio" id="objectif-ultra" name="objectif" value="ultra">
+            <label for="objectif-ultra">Trail long ou ultra</label>
+          </fieldset>
+
+          <!-- ----- Question 4 : le terrain ----- -->
+          <fieldset>
+            <legend>4. Sur quel terrain cours-tu le plus ?</legend>
+            <input type="radio" id="terrain-route" name="terrain" value="route" required>
+            <label for="terrain-route">Route, trottoirs, piste</label><br>
+            <input type="radio" id="terrain-trail" name="terrain" value="trail">
+            <label for="terrain-trail">Trail : sentiers, montagne, boue</label><br>
+            <input type="radio" id="terrain-mixte" name="terrain" value="mixte">
+            <label for="terrain-mixte">Mixte : un peu des deux, chemins de parc</label>
+          </fieldset>
+
+          <!-- ----- Question 5 : le poids -----
+               On demande une fourchette, pas un chiffre précis : c'est moins intrusif
+               et ça suffit pour choisir le niveau d'amorti. -->
+          <fieldset>
+            <legend>5. Quel est ton poids approximatif ?</legend>
+            <label for="poids">Poids</label>
+            <select id="poids" name="poids" required>
+              <option value="">Choisis une réponse</option>
+              <option value="moins60">Moins de 60 kg</option>
+              <option value="60a75">De 60 à 75 kg</option>
+              <option value="75a90">De 75 à 90 kg</option>
+              <option value="plus90">Plus de 90 kg</option>
+            </select>
+          </fieldset>
+
+          <!-- ----- Question 6 : la foulée (pronation) -----
+               <small> affiche un texte d'aide plus discret. -->
+          <fieldset>
+            <legend>6. Comment ton pied se pose-t-il ?</legend>
+            <p><small>Astuce : regarde l'usure de tes anciennes chaussures. Usées côté intérieur : plutôt pronateur. Côté extérieur : plutôt supinateur. Usure centrée : neutre.</small></p>
+            <input type="radio" id="foulee-neutre" name="foulee" value="neutre" required>
+            <label for="foulee-neutre">Neutre</label><br>
+            <input type="radio" id="foulee-pronateur" name="foulee" value="pronateur">
+            <label for="foulee-pronateur">Pronateur (le pied s'écrase vers l'intérieur)</label><br>
+            <input type="radio" id="foulee-supinateur" name="foulee" value="supinateur">
+            <label for="foulee-supinateur">Supinateur (le pied roule vers l'extérieur)</label><br>
+            <input type="radio" id="foulee-inconnue" name="foulee" value="inconnue">
+            <label for="foulee-inconnue">Je ne sais pas</label>
+          </fieldset>
+
+          <!-- ----- Question 7 : les blessures passées -----
+               Ici ce sont des CHECKBOX : plusieurs réponses possibles.
+               Pas de "required" : on peut n'en cocher aucune. -->
+          <fieldset>
+            <legend>7. As-tu déjà eu une de ces blessures ? (plusieurs choix possibles)</legend>
+            <input type="checkbox" id="blessure-genou" name="blessures" value="genou">
+            <label for="blessure-genou">Douleur au genou</label><br>
+            <input type="checkbox" id="blessure-tibia" name="blessures" value="tibia">
+            <label for="blessure-tibia">Douleur au tibia (périostite)</label><br>
+            <input type="checkbox" id="blessure-achille" name="blessures" value="achille">
+            <label for="blessure-achille">Tendon d'Achille</label><br>
+            <input type="checkbox" id="blessure-plantaire" name="blessures" value="plantaire">
+            <label for="blessure-plantaire">Sous le pied (aponévrosite plantaire)</label><br>
+            <input type="checkbox" id="blessure-cheville" name="blessures" value="cheville">
+            <label for="blessure-cheville">Entorses de cheville à répétition</label>
+          </fieldset>
+
+          <!-- ----- Question 8 : les sensations ----- -->
+          <fieldset>
+            <legend>8. Quelles sensations recherches-tu ?</legend>
+            <input type="radio" id="sensation-amorti" name="sensation" value="amorti" required>
+            <label for="sensation-amorti">Beaucoup d'amorti, du confort</label><br>
+            <input type="radio" id="sensation-equilibre" name="sensation" value="equilibre">
+            <label for="sensation-equilibre">Un équilibre entre confort et dynamisme</label><br>
+            <input type="radio" id="sensation-dynamisme" name="sensation" value="dynamisme">
+            <label for="sensation-dynamisme">Du dynamisme, une chaussure légère et réactive</label>
+          </fieldset>
+
+          <!-- ----- Question 9 : la largeur du pied ----- -->
+          <fieldset>
+            <legend>9. Comment est la largeur de ton pied ?</legend>
+            <input type="radio" id="largeur-normale" name="largeur" value="normale" required>
+            <label for="largeur-normale">Normale</label><br>
+            <input type="radio" id="largeur-large" name="largeur" value="large">
+            <label for="largeur-large">Large (je me sens souvent serré)</label><br>
+            <input type="radio" id="largeur-inconnue" name="largeur" value="inconnue">
+            <label for="largeur-inconnue">Je ne sais pas</label>
+          </fieldset>
+
+          <!-- ----- Question 10 : le budget ----- -->
+          <fieldset>
+            <legend>10. Quel est ton budget maximum ?</legend>
+            <label for="budget">Budget</label>
+            <select id="budget" name="budget" required>
+              <option value="">Choisis une réponse</option>
+              <option value="100">Jusqu'à 100 €</option>
+              <option value="150">Jusqu'à 150 €</option>
+              <option value="200">Jusqu'à 200 €</option>
+              <option value="illimite">Peu importe</option>
+            </select>
+          </fieldset>
+
+          <!-- Le bouton d'envoi. type="submit" signifie : "envoie le formulaire". -->
+          <button type="submit">Voir mes chaussures</button>
+
+        </form>
       </section>
 
-      <!-- Section 2 : les résultats.
-           Pour l'instant vide : c'est le JavaScript qui la remplira avec les 3 chaussures. -->
+      <!-- ========== SECTION RÉSULTATS ========== -->
       <section id="resultats">
         <h2>Tes chaussures recommandées</h2>
         <p>Les recommandations s'afficheront ici.</p>
       </section>
 
-      <!-- Section 3 : l'avertissement.
-           <aside> désigne un contenu "à côté" du sujet principal, ici une mise en garde importante. -->
+      <!-- ========== AVERTISSEMENT ========== -->
       <aside id="avertissement">
         <h2>Important</h2>
-        <!-- <strong> met un mot en valeur : le navigateur l'affiche en gras. -->
         <p>Ce site donne un <strong>conseil</strong>, pas un avis médical. En cas de douleur ou de blessure, consulte un médecin ou un podologue avant de choisir tes chaussures.</p>
       </aside>
 
     </main>
 
     <!-- ===================== PIED DE PAGE ===================== -->
-    <!-- <footer> : le bas de la page, pour les mentions secondaires. -->
     <footer>
       <p>Site gratuit et indépendant. Les caractéristiques des chaussures proviennent des sites officiels des marques.</p>
     </footer>
