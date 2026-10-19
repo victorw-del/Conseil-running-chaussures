@@ -26,7 +26,7 @@ async function chargerChaussures() {
 
     // On ne garde que les chaussures vérifiées... ou les exemples (pendant le développement).
     chaussures = toutesLesChaussures.filter(function (chaussure) {
-      return chaussure.verifie === true || chaussure.exemple === true;
+      return chaussure.verifie === true;
     });
 
     console.log(chaussures.length + " chaussures chargées :", chaussures);
@@ -308,12 +308,6 @@ function carteChaussure(resultat, position) {
     lien = `<a class="lien-fiche" href="${c.lien_officiel}" target="_blank" rel="noopener">Voir la fiche officielle</a>`;
   }
 
-  // Un badge pour signaler clairement les chaussures fictives.
-  let badge = "";
-  if (c.exemple === true) {
-    badge = `<span class="badge-exemple">Donnée fictive</span>`;
-  }
-
   // Le bloc "À savoir" n'apparaît que s'il y a des alertes.
   let blocAlertes = "";
   if (resultat.alertes.length > 0) {
@@ -327,7 +321,7 @@ function carteChaussure(resultat, position) {
       <div class="carte-entete">
         <span class="rang">${position + 1}</span>
         <div>
-          <p class="marque">${c.marque} ${badge}</p>
+            <p class="marque">${c.marque}</p>
           <h3>${c.modele}</h3>
         </div>
         <span class="score">${resultat.score} %</span>
