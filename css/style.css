@@ -1,0 +1,189 @@
+/* =========================================================
+   FEUILLE DE STYLE DU SITE "CONSEIL CHAUSSURES RUNNING"
+   ========================================================= */
+
+/* ---------- 1. Les variables ----------
+   :root désigne toute la page. On y range nos couleurs dans des "variables"
+   (elles commencent par --). Pour changer une couleur partout sur le site,
+   il suffit de la modifier ICI. */
+:root {
+  --couleur-principale: #e8590c;   /* orange : boutons, réponses choisies */
+  --couleur-fond: #f4f6f8;         /* gris très clair : fond de la page */
+  --couleur-carte: #ffffff;        /* blanc : fond des blocs de questions */
+  --couleur-texte: #1d2733;        /* presque noir : texte principal */
+  --couleur-texte-doux: #5b6672;   /* gris : textes d'aide */
+  --couleur-bordure: #d9dee3;      /* gris clair : contours */
+  --arrondi: 12px;                 /* arrondi des coins des blocs */
+}
+
+/* ---------- 2. Réglage de base ----------
+   box-sizing: border-box fait que la largeur d'un élément INCLUT ses marges intérieures.
+   Sans ça, les calculs de taille deviennent vite casse-tête. Le * veut dire "tous les éléments". */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;                                  /* supprime la marge blanche par défaut du navigateur */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+                                              /* la police du système : rapide et lisible partout */
+  font-size: 17px;
+  line-height: 1.5;                           /* espace entre les lignes : plus confortable à lire */
+  color: var(--couleur-texte);                /* var(...) utilise une variable définie plus haut */
+  background-color: var(--couleur-fond);
+}
+
+/* ---------- 3. La largeur du contenu ----------
+   On limite la largeur pour que les lignes ne soient pas trop longues sur grand écran,
+   et margin: 0 auto centre le bloc horizontalement. padding = marge intérieure. */
+header,
+main,
+footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ---------- 4. L'en-tête ---------- */
+header {
+  padding-top: 40px;
+  padding-bottom: 16px;
+}
+
+h1 {
+  font-size: 2rem;              /* rem = multiple de la taille de texte de base */
+  line-height: 1.15;
+  margin: 0 0 8px;              /* haut, côtés, bas */
+  color: var(--couleur-principale);
+}
+
+header p {
+  color: var(--couleur-texte-doux);
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin: 32px 0 16px;
+}
+
+/* ---------- 5. Les blocs de questions ----------
+   Chaque <fieldset> devient une "carte" blanche aux coins arrondis. */
+fieldset {
+  background-color: var(--couleur-carte);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--arrondi);
+  padding: 16px 20px 20px;
+  margin: 0 0 16px;
+}
+
+legend {
+  font-weight: 700;             /* texte en gras */
+  padding: 0 6px;
+}
+
+small {
+  color: var(--couleur-texte-doux);
+}
+
+/* ---------- 6. Les réponses ----------
+   On agrandit la zone cliquable des réponses : plus facile au doigt sur téléphone. */
+fieldset label {
+  display: inline-block;
+  padding: 6px 4px;
+  cursor: pointer;              /* le curseur devient une petite main au survol */
+}
+
+/* accent-color colore les boutons ronds et cases à cocher avec notre orange. */
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--couleur-principale);
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+/* La réponse choisie passe en gras et en orange.
+   Le + veut dire "le <label> placé juste après la case cochée". */
+input:checked + label {
+  color: var(--couleur-principale);
+  font-weight: 600;
+}
+
+/* Les listes déroulantes prennent toute la largeur du bloc. */
+select {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--couleur-bordure);
+  border-radius: 8px;
+  background-color: var(--couleur-carte);
+}
+
+/* ---------- 7. Le bouton ---------- */
+button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--couleur-principale);
+  border: none;
+  border-radius: var(--arrondi);
+  cursor: pointer;
+  transition: transform 0.1s;   /* anime doucement le changement ci-dessous */
+}
+
+/* :hover = quand la souris survole le bouton. Il grossit très légèrement. */
+button:hover {
+  transform: scale(1.02);
+}
+
+/* :focus-visible = quand on arrive sur un élément au clavier (touche Tab).
+   Le contour visible aide les personnes qui naviguent sans souris. */
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--couleur-texte);
+  outline-offset: 2px;
+}
+
+/* ---------- 8. L'avertissement ----------
+   Fond orange très pâle et bordure à gauche pour attirer l'œil. */
+#avertissement {
+  background-color: #fff4e6;
+  border-left: 5px solid var(--couleur-principale);
+  border-radius: 8px;
+  padding: 4px 20px;
+  margin: 32px 0;
+}
+
+#avertissement h2 {
+  margin-top: 16px;
+  font-size: 1.1rem;
+}
+
+/* ---------- 9. Le pied de page ---------- */
+footer {
+  color: var(--couleur-texte-doux);
+  font-size: 0.85rem;
+  padding-bottom: 40px;
+}
+
+/* ---------- 10. Adaptation aux grands écrans ----------
+   Une "media query" : les règles à l'intérieur ne s'appliquent que si l'écran
+   fait au moins 700px de large (tablette, ordinateur). Sur téléphone, elles sont ignorées.
+   On écrit d'abord pour le téléphone, puis on améliore pour les grands écrans :
+   c'est la méthode "mobile d'abord". */
+@media (min-width: 700px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  header {
+    padding-top: 64px;
+  }
+}
