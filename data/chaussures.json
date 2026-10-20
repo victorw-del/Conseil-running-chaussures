@@ -2062,5 +2062,986 @@
     "lien_officiel": "https://www.nike.com/fr/t/chaussure-de-trail-nike-wildhorse-10-pour-homme-6RHZHLQc/FV2338-410",
     "source": "Site officiel Nike FR, fiche Wildhorse 10 homme, consultée le 20/10/2026. Drop 9,5 mm, poids env. 311 g (pointure 44 homme). Prix public 149,99 €. Type neutre : déduit, Nike ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots de Nike.",
     "verifie": true
+  },
+  {
+    "id": "adidas-adizero-adios-pro-5",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Adizero Adios Pro 5",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 5,
+    "drop_mm": 4,
+    "poids_g": 180,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 260,
+      "max": 260
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-adizero-adios-pro-5/KJ7040.html",
+    "source": "Site officiel adidas.fr, fiche Adizero Adios Pro 5 homme, consultée le 20/10/2026. Prix public 260 €. Sur la fiche : poids 180 g (pointure non précisée). Drop 4 mm : absent de la fiche FR, relevé sur Running Warehouse (https://www.runningwarehouse.com/adidas_adizero_Adios_Pro_5/descpage-A5AAPM1.html). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-adizero-adios-pro-evo-3",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Adizero Adios Pro Evo 3",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 5,
+    "drop_mm": 3,
+    "poids_g": 95,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 500,
+      "max": 500
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-adizero-adios-pro-evo-3/KH7678.html",
+    "source": "Site officiel adidas.fr, fiche Adizero Adios Pro Evo 3 homme, consultée le 20/10/2026. Prix public 500 €. Sur la fiche : drop 3 mm. Poids 95 g (US M9) : absent de la fiche FR, relevé sur Running Warehouse (https://www.runningwarehouse.com/adidas_adizero_Adios_Pro_Evo_3/descpage-AAPE3.html). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-adizero-prime-x3-strung",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Adizero Prime X3 Strung",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "unisexe": true,
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 5,
+    "dynamisme": 5,
+    "drop_mm": 6,
+    "poids_g": 285,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 300,
+      "max": 300
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-adizero-prime-x3-strung/KI3248.html",
+    "source": "Site officiel adidas.fr, fiche Adizero Prime X3 Strung homme, consultée le 20/10/2026. Prix public 300 €. Sur la fiche : drop 6 mm, poids 285 g (pointure 42). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-adizero-takumi-sen-11",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Adizero Takumi Sen 11",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 2,
+    "dynamisme": 5,
+    "drop_mm": 7,
+    "poids_g": 188,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km"
+    ],
+    "prix": {
+      "min": 200,
+      "max": 200
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-adizero-takumi-sen-11/JQ0781.html",
+    "source": "Site officiel adidas.fr, fiche Adizero Takumi Sen 11 homme, consultée le 20/10/2026. Prix public 200 €. Sur la fiche : drop 7 mm, poids 188 g (pointure non précisée). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-adizero-adios-9",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Adizero Adios 9",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 2,
+    "dynamisme": 4,
+    "drop_mm": 7,
+    "poids_g": 176,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 140,
+      "max": 140
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-running-adizero-adios-9/KI5699.html",
+    "source": "Site officiel adidas.fr, fiche Adizero Adios 9 homme, consultée le 20/10/2026. Prix public 140 €. Sur la fiche : drop 7 mm, poids 176 g (pointure 38 2/3). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-adizero-boston-13",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Adizero Boston 13",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 4,
+    "drop_mm": 6,
+    "poids_g": 260,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 160,
+      "max": 160
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-running-adizero-boston-13/KI4776.html",
+    "source": "Site officiel adidas.fr, fiche Adizero Boston 13 homme, consultée le 20/10/2026. Prix public 160 €. Sur la fiche : drop 6 mm, poids 260 g (pointure non précisée). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-adizero-evo-sl",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Adizero EVO SL",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 4,
+    "drop_mm": 6,
+    "poids_g": 224,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 150,
+      "max": 150
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-adizero-evo-sl/JP7149.html",
+    "source": "Site officiel adidas.fr, fiche Adizero EVO SL homme, consultée le 20/10/2026. Prix public 150 €. Drop 6 mm : absent de la fiche FR, relevé sur adidas.co.nz (fiche produit KH9577) (https://www.adidas.co.nz/adizero-evo-sl-shoes/KH9577.html). Poids 224 g (UK 8.5) : absent de la fiche FR, relevé sur adidas.co.nz (fiche produit KH9577) (https://www.adidas.co.nz/adizero-evo-sl-shoes/KH9577.html). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-adizero-sl-2",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Adizero SL 2",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 3,
+    "drop_mm": 9,
+    "poids_g": 238,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 130,
+      "max": 130
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-adizero-sl-2/JQ0354.html",
+    "source": "Site officiel adidas.fr, fiche Adizero SL 2 homme, consultée le 20/10/2026. Prix public 130 €. Sur la fiche : drop 9 mm, poids 238 g (pointure 42 2/3). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-hyperboost-run",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Hyperboost Run",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 3,
+    "drop_mm": 6,
+    "poids_g": 248,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 170,
+      "max": 170
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-running-hyperboost-run/KH8132.html",
+    "source": "Site officiel adidas.fr, fiche Hyperboost Run homme, consultée le 20/10/2026. Prix public 170 €. Sur la fiche : drop 6 mm, poids 248 g (pointure 42 2/3). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-ultraboost-5",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Ultraboost 5",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 3,
+    "drop_mm": 10,
+    "poids_g": 292,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km"
+    ],
+    "prix": {
+      "min": 180,
+      "max": 180
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-ultraboost-5/ID8813.html",
+    "source": "Site officiel adidas.fr, fiche Ultraboost 5 homme, consultée le 20/10/2026. Prix public 180 €. Drop 10 mm : absent de la fiche FR, relevé sur adidas.co.in (fiche produit homme IF1480) (https://www.adidas.co.in/ultraboost-5-shoes/IF1480.html). Poids 292 g (UK 8.5) : absent de la fiche FR, relevé sur adidas.co.in (fiche produit homme IF1480) (https://www.adidas.co.in/ultraboost-5-shoes/IF1480.html). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-adistar-5",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Adistar 5",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "stable",
+    "amorti": 5,
+    "dynamisme": 2,
+    "drop_mm": 6,
+    "poids_g": 264,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 140,
+      "max": 140
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-running-adistar-5/IH7175.html",
+    "source": "Site officiel adidas.fr, fiche Adistar 5 homme, consultée le 20/10/2026. Prix public 140 €. Sur la fiche : drop 6 mm, poids 264 g (pointure non précisée). Type stable : d'après les mots d'Adidas sur la stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-supernova-prima-3",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Supernova Prima 3",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "stable",
+    "amorti": 4,
+    "dynamisme": 3,
+    "drop_mm": 9,
+    "poids_g": 294,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 170,
+      "max": 170
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-running-supernova-prima-3/KI3182.html",
+    "source": "Site officiel adidas.fr, fiche Supernova Prima 3 homme, consultée le 20/10/2026. Prix public 170 €. Sur la fiche : drop 9 mm, poids 294 g (pointure FR 42 2/3). Type stable : d'après les mots d'Adidas sur la stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-supernova-rise-3",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Supernova Rise 3",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 3,
+    "drop_mm": 8,
+    "poids_g": 272,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 150,
+      "max": 150
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-running-supernova-rise-3/KI9228.html",
+    "source": "Site officiel adidas.fr, fiche Supernova Rise 3 homme, consultée le 20/10/2026. Prix public 150 €. Sur la fiche : drop 8 mm, poids 272 g (pointure non précisée). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-supernova-solution-3",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Supernova Solution 3",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "stable",
+    "amorti": 4,
+    "dynamisme": 2,
+    "drop_mm": 8,
+    "poids_g": 296,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 150,
+      "max": 150
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-running-supernova-solution-3/KK1915.html",
+    "source": "Site officiel adidas.fr, fiche Supernova Solution 3 homme, consultée le 20/10/2026. Prix public 150 €. Sur la fiche : drop 8 mm. Poids 296 g : absent de la fiche FR, relevé sur RunRepeat (poids annoncé par la marque) (https://runrepeat.com/adidas-supernova-solution-3). Type stable : d'après les mots d'Adidas sur la stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-pureboost-5",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Pureboost 5",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 4,
+    "drop_mm": 10,
+    "poids_g": 252,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km"
+    ],
+    "prix": {
+      "min": 130,
+      "max": 130
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-running-pureboost-5/IF9191.html",
+    "source": "Site officiel adidas.fr, fiche Pureboost 5 homme, consultée le 20/10/2026. Prix public 130 €. Sur la fiche : drop 10 mm, poids 252 g (pointure 42 2/3). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-response-super",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Response Super",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 2,
+    "drop_mm": 10,
+    "poids_g": 320,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 90,
+      "max": 90
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-response-super/JQ2523.html",
+    "source": "Site officiel adidas.fr, fiche Response Super homme, consultée le 20/10/2026. Prix public 90 €. Sur la fiche : poids 320 g (pointure 42 2/3). Drop 10 mm : absent de la fiche FR, relevé sur adidas.de (coloris femme JQ2517) (https://www.adidas.de/en/response-super-shoes/JQ2517.html). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-duramo-speed-2",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Duramo Speed 2",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 4,
+    "drop_mm": 6.5,
+    "poids_g": 270,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 90,
+      "max": 90
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-running-duramo-speed-2/JQ0624.html",
+    "source": "Site officiel adidas.fr, fiche Duramo Speed 2 homme, consultée le 20/10/2026. Prix public 90 €. Sur la fiche : drop 6,5 mm, poids 270 g (pointure 42 2/3). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-ultrarun-5",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Ultrarun 5",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 2,
+    "drop_mm": 10,
+    "poids_g": 324,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km"
+    ],
+    "prix": {
+      "min": 80,
+      "max": 80
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-running-ultrarun-5/IH2640.html",
+    "source": "Site officiel adidas.fr, fiche Ultrarun 5 homme, consultée le 20/10/2026. Prix public 80 €. Sur la fiche : drop 10 mm, poids 324 g (pointure 38 2/3). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-response-2",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Response 2",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 2,
+    "drop_mm": 8,
+    "poids_g": 301,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km"
+    ],
+    "prix": {
+      "min": 70,
+      "max": 70
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-running-response-2/KJ1747.html",
+    "source": "Site officiel adidas.fr, fiche Response 2 homme, consultée le 20/10/2026. Prix public 70 €. Sur la fiche : drop 8 mm, poids 301 g (pointure non précisée). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-runfalcon-6",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Runfalcon 6",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 2,
+    "dynamisme": 2,
+    "drop_mm": 10,
+    "poids_g": 282,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir"
+    ],
+    "prix": {
+      "min": 60,
+      "max": 60
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-running-runfalcon-6-cloudfoam/IH9529.html",
+    "source": "Site officiel adidas.fr, fiche Runfalcon 6 homme, consultée le 20/10/2026. Prix public 60 €. Sur la fiche : drop 10 mm, poids 282 g (pointure non précisée). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-galaxy-8",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Galaxy 8",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 1,
+    "drop_mm": 5,
+    "poids_g": 326,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir"
+    ],
+    "prix": {
+      "min": 55,
+      "max": 55
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-running-galaxy-8/KI7980.html",
+    "source": "Site officiel adidas.fr, fiche Galaxy 8 homme, consultée le 20/10/2026. Prix public 55 €. Sur la fiche : drop 5 mm, poids 326 g (pointure non précisée). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-duramo-rc2",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Duramo RC2",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 2,
+    "dynamisme": 3,
+    "drop_mm": 6,
+    "poids_g": 246,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km"
+    ],
+    "prix": {
+      "min": 50,
+      "max": 50
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-running-duramo-rc2/JS4429.html",
+    "source": "Site officiel adidas.fr, fiche Duramo RC2 homme, consultée le 20/10/2026. Prix public 50 €. Sur la fiche : drop 6 mm, poids 246 g (pointure FR 42 2/3). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-adizero-evo-sl-atr",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Adizero EVO SL ATR",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route",
+      "mixte"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 5,
+    "drop_mm": 6,
+    "poids_g": 266,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 160,
+      "max": 160
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-adizero-evo-sl-atr/LC3646.html",
+    "source": "Site officiel adidas.fr, fiche Adizero EVO SL ATR homme, consultée le 20/10/2026. Prix public 160 €. Drop 6 mm : absent de la fiche FR, relevé sur adidas.co.uk (fiche produit homme KJ8338) (https://www.adidas.co.uk/-/KJ8338.html). Poids 266 g : absent de la fiche FR, relevé sur adidas.co.uk (fiche produit homme KJ8338) (https://www.adidas.co.uk/-/KJ8338.html). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-hyperboost-atr",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Hyperboost ATR",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route",
+      "mixte"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 3,
+    "drop_mm": 6,
+    "poids_g": 273,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 180,
+      "max": 180
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-hyperboost-atr-m/KI1700.html",
+    "source": "Site officiel adidas.fr, fiche Hyperboost ATR homme, consultée le 20/10/2026. Prix public 180 €. Drop 6 mm : absent de la fiche FR, relevé sur Pace Athletic (fiche IH9454 homme) (https://www.paceathletic.com/products/mens-adidas-hyperboost-atr-ih9454). Poids 273 g : absent de la fiche FR, relevé sur Pace Athletic (fiche IH9454 homme) (https://www.paceathletic.com/products/mens-adidas-hyperboost-atr-ih9454). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-supernova-rise-3-atr",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Supernova Rise 3 ATR",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route",
+      "mixte"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 2,
+    "drop_mm": 7,
+    "poids_g": 270,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 160,
+      "max": 160
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-running-supernova-rise-3-atr/KI3138.html",
+    "source": "Site officiel adidas.fr, fiche Supernova Rise 3 ATR homme, consultée le 20/10/2026. Prix public 160 €. Sur la fiche : drop 7 mm, poids 270 g (pointure non précisée). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-terrex-agravic-speed-ultra-2",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Terrex Agravic Speed Ultra 2",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 5,
+    "drop_mm": 8,
+    "poids_g": 265,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "semi",
+      "marathon",
+      "ultra"
+    ],
+    "prix": {
+      "min": 230,
+      "max": 230
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-trail-running-terrex-agravic-speed-ultra-2/KZ6512.html",
+    "source": "Site officiel adidas.fr, fiche Terrex Agravic Speed Ultra 2 homme, consultée le 20/10/2026. Prix public 230 €. Drop 8 mm : absent de la fiche FR, relevé sur adidas.ie (coloris femme) (https://www.adidas.ie/women-grey-trail-fast). Poids 265 g (US M9) : absent de la fiche FR, relevé sur Believe in the Run (https://believeintherun.com/shoe-reviews/adidas-terrex-agravic-speed-ultra-2-review/). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-terrex-agravic-sl",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Terrex Agravic SL",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail",
+      "mixte"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 4,
+    "drop_mm": 6,
+    "poids_g": 279,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 160,
+      "max": 160
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-trail-running-terrex-agravic-sl/KH8801.html",
+    "source": "Site officiel adidas.fr, fiche Terrex Agravic SL homme, consultée le 20/10/2026. Prix public 160 €. Drop 6 mm : absent de la fiche FR, relevé sur adidas.co.uk (fiche produit homme KZ8663) (https://www.adidas.co.uk/-/KZ8663.html). Poids 279 g : absent de la fiche FR, relevé sur adidas.co.uk (fiche produit homme KZ8663) (https://www.adidas.co.uk/-/KZ8663.html). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-terrex-agravic-4",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Terrex Agravic 4",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 3,
+    "drop_mm": 8,
+    "poids_g": 277,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 140,
+      "max": 140
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-trail-running-terrex-agravic-4/KJ8873.html",
+    "source": "Site officiel adidas.fr, fiche Terrex Agravic 4 homme, consultée le 20/10/2026. Prix public 140 €. Sur la fiche : drop 8 mm, poids 276,8 g (pointure non précisée). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-terrex-tracefinder-plus",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Terrex Tracefinder Plus",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 2,
+    "drop_mm": 7,
+    "poids_g": 315,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km"
+    ],
+    "prix": {
+      "min": 100,
+      "max": 100
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-trail-running-terrex-tracefinder-plus/HQ5103.html",
+    "source": "Site officiel adidas.fr, fiche Terrex Tracefinder Plus homme, consultée le 20/10/2026. Prix public 100 €. Sur la fiche : drop 7 mm, poids 315 g (pointure non précisée). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
+  },
+  {
+    "id": "adidas-ultrarun-5-tr",
+    "exemple": false,
+    "marque": "Adidas",
+    "modele": "Ultrarun 5 TR",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "mixte"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 1,
+    "drop_mm": 11,
+    "poids_g": 345,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir"
+    ],
+    "prix": {
+      "min": 80,
+      "max": 80
+    },
+    "lien_officiel": "https://www.adidas.fr/chaussure-de-running-ultrarun-5-tr/JQ6920.html",
+    "source": "Site officiel adidas.fr, fiche Ultrarun 5 TR homme, consultée le 20/10/2026. Prix public 80 €. Sur la fiche : drop 11 mm, poids 345 g (pointure 42 2/3). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
+    "verifie": true
   }
 ]
