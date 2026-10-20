@@ -1679,9 +1679,7 @@
     "exemple": false,
     "marque": "Nike",
     "modele": "Pegasus Plus 2",
-    "sexe": [
-      "homme"
-    ],
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -1711,9 +1709,7 @@
     "exemple": false,
     "marque": "Nike",
     "modele": "Pegasus Premium",
-    "sexe": [
-      "homme"
-    ],
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -1743,9 +1739,7 @@
     "exemple": false,
     "marque": "Nike",
     "modele": "Vomero 18",
-    "sexe": [
-      "homme"
-    ],
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -1776,9 +1770,7 @@
     "exemple": false,
     "marque": "Nike",
     "modele": "Structure Plus",
-    "sexe": [
-      "homme"
-    ],
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -1809,9 +1801,7 @@
     "exemple": false,
     "marque": "Nike",
     "modele": "Zoom Fly 6",
-    "sexe": [
-      "homme"
-    ],
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -1841,9 +1831,7 @@
     "exemple": false,
     "marque": "Nike",
     "modele": "Streakfly 2",
-    "sexe": [
-      "homme"
-    ],
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -1871,9 +1859,7 @@
     "exemple": false,
     "marque": "Nike",
     "modele": "Alphafly 3",
-    "sexe": [
-      "homme"
-    ],
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -1902,9 +1888,7 @@
     "exemple": false,
     "marque": "Nike",
     "modele": "Alphafly 4",
-    "sexe": [
-      "homme"
-    ],
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -1933,9 +1917,7 @@
     "exemple": false,
     "marque": "Nike",
     "modele": "ACG Pegasus Trail",
-    "sexe": [
-      "homme"
-    ],
+    "sexe": ["homme", "femme"],
     "terrain": [
       "trail",
       "mixte"
@@ -1966,9 +1948,7 @@
     "exemple": false,
     "marque": "Nike",
     "modele": "ACG Ultrafly Trail",
-    "sexe": [
-      "homme"
-    ],
+    "sexe": ["homme", "femme"],
     "terrain": [
       "trail"
     ],
@@ -1998,9 +1978,7 @@
     "exemple": false,
     "marque": "Nike",
     "modele": "ACG Zegama Trail",
-    "sexe": [
-      "homme"
-    ],
+    "sexe": ["homme", "femme"],
     "terrain": [
       "trail"
     ],
@@ -2031,9 +2009,7 @@
     "exemple": false,
     "marque": "Nike",
     "modele": "Juniper Trail 2 GORE-TEX",
-    "sexe": [
-      "homme"
-    ],
+    "sexe": ["homme", "femme"],
     "terrain": [
       "trail"
     ],
@@ -2061,9 +2037,7 @@
     "exemple": false,
     "marque": "Nike",
     "modele": "Wildhorse 10",
-    "sexe": [
-      "homme"
-    ],
+    "sexe": ["homme", "femme"],
     "terrain": [
       "trail",
       "mixte"
