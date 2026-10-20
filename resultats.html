@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tes 5 chaussures · Trouver la bonne paire de chaussures</title>
+    <meta name="description" content="Les 5 chaussures de running qui correspondent le mieux à ton profil de coureur.">
+    <!-- Même favicon et même feuille de style que la page du questionnaire. -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👟</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <!-- La classe "page-resultats" permet au CSS d'élargir cette page et de la rendre plus spectaculaire. -->
+  <body class="page-resultats">
+
+    <!-- ===================== EN-TÊTE ===================== -->
+    <header>
+      <!-- Le titre du site ramène au questionnaire. -->
+      <p class="nom-du-site"><a href="index.html">Trouver la bonne paire de chaussures</a></p>
+    </header>
+
+    <!-- ===================== CONTENU PRINCIPAL ===================== -->
+    <main>
+
+      <!-- ========== LE BANDEAU ==========
+           resultats.js y écrit le résumé du profil (ex. : « Femme · Route · Semi-marathon »). -->
+      <section class="bandeau-resultats">
+        <h1 id="titre-resultats" tabindex="-1">Tes 5 chaussures idéales</h1>
+        <p id="resume-profil">Calcul de tes recommandations…</p>
+      </section>
+
+      <!-- ========== LES CARTES ==========
+           resultats.js remplit cette section avec une grande carte par chaussure.
+           aria-live="polite" : les lecteurs d'écran annoncent le contenu quand il arrive. -->
+      <section id="resultats" aria-live="polite"></section>
+
+      <!-- Le bouton pour tout recommencer : un simple lien vers le questionnaire, vide. -->
+      <p class="zone-recommencer">
+        <a class="bouton-recommencer" href="index.html">Recommencer le questionnaire</a>
+      </p>
+
+      <!-- ========== AVERTISSEMENT ========== -->
+      <aside id="avertissement">
+        <h2>Important</h2>
+        <p>Ce site donne un <strong>conseil</strong>, pas un avis médical. En cas de douleur ou de blessure, consulte un médecin ou un podologue avant de choisir tes chaussures.</p>
+      </aside>
+
+    </main>
+
+    <!-- ===================== PIED DE PAGE ===================== -->
+    <footer>
+      <p>Site gratuit et indépendant. Les caractéristiques des chaussures proviennent des sites officiels des marques.</p>
+    </footer>
+
+    <!-- L'ordre compte : recommandation.js (le calcul) doit être chargé AVANT resultats.js,
+         qui utilise ses fonctions. -->
+    <script src="js/recommandation.js"></script>
+    <script src="js/resultats.js"></script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 /* =========================================================
-   FEUILLE DE STYLE DU SITE "CONSEIL CHAUSSURES RUNNING"
+   FEUILLE DE STYLE DU SITE "TROUVER LA BONNE PAIRE DE CHAUSSURES"
    ========================================================= */
 
 /* ---------- 1. Les variables ----------
@@ -326,4 +326,210 @@ footer {
 /* Le titre des résultats reçoit le focus : on évite le contour autour d'un titre cliqué à la souris. */
 #resultats h2:focus {
   outline: none;
+}
+
+/* =========================================================
+   13. LA PAGE DES RÉSULTATS (resultats.html)
+   Tout ce qui suit ne s'applique qu'à la page des résultats, grâce à la classe
+   "page-resultats" posée sur son <body>. On garde les mêmes couleurs et la même
+   police, mais en plus grand et plus spectaculaire.
+   ========================================================= */
+
+/* Une page plus large que le questionnaire, pour des cartes généreuses. */
+.page-resultats header,
+.page-resultats main,
+.page-resultats footer {
+  max-width: 1040px;
+}
+
+.page-resultats header {
+  padding-top: 20px;
+  padding-bottom: 0;
+}
+
+/* Le nom du site, en petit, qui ramène au questionnaire. */
+.nom-du-site {
+  margin: 0;
+  font-weight: 700;
+}
+
+.nom-du-site a {
+  color: var(--couleur-principale);
+  text-decoration: none;
+}
+
+/* Le bandeau orange en haut des résultats.
+   linear-gradient() crée un dégradé entre deux couleurs. */
+.bandeau-resultats {
+  margin: 16px 0 24px;
+  padding: 28px 24px;
+  border-radius: var(--arrondi);
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--couleur-principale), #f59f00);
+}
+
+.bandeau-resultats h1 {
+  color: #ffffff;
+  margin: 0 0 6px;
+}
+
+.bandeau-resultats p {
+  margin: 0;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+/* Le titre reçoit le focus au chargement : pas de contour autour. */
+#titre-resultats:focus {
+  outline: none;
+}
+
+/* ---------- Les grandes cartes ----------
+   Sur téléphone, l'image est au-dessus du texte. */
+.carte-resultat {
+  background-color: var(--couleur-carte);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--arrondi);
+  overflow: hidden;               /* l'image suit les coins arrondis de la carte */
+  margin-bottom: 24px;
+  box-shadow: 0 6px 20px rgba(29, 39, 51, 0.08);   /* une ombre douce : la carte "flotte" */
+}
+
+/* La carte n°1 est mise en avant avec un contour orange. */
+.carte-premiere {
+  border: 3px solid var(--couleur-principale);
+}
+
+/* La zone de l'image. position: relative permet d'y placer le numéro par-dessus. */
+.carte-visuel {
+  position: relative;
+  background-color: #fff4e6;
+}
+
+.photo-chaussure {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: contain;            /* l'image entière est visible, sans être déformée */
+  background-color: #ffffff;
+}
+
+/* Quand une chaussure n'a pas encore d'image : un grand emoji sur fond orange pâle. */
+.visuel-vide {
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  background: linear-gradient(135deg, #fff4e6, #ffe8cc);
+}
+
+/* Le numéro, posé en haut à gauche de l'image (position: absolute). */
+.carte-visuel .rang {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 48px;
+  height: 48px;
+  font-size: 1.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carte-contenu {
+  padding: 20px 22px 24px;
+}
+
+/* Le nom de la chaussure, en grand. */
+.carte-contenu h2 {
+  font-size: 1.8rem;
+  line-height: 1.15;
+  margin: 2px 0 10px;
+}
+
+/* Le score dans une pastille. */
+.score-badge {
+  display: inline-block;
+  margin: 0;
+  padding: 4px 12px;
+  border-radius: 999px;           /* très arrondi : forme de pilule */
+  background-color: #fff4e6;
+  color: var(--couleur-principale);
+  font-weight: 700;
+}
+
+.carte-contenu h4 {
+  margin: 14px 0 4px;
+  font-size: 1rem;
+}
+
+.carte-contenu ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.note-modele {
+  font-size: 0.85rem;
+  color: var(--couleur-texte-doux);
+  margin: 12px 0 0;
+}
+
+.aucun-resultat {
+  background-color: var(--couleur-carte);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--arrondi);
+  padding: 20px;
+}
+
+/* Le bouton "Recommencer" : c'est un lien <a>, habillé comme le bouton principal. */
+.zone-recommencer {
+  text-align: center;
+  margin: 8px 0 0;
+}
+
+.bouton-recommencer {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--couleur-principale);
+  border-radius: var(--arrondi);
+  text-decoration: none;
+  transition: transform 0.1s;
+}
+
+.bouton-recommencer:hover {
+  transform: scale(1.02);
+}
+
+.bouton-recommencer:focus-visible {
+  outline: 3px solid var(--couleur-texte);
+  outline-offset: 2px;
+}
+
+/* ---------- Sur grand écran : l'image à gauche, le texte à droite ----------
+   grid-template-columns: 2fr 3fr partage la largeur en 5 parts : 2 pour l'image, 3 pour le texte. */
+@media (min-width: 800px) {
+  .carte-resultat {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .photo-chaussure,
+  .visuel-vide {
+    height: 100%;
+    min-height: 320px;
+  }
+
+  .carte-contenu {
+    padding: 28px 32px;
+  }
+
+  .carte-contenu h2 {
+    font-size: 2.1rem;
+  }
+
+  .bandeau-resultats {
+    padding: 40px 36px;
+  }
 }

@@ -4,6 +4,7 @@
     "exemple": false,
     "marque": "Nike",
     "modele": "Pegasus 42",
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -34,6 +35,7 @@
     "exemple": false,
     "marque": "Asics",
     "modele": "Novablast 6",
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -63,6 +65,7 @@
     "exemple": false,
     "marque": "Hoka",
     "modele": "Clifton 11",
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -93,6 +96,7 @@
     "exemple": false,
     "marque": "Asics",
     "modele": "Gel-Nimbus 28",
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -122,6 +126,7 @@
     "exemple": false,
     "marque": "Hoka",
     "modele": "Bondi 9",
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -152,6 +157,7 @@
     "exemple": false,
     "marque": "New Balance",
     "modele": "Fresh Foam X 1080 v15",
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -182,6 +188,7 @@
     "exemple": false,
     "marque": "Brooks",
     "modele": "Adrenaline GTS 25",
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -212,6 +219,7 @@
     "exemple": false,
     "marque": "Asics",
     "modele": "GT-2000 14",
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -242,6 +250,7 @@
     "exemple": false,
     "marque": "Asics",
     "modele": "Gel-Kayano 33",
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -272,6 +281,7 @@
     "exemple": false,
     "marque": "Hoka",
     "modele": "Arahi 9",
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -302,6 +312,7 @@
     "exemple": false,
     "marque": "Nike",
     "modele": "Vaporfly 4",
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -331,6 +342,7 @@
     "exemple": false,
     "marque": "Hoka",
     "modele": "Speedgoat 7",
+    "sexe": ["homme", "femme"],
     "terrain": [
       "trail"
     ],
@@ -360,6 +372,7 @@
     "exemple": false,
     "marque": "Brooks",
     "modele": "Cascadia 20",
+    "sexe": ["homme", "femme"],
     "terrain": [
       "trail"
     ],
@@ -389,6 +402,7 @@
     "exemple": false,
     "marque": "Hoka",
     "modele": "Challenger 8",
+    "sexe": ["homme", "femme"],
     "terrain": [
       "mixte"
     ],
@@ -418,6 +432,7 @@
     "exemple": false,
     "marque": "Kiprun",
     "modele": "KS500 2",
+    "sexe": ["homme", "femme"],
     "terrain": [
       "route"
     ],
@@ -446,6 +461,7 @@
     "exemple": false,
     "marque": "Kiprun",
     "modele": "Kipsummit",
+    "sexe": ["homme", "femme"],
     "terrain": [
       "trail",
       "mixte"
@@ -474,6 +490,7 @@
     "exemple": false,
     "marque": "Brooks",
     "modele": "Ghost Amp",
+    "sexe": ["homme", "femme"],
     "terrain": ["route"],
     "type": "stable",
     "amorti": 3,
@@ -497,6 +514,7 @@
 "marque": "Brooks",
     
 "modele": "Glycerin Flex",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
@@ -555,6 +573,7 @@
 "marque": "Brooks",
     
 "modele": "Glycerin 23",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
@@ -615,6 +634,7 @@
 "marque": "Brooks",
     
 "modele": "Glycerin GTS 23",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
@@ -675,6 +695,7 @@
 "marque": "Brooks",
     
 "modele": "Ghost Max 4",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
@@ -735,6 +756,7 @@
 "marque": "Brooks",
     
 "modele": "Ghost Trail",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
@@ -793,6 +815,7 @@
 "marque": "Brooks",
     
 "modele": "Revel 9",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
@@ -851,6 +874,7 @@
 "marque": "Brooks",
     
 "modele": "Hyperion Max 4",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
@@ -909,6 +933,7 @@
 "marque": "Brooks",
     
 "modele": "Launch 12",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
@@ -965,6 +990,8 @@
 "marque": "Brooks",
     
 "modele": "Cascadia Elite (unisexe)",
+"sexe": ["homme", "femme"],
+"unisexe": true,
     
 "terrain": [
       
@@ -1019,6 +1046,7 @@
 "marque": "Brooks",
     
 "modele": "Anthem 8",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
@@ -1077,6 +1105,7 @@
 "marque": "Brooks",
     
 "modele": "Catamount 4",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
@@ -1131,6 +1160,7 @@
 "marque": "Brooks",
     
 "modele": "Ghost 18",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
@@ -1191,6 +1221,7 @@
 "marque": "Brooks",
     
 "modele": "Beast GTS 26",
+"sexe": ["homme"],
     
 "terrain": [
       
@@ -1251,6 +1282,7 @@
 "marque": "Brooks",
     
 "modele": "Addiction GTS 15",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
@@ -1309,6 +1341,7 @@
 "marque": "Brooks",
     
 "modele": "Glycerin Max 2",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
@@ -1367,6 +1400,8 @@
 "marque": "Brooks",
     
 "modele": "Hyperion Elite 6 (unisexe)",
+"sexe": ["homme", "femme"],
+"unisexe": true,
     
 "terrain": [
       
@@ -1425,6 +1460,7 @@
 "marque": "Brooks",
     
 "modele": "Revel Max",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
@@ -1479,6 +1515,7 @@
 "marque": "Brooks",
     
 "modele": "Trace 4",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
@@ -1535,6 +1572,7 @@
 "marque": "Brooks",
     
 "modele": "Divide 6",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
@@ -1591,6 +1629,7 @@
 "marque": "Brooks",
     
 "modele": "Range",
+"sexe": ["homme", "femme"],
     
 "terrain": [
       
