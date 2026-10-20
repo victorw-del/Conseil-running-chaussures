@@ -307,6 +307,16 @@ function carteChaussure(resultat, position) {
   if (c.lien_officiel !== "") {
     lien = `<a class="lien-fiche" href="${c.lien_officiel}" target="_blank" rel="noopener">Voir la fiche officielle</a>`;
   }
+    
+// La photo, seulement si la chaussure a un champ "image" dans le JSON.
+  
+let photo = "";
+  
+if (c.image) {
+    
+photo = `<img class="photo-chaussure" src="${c.image}" alt="${c.marque} ${c.modele}" loading="lazy">`;
+  
+}
 
   // Le bloc "À savoir" n'apparaît que s'il y a des alertes.
   let blocAlertes = "";
@@ -318,6 +328,7 @@ function carteChaussure(resultat, position) {
 
   return `
     <article class="carte-chaussure">
+    ${photo}
       <div class="carte-entete">
         <span class="rang">${position + 1}</span>
         <div>
