@@ -3043,5 +3043,729 @@
     "lien_officiel": "https://www.adidas.fr/chaussure-de-running-ultrarun-5-tr/JQ6920.html",
     "source": "Site officiel adidas.fr, fiche Ultrarun 5 TR homme, consultée le 20/10/2026. Prix public 80 €. Sur la fiche : drop 11 mm, poids 345 g (pointure 42 2/3). Type neutre : déduit, Adidas ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots d'Adidas.",
     "verifie": true
+  },
+  {
+    "id": "kiprun-kipcore",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipcore",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 2,
+    "drop_mm": 8,
+    "poids_g": 264,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km"
+    ],
+    "prix": {
+      "min": 70,
+      "max": 70
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-homme-kiprun-kipcore-bleu-et-blanc/353286/c364c227c132m8913726",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipcore homme, consultée le 20/10/2026. Drop 8 mm, poids 264 g (pointure non précisée). Prix 69,99 €. Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kipcore-premium",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipcore Premium",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route",
+      "mixte"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 3,
+    "drop_mm": 8,
+    "poids_g": 272,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 90,
+      "max": 90
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-running-route-polyvalente-homme-kiprun-kipcore-premium-gris-vert/353370/c169c132c141m8958672",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipcore Premium homme, consultée le 20/10/2026. Drop 8 mm, poids 272 g en 42. Prix 89,99 € (en promo à 64,99 € le 20/10/2026). Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kipnext",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipnext",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 2,
+    "drop_mm": 6,
+    "poids_g": 277,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km"
+    ],
+    "prix": {
+      "min": 70,
+      "max": 70
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-route-homme-kiprun-kipnext-beige/353380/c179c183m8913928",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipnext homme, consultée le 20/10/2026. Drop 6 mm, poids 277 g en 42. Prix 69,99 €. Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-ks900-light",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "KS900 Light",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "route",
+      "mixte"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 2,
+    "drop_mm": 6,
+    "poids_g": 252,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 100,
+      "max": 100
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-running-homme-kiprun-ks900-light-gris-jaune/333004/c406c132m8830204",
+    "source": "Site officiel Decathlon, fiche Kiprun KS900 Light homme, consultée le 20/10/2026. Drop 6 mm, poids 252 g en 42. Prix 99,99 € (en promo à 44,99 € le 20/10/2026). Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-ks900-support",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "KS900 Support",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "stable",
+    "amorti": 5,
+    "dynamisme": 2,
+    "drop_mm": 7,
+    "poids_g": 305,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 140,
+      "max": 140
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-route-homme-kiprun-ks900-support-noir-bleu-jaune/337813/c382c59c132m8940046",
+    "source": "Site officiel Decathlon, fiche Kiprun KS900 Support homme, consultée le 20/10/2026. Drop 7 mm, poids 305 g en 42. Prix 139,99 € (en promo à 99,99 € le 20/10/2026). Type stable : la fiche parle de corriger la surpronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kipride",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipride",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 5,
+    "dynamisme": 3,
+    "drop_mm": 6,
+    "poids_g": 243,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 120,
+      "max": 120
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-route-homme-kiprun-kipride-bleu-et-orange/352928/c309c231c125m8960616",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipride homme, consultée le 20/10/2026. Drop 6 mm, poids 243 g en 42. Prix 119,99 € (en promo à 89,99 € le 20/10/2026). Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kipride-max",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipride Max",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 5,
+    "dynamisme": 3,
+    "drop_mm": 6,
+    "poids_g": 271,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 150,
+      "max": 150
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-route-homme-kiprun-kipride-max-bleu-et-orange/362185/c309c231c125m8960620",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipride Max homme, consultée le 20/10/2026. Drop 6 mm, poids 271 g en 42. Prix 149,99 €. Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kipstorm-interval",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipstorm Interval",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 2,
+    "dynamisme": 4,
+    "drop_mm": 6,
+    "poids_g": 149,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km"
+    ],
+    "prix": {
+      "min": 120,
+      "max": 120
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-homme-kiprun-kipstorm-interval-orange/365896/c227c125m8988947",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipstorm Interval homme, consultée le 20/10/2026. Drop 6 mm, poids 149 g en 42. Prix 119,99 €. Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kipstorm-tempo",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipstorm Tempo",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 4,
+    "drop_mm": 8,
+    "poids_g": 225,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 140,
+      "max": 140
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-route-homme-kiprun-kipstorm-tempo-vert-jaune/362245/c266c132m9001574",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipstorm Tempo homme, consultée le 20/10/2026. Drop 8 mm, poids 225 g en 42. Prix 139,99 €. Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kipstorm-challenger",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipstorm Challenger",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 5,
+    "drop_mm": 8,
+    "poids_g": 195,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 130,
+      "max": 130
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-carbone-homme-kiprun-kipstorm-challenger-vert-et-jaune/358423/c266c132m9001575",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipstorm Challenger homme, consultée le 20/10/2026. Drop 8 mm, poids 195 g en 42. Prix 129,99 € (en promo à 99,99 € le 20/10/2026). Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kd900x-ld-2",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "KD900X LD 2",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 5,
+    "drop_mm": 4,
+    "poids_g": 225,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 110,
+      "max": 110
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-plaque-carbone-homme-kiprun-kd900-x-ld-2-blanc-orange/360707/c227c125m8961370",
+    "source": "Site officiel Decathlon, fiche Kiprun KD900X LD 2 homme, consultée le 20/10/2026. Drop 4 mm, poids 225 g en 42. Prix 109,99 €. Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kipstorm-elite",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipstorm Elite",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 5,
+    "drop_mm": 5,
+    "poids_g": 215,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 220,
+      "max": 220
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-a-plaque-carbone-homme-kiprun-kipstorm-elite-jaune-clair/362113/c269c382m8961381",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipstorm Elite homme, consultée le 20/10/2026. Drop 5 mm, poids 215 g en 42. Prix 219,99 € (en promo à 164,99 € le 20/10/2026). Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kipstorm-lab",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipstorm Lab",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 5,
+    "drop_mm": 4,
+    "poids_g": 167,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 300,
+      "max": 300
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-route-avec-plaque-carbone-kiprun-kipstorm-lab/369831/c140m8953316",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipstorm Lab homme, consultée le 20/10/2026. Drop 4 mm, poids 167 g en 42. Prix 299,99 €. Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kipcore-gravel",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipcore Gravel",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route",
+      "mixte"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 2,
+    "drop_mm": 8,
+    "poids_g": 315,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 60,
+      "max": 60
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-route-et-chemin-homme-kiprun-kipcore-gravel-noir-et-gris/362150/c382c208c248m8958677",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipcore Gravel homme, consultée le 20/10/2026. Drop 8 mm, poids 315 g en 42. Prix 59,99 €. Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kipride-gravel",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipride Gravel",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route",
+      "mixte"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 3,
+    "drop_mm": 6,
+    "poids_g": 264,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 120,
+      "max": 120
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-route-et-chemin-homme-kiprun-kipride-gravel-noir-et-gris/365827/c383c382c169m9019968",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipride Gravel homme, consultée le 20/10/2026. Drop 6 mm, poids 264 g en 42. Prix 119,99 €. Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kipsummit-max",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipsummit Max",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 5,
+    "dynamisme": 3,
+    "drop_mm": 6,
+    "poids_g": 268,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon",
+      "ultra"
+    ],
+    "prix": {
+      "min": 140,
+      "max": 140
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-trail-homme-kiprun-kipsummit-max-noir-et-gris/362206/c208c382m8933583",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipsummit Max homme, consultée le 20/10/2026. Drop 6 mm, poids 268 g en 42. Prix 139,99 €. Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kipsummit-race",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipsummit Race",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 5,
+    "drop_mm": 6,
+    "poids_g": 255,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "marathon",
+      "ultra"
+    ],
+    "prix": {
+      "min": 200,
+      "max": 200
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-trail-plaque-carbone-homme-kiprun-kipsummit-race-vert/361989/c177m8947568",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipsummit Race homme, consultée le 20/10/2026. Drop 6 mm, poids 255 g en 42. Prix 199,99 €. Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kipclimb",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipclimb",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 2,
+    "drop_mm": 6,
+    "poids_g": 305,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 100,
+      "max": 100
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-trail-running-homme-kiprun-kipclimb-noir/366862/c382c71m9001242",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipclimb homme, consultée le 20/10/2026. Drop 6 mm, poids 305 g en 42. Prix 99,99 € (en promo à 69,99 € le 20/10/2026). La fiche technique indique aussi 298 g. Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-kipclimb-max",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Kipclimb Max",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 3,
+    "drop_mm": 4,
+    "poids_g": 315,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "semi",
+      "marathon",
+      "ultra"
+    ],
+    "prix": {
+      "min": 150,
+      "max": 150
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-trail-homme-kiprun-kipclimb-max-beige/366852/c370m9001260",
+    "source": "Site officiel Decathlon, fiche Kiprun Kipclimb Max homme, consultée le 20/10/2026. Drop 4 mm, poids 315 g en 42. Prix 149,99 € (en promo à 104,99 € le 20/10/2026). Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-mt3",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "MT3",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 2,
+    "drop_mm": 8,
+    "poids_g": 310,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon",
+      "ultra"
+    ],
+    "prix": {
+      "min": 54,
+      "max": 54
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-trail-homme-kiprun-mt3-noir-blanc/341192/c382c183m8828396",
+    "source": "Site officiel Decathlon, fiche Kiprun MT3 homme, consultée le 20/10/2026. Drop 8 mm, poids 310 g en 43. Prix 53,99 €. Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-xt8",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "XT8",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 2,
+    "drop_mm": 8,
+    "poids_g": 315,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 48,
+      "max": 48
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-trail-homme-kiprun-xt8-bleu/312121/c246c353c125m8931405",
+    "source": "Site officiel Decathlon, fiche Kiprun XT8 homme, consultée le 20/10/2026. Drop 8 mm, poids 315 g en 42. Prix 47,99 €. Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
+  },
+  {
+    "id": "kiprun-race-light",
+    "exemple": false,
+    "marque": "Kiprun",
+    "modele": "Race Light",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 2,
+    "dynamisme": 4,
+    "drop_mm": 4,
+    "poids_g": 240,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 70,
+      "max": 70
+    },
+    "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-trail-homme-kiprun-race-light-bleu/312132/c409m8572253",
+    "source": "Site officiel Decathlon, fiche Kiprun Race Light homme, consultée le 20/10/2026. Drop 4 mm, poids 240 g en 42. Prix 69,99 €. Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
+    "verifie": true
   }
 ]
