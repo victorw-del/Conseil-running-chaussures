@@ -1673,7 +1673,420 @@
     
 "verifie": true
   
-}
-
-  
+},
+  {
+    "id": "nike-pegasus-plus-2",
+    "exemple": false,
+    "marque": "Nike",
+    "modele": "Pegasus Plus 2",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 4,
+    "drop_mm": 10,
+    "poids_g": 265,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 170,
+      "max": 170
+    },
+    "lien_officiel": "https://www.nike.com/fr/t/chaussure-de-running-sur-route-nike-pegasus-plus-2-pour-homme-bVq2jMv5/IM2541-101",
+    "source": "Site officiel Nike FR, fiche Pegasus Plus 2 homme, consultée le 20/10/2026. Drop 10 mm, poids env. 265 g (pointure 44 homme). Prix public 169,99 €. Type neutre : déduit, Nike ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots de Nike.",
+    "verifie": true
+  },
+  {
+    "id": "nike-pegasus-premium",
+    "exemple": false,
+    "marque": "Nike",
+    "modele": "Pegasus Premium",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 4,
+    "drop_mm": 10,
+    "poids_g": 325,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 210,
+      "max": 210
+    },
+    "lien_officiel": "https://www.nike.com/fr/t/chaussure-de-running-sur-route-nike-pegasus-premium-pour-homme-vRcGAMSK/HQ2592-110",
+    "source": "Site officiel Nike FR, fiche Pegasus Premium homme, consultée le 20/10/2026. Drop 10 mm, poids env. 325 g (pointure 44 homme). Prix public 209,99 €. Type neutre : déduit, Nike ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots de Nike.",
+    "verifie": true
+  },
+  {
+    "id": "nike-vomero-18",
+    "exemple": false,
+    "marque": "Nike",
+    "modele": "Vomero 18",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 5,
+    "dynamisme": 2,
+    "drop_mm": 10,
+    "poids_g": 325,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 160,
+      "max": 160
+    },
+    "lien_officiel": "https://www.nike.com/fr/t/chaussure-de-running-sur-route-nike-vomero-18-pour-homme-SMtmxlKz/HM6803-005",
+    "source": "Site officiel Nike FR, fiche Vomero 18 homme, consultée le 20/10/2026. Drop 10 mm, poids env. 325 g (pointure 44 homme). Prix public 159,99 €. Version large vendue sur nike.com. Type neutre : déduit, Nike ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots de Nike.",
+    "verifie": true
+  },
+  {
+    "id": "nike-structure-plus",
+    "exemple": false,
+    "marque": "Nike",
+    "modele": "Structure Plus",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "stable",
+    "amorti": 4,
+    "dynamisme": 3,
+    "drop_mm": 10,
+    "poids_g": 309,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 180,
+      "max": 180
+    },
+    "lien_officiel": "https://www.nike.com/fr/t/chaussure-de-running-sur-route-nike-structure-plus-pour-homme-rdhfPpo2/HQ3048-401",
+    "source": "Site officiel Nike FR, fiche Structure Plus homme, consultée le 20/10/2026. Drop 10 mm, poids env. 309 g (pointure 44 homme). Prix public 179,99 €. Version large vendue sur nike.com. Nike indique « Stable ». Amorti, dynamisme et usage : propositions d'après les mots de Nike.",
+    "verifie": true
+  },
+  {
+    "id": "nike-zoom-fly-6",
+    "exemple": false,
+    "marque": "Nike",
+    "modele": "Zoom Fly 6",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 5,
+    "drop_mm": 8,
+    "poids_g": 265,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 170,
+      "max": 170
+    },
+    "lien_officiel": "https://www.nike.com/fr/t/chaussure-de-course-sur-route-nike-zoom-fly-6-pour-homme-OHkLQ2uh/FN8454-404",
+    "source": "Site officiel Nike FR, fiche Zoom Fly 6 homme, consultée le 20/10/2026. Drop 8 mm, poids env. 265 g (pointure 44 homme). Prix public 169,99 €. Type neutre : déduit, Nike ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots de Nike.",
+    "verifie": true
+  },
+  {
+    "id": "nike-streakfly-2",
+    "exemple": false,
+    "marque": "Nike",
+    "modele": "Streakfly 2",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 1,
+    "dynamisme": 5,
+    "drop_mm": 4,
+    "poids_g": 145,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km"
+    ],
+    "prix": {
+      "min": 180,
+      "max": 180
+    },
+    "lien_officiel": "https://www.nike.com/fr/t/chaussure-de-course-sur-route-nike-streakfly-2-EccFPfoS/HF6416-601",
+    "source": "Site officiel Nike FR, fiche Streakfly 2 homme, consultée le 20/10/2026. Drop 4 mm, poids env. 145 g (pointure 44 homme). Prix public 179,99 €. Type neutre : déduit, Nike ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots de Nike.",
+    "verifie": true
+  },
+  {
+    "id": "nike-alphafly-3",
+    "exemple": false,
+    "marque": "Nike",
+    "modele": "Alphafly 3",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 5,
+    "drop_mm": 8,
+    "poids_g": 218,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 320,
+      "max": 320
+    },
+    "lien_officiel": "https://www.nike.com/fr/t/chaussure-de-course-sur-route-alphafly-3-pour-KnKE5jwD/IR1996-001",
+    "source": "Site officiel Nike FR, fiche Alphafly 3 homme, consultée le 20/10/2026. Drop 8 mm, poids env. 218 g (pointure 44 homme). Prix public 319,99 €. Type neutre : déduit, Nike ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots de Nike.",
+    "verifie": true
+  },
+  {
+    "id": "nike-alphafly-4",
+    "exemple": false,
+    "marque": "Nike",
+    "modele": "Alphafly 4",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 5,
+    "drop_mm": 8,
+    "poids_g": 188,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 280,
+      "max": 280
+    },
+    "lien_officiel": "https://www.nike.com/fr/t/chaussure-de-course-sur-route-nike-alphafly-4-pour-homme-nOHkKz9h/IU4686-002",
+    "source": "Site officiel Nike FR, fiche Alphafly 4 homme, consultée le 20/10/2026. Drop 8 mm, poids env. 188 g (pointure 42 homme / 42 femme). Prix public 279,99 €. Type neutre : déduit, Nike ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots de Nike.",
+    "verifie": true
+  },
+  {
+    "id": "nike-acg-pegasus-trail",
+    "exemple": false,
+    "marque": "Nike",
+    "modele": "ACG Pegasus Trail",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "trail",
+      "mixte"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 3,
+    "drop_mm": 8,
+    "poids_g": 305,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 150,
+      "max": 150
+    },
+    "lien_officiel": "https://www.nike.com/fr/t/chaussure-de-trail-nike-acg-pegasus-trail-pour-homme-edJ7MX66/HV8116-301",
+    "source": "Site officiel Nike FR, fiche ACG Pegasus Trail homme, consultée le 20/10/2026. Drop 8 mm, poids env. 305 g (pointure 44 homme). Prix public 149,99 €. Type neutre : déduit, Nike ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots de Nike.",
+    "verifie": true
+  },
+  {
+    "id": "nike-acg-ultrafly-trail",
+    "exemple": false,
+    "marque": "Nike",
+    "modele": "ACG Ultrafly Trail",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 5,
+    "drop_mm": 8.5,
+    "poids_g": 287,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "semi",
+      "marathon",
+      "ultra"
+    ],
+    "prix": {
+      "min": 250,
+      "max": 250
+    },
+    "lien_officiel": "https://www.nike.com/fr/t/chaussure-de-course-de-trail-nike-acg-ultrafly-trail-bddi5f1L/HF5668-601",
+    "source": "Site officiel Nike FR, fiche ACG Ultrafly Trail homme, consultée le 20/10/2026. Drop 8,5 mm, poids env. 287 g (pointure 44 homme). Prix public 249,99 €. Type neutre : déduit, Nike ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots de Nike.",
+    "verifie": true
+  },
+  {
+    "id": "nike-acg-zegama-trail",
+    "exemple": false,
+    "marque": "Nike",
+    "modele": "ACG Zegama Trail",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 5,
+    "dynamisme": 2,
+    "drop_mm": 4,
+    "poids_g": 338,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon",
+      "ultra"
+    ],
+    "prix": {
+      "min": 170,
+      "max": 170
+    },
+    "lien_officiel": "https://www.nike.com/fr/t/chaussure-de-trail-acg-zegama-trail-pour-homme-gUx0ZLKR/HV8113-600",
+    "source": "Site officiel Nike FR, fiche ACG Zegama Trail homme, consultée le 20/10/2026. Drop 4 mm, poids env. 338 g (pointure 44 homme). Prix public 169,99 €. Type neutre : déduit, Nike ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots de Nike.",
+    "verifie": true
+  },
+  {
+    "id": "nike-juniper-trail-2-gore-tex",
+    "exemple": false,
+    "marque": "Nike",
+    "modele": "Juniper Trail 2 GORE-TEX",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 2,
+    "dynamisme": 2,
+    "drop_mm": 10,
+    "poids_g": 323,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir"
+    ],
+    "prix": {
+      "min": 115,
+      "max": 115
+    },
+    "lien_officiel": "https://www.nike.com/fr/t/chaussure-de-trail-impermeable-nike-juniper-trail-2-gore-tex-pour-homme-1x1SuPzZ/HM9734-202",
+    "source": "Site officiel Nike FR, fiche Juniper Trail 2 GORE-TEX homme, consultée le 20/10/2026. Drop 10 mm, poids env. 323 g (pointure 44 homme). Prix public 114,99 €. Type neutre : déduit, Nike ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots de Nike.",
+    "verifie": true
+  },
+  {
+    "id": "nike-wildhorse-10",
+    "exemple": false,
+    "marque": "Nike",
+    "modele": "Wildhorse 10",
+    "sexe": [
+      "homme"
+    ],
+    "terrain": [
+      "trail",
+      "mixte"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 3,
+    "drop_mm": 9.5,
+    "poids_g": 311,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 150,
+      "max": 150
+    },
+    "lien_officiel": "https://www.nike.com/fr/t/chaussure-de-trail-nike-wildhorse-10-pour-homme-6RHZHLQc/FV2338-410",
+    "source": "Site officiel Nike FR, fiche Wildhorse 10 homme, consultée le 20/10/2026. Drop 9,5 mm, poids env. 311 g (pointure 44 homme). Prix public 149,99 €. Type neutre : déduit, Nike ne parle d'aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots de Nike.",
+    "verifie": true
+  }
 ]
