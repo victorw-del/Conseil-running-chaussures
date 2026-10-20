@@ -327,14 +327,3 @@ footer {
 #resultats h2:focus {
   outline: none;
 }
-
-/* ---------- 13. Photo de la chaussure ---------- */
-.photo-chaussure {
-  display: block;
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  background: #fff;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}

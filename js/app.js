@@ -328,7 +328,6 @@ photo = `<img class="photo-chaussure" src="${c.image}" alt="${c.marque} ${c.mode
 
   return `
     <article class="carte-chaussure">
-    ${photo}
       <div class="carte-entete">
         <span class="rang">${position + 1}</span>
         <div>
