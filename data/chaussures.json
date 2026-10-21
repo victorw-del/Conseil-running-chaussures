@@ -4157,5 +4157,503 @@
     "lien_officiel": "https://www.on.com/en-fr/products/cloudultra-pro-m-3mf3017/mens/ivory-celeste-shoes-3MF30175298",
     "source": "Site officiel on.com (boutique France), fiche Cloudultra Pro, consultée le 21/10/2026. Prix public 270 €. On ne publie pas le drop ni le poids : valeurs annoncées par la marque, relevées sur RunRepeat (https://runrepeat.com/on-cloudultra-pro). Type neutre : On ne décrit aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots et les notes de On.",
     "verifie": true
+  },
+  {
+    "id": "hoka-clifton-pro",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Clifton PRO",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 3,
+    "drop_mm": 8,
+    "poids_g": 296,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 170,
+      "max": 170
+    },
+    "lien_officiel": "https://www.hoka.com/fr/fr/route-hommes/clifton-pro/1176510.html",
+    "source": "Site officiel hoka.com (boutique France), fiche Clifton PRO homme, consultée le 21/10/2026. Drop 8 mm, poids 296 g (UK 9.5). Prix public 170 €. Type neutre : Hoka la classe « Neutre » dans sa liste. Amorti, dynamisme et usage : propositions d'après les mots de Hoka.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-skyward-x-2",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Skyward X 2",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 5,
+    "dynamisme": 3,
+    "drop_mm": 5,
+    "poids_g": 312,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 230,
+      "max": 230
+    },
+    "lien_officiel": "https://www.hoka.com/fr/fr/route-hommes/skyward-x-2/1171925.html",
+    "source": "Site officiel hoka.com (boutique France), fiche Skyward X 2 homme, consultée le 21/10/2026. Drop 5 mm, poids 312 g (pointure non précisée). Prix public 230 €. Type neutre : Hoka la classe « Neutre » dans sa liste. Amorti, dynamisme et usage : propositions d'après les mots de Hoka.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-gaviota-6",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Gaviota 6",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "stable",
+    "amorti": 4,
+    "dynamisme": 2,
+    "drop_mm": 6,
+    "poids_g": 291,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 180,
+      "max": 180
+    },
+    "lien_officiel": "https://www.hoka.com/fr/fr/route-hommes/gaviota-6/1171932.html",
+    "source": "Site officiel hoka.com (boutique France), fiche Gaviota 6 homme, consultée le 21/10/2026. Drop 6 mm, poids 291 g (pointure non précisée). Prix public 180 €. Type stable : Hoka la classe « Stable » dans sa liste et parle du H-Frame pour stabiliser la foulée. Amorti, dynamisme et usage : propositions d'après les mots de Hoka.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-rincon-5",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Rincon 5",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 4,
+    "drop_mm": 8,
+    "poids_g": 276,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 135,
+      "max": 135
+    },
+    "lien_officiel": "https://www.hoka.com/fr/fr/route-hommes/rincon%C2%A05/1176630.html",
+    "source": "Site officiel hoka.com (boutique France), fiche Rincon 5 homme, consultée le 21/10/2026. Drop 8 mm, poids 276 g (pointure non précisée). Prix public 135 €. Type neutre : Hoka la classe « Neutre » dans sa liste. Amorti, dynamisme et usage : propositions d'après les mots de Hoka.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-mach-7",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Mach 7",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 4,
+    "drop_mm": 5,
+    "poids_g": 237,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 160,
+      "max": 160
+    },
+    "lien_officiel": "https://www.hoka.com/fr/fr/route-hommes/mach-7/1171904.html",
+    "source": "Site officiel hoka.com (boutique France), fiche Mach 7 homme, consultée le 21/10/2026. Drop 5 mm, poids 237 g (pointure non précisée). Prix public 160 €. Type neutre : Hoka la classe « Neutre » dans sa liste. Amorti, dynamisme et usage : propositions d'après les mots de Hoka.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-mach-x-3",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Mach X 3",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 4,
+    "drop_mm": 5,
+    "poids_g": 288,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 190,
+      "max": 190
+    },
+    "lien_officiel": "https://www.hoka.com/fr/fr/route-hommes/mach-x-3/1168720.html",
+    "source": "Site officiel hoka.com (boutique France), fiche Mach X 3 homme, consultée le 21/10/2026. Drop 5 mm, poids 288 g (pointure non précisée). Prix public 190 €. Type neutre : Hoka la classe « Neutre » dans sa liste. Amorti, dynamisme et usage : propositions d'après les mots de Hoka.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-rocket-x-3",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Rocket X 3",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "unisexe": true,
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 5,
+    "drop_mm": 7,
+    "poids_g": 227,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 250,
+      "max": 250
+    },
+    "lien_officiel": "https://www.hoka.com/fr/fr/race/rocket-x-3/1168724.html",
+    "source": "Site officiel hoka.com (boutique France), fiche Rocket X 3 homme, consultée le 21/10/2026. Drop 7 mm, poids 227 g (pointure non précisée). Prix public 250 €. Type neutre : Hoka la classe « Neutre » dans sa liste. Amorti, dynamisme et usage : propositions d'après les mots de Hoka.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-cielo-x1-3-0",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Cielo X1 3.0",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "unisexe": true,
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 5,
+    "drop_mm": 7,
+    "poids_g": 213,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 275,
+      "max": 275
+    },
+    "lien_officiel": "https://www.hoka.com/fr/fr/race/cielo-x1-3.0/1171927.html",
+    "source": "Site officiel hoka.com (boutique France), fiche Cielo X1 3.0 homme, consultée le 21/10/2026. Drop 7 mm, poids 213 g (pointure non précisée). Prix public 275 €. Type neutre : Hoka la classe « Neutre » dans sa liste. Amorti, dynamisme et usage : propositions d'après les mots de Hoka.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-torrent-5",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Torrent 5",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 4,
+    "drop_mm": 5,
+    "poids_g": 275,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 145,
+      "max": 145
+    },
+    "lien_officiel": "https://www.hoka.com/fr/fr/trail-hommes/torrent%C2%A05/1176650.html",
+    "source": "Site officiel hoka.com (boutique France), fiche Torrent 5 homme, consultée le 21/10/2026. Drop 5 mm, poids 275 g (pointure non précisée). Prix public 145 €. Type neutre : Hoka la classe « Neutre » dans sa liste. Amorti, dynamisme et usage : propositions d'après les mots de Hoka.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-zinal-3",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Zinal 3",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 4,
+    "drop_mm": 5,
+    "poids_g": 253,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 160,
+      "max": 160
+    },
+    "lien_officiel": "https://www.hoka.com/fr/fr/trail-hommes/zinal-3/1171951.html",
+    "source": "Site officiel hoka.com (boutique France), fiche Zinal 3 homme, consultée le 21/10/2026. Drop 5 mm, poids 253 g (pointure non précisée). Prix public 160 €. Type neutre : Hoka la classe « Neutre » dans sa liste. Amorti, dynamisme et usage : propositions d'après les mots de Hoka.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-mafate-5",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Mafate 5",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 5,
+    "dynamisme": 3,
+    "drop_mm": 8,
+    "poids_g": 332,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "marathon",
+      "ultra"
+    ],
+    "prix": {
+      "min": 190,
+      "max": 190
+    },
+    "lien_officiel": "https://www.hoka.com/fr/fr/trail-hommes/mafate-5/1168722.html",
+    "source": "Site officiel hoka.com (boutique France), fiche Mafate 5 homme, consultée le 21/10/2026. Drop 8 mm, poids 332 g (pointure non précisée). Prix public 190 €. Type neutre : Hoka la classe « Neutre » dans sa liste. Amorti, dynamisme et usage : propositions d'après les mots de Hoka.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-mafate-x",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Mafate X",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 5,
+    "dynamisme": 3,
+    "drop_mm": 7,
+    "poids_g": 344,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "marathon",
+      "ultra"
+    ],
+    "prix": {
+      "min": 225,
+      "max": 225
+    },
+    "lien_officiel": "https://www.hoka.com/fr/fr/trail-hommes/mafate-x/1161990.html",
+    "source": "Site officiel hoka.com (boutique France), fiche Mafate X homme, consultée le 21/10/2026. Drop 7 mm, poids 344 g (pointure non précisée). Prix public 225 €. Type neutre : Hoka la classe « Neutre » dans sa liste. Amorti, dynamisme et usage : propositions d'après les mots de Hoka.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-stinson-8",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Stinson 8",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail",
+      "mixte"
+    ],
+    "type": "stable",
+    "amorti": 5,
+    "dynamisme": 2,
+    "drop_mm": 5,
+    "poids_g": 320,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "ultra"
+    ],
+    "prix": {
+      "min": 180,
+      "max": 180
+    },
+    "lien_officiel": "https://www.hoka.com/fr/fr/trail-hommes/stinson-8/1176637.html",
+    "source": "Site officiel hoka.com (boutique France), fiche Stinson 8 homme, consultée le 21/10/2026. Drop 5 mm, poids 320 g (pointure non précisée). Prix public 180 €. Type stable : Hoka la classe « Stable » dans sa liste et parle du H-Frame pour stabiliser la foulée. Amorti, dynamisme et usage : propositions d'après les mots de Hoka.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-tecton-x-4",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Tecton X 4",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 5,
+    "drop_mm": 5,
+    "poids_g": 275,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "semi",
+      "marathon",
+      "ultra"
+    ],
+    "prix": {
+      "min": 250,
+      "max": 250
+    },
+    "lien_officiel": "https://www.hoka.com/fr/fr/trail-hommes/tecton%C2%A0x%C2%A04/1176632.html",
+    "source": "Site officiel hoka.com (boutique France), fiche Tecton X 4 homme, consultée le 21/10/2026. Drop 5 mm, poids 275 g (EU 44). Prix public 250 €. Type neutre : Hoka la classe « Neutre » dans sa liste. Amorti, dynamisme et usage : propositions d'après les mots de Hoka.",
+    "verifie": true
+  },
+  {
+    "id": "hoka-rocket-x-trail",
+    "exemple": false,
+    "marque": "Hoka",
+    "modele": "Rocket X Trail",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail",
+      "mixte"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 5,
+    "drop_mm": 6,
+    "poids_g": 268,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 225,
+      "max": 225
+    },
+    "lien_officiel": "https://www.hoka.com/fr/fr/trail-hommes/rocket-x-trail/1176330.html",
+    "source": "Site officiel hoka.com (boutique France), fiche Rocket X Trail homme, consultée le 21/10/2026. Drop 6 mm, poids 268 g (pointure non précisée). Prix public 225 €. Type neutre : Hoka la classe « Neutre » dans sa liste. Amorti, dynamisme et usage : propositions d'après les mots de Hoka.",
+    "verifie": true
   }
 ]
