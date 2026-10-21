@@ -3767,5 +3767,395 @@
     "lien_officiel": "https://www.decathlon.fr/p/chaussures-de-running-trail-homme-kiprun-race-light-bleu/312132/c409m8572253",
     "source": "Site officiel Decathlon, fiche Kiprun Race Light homme, consultée le 20/10/2026. Drop 4 mm, poids 240 g en 42. Prix 69,99 €. Type neutre : la fiche ne décrit aucun système anti-pronation. Amorti, dynamisme et usage : propositions d'après les niveaux et les mots de Decathlon.",
     "verifie": true
+  },
+  {
+    "id": "on-cloudmonster-3",
+    "exemple": false,
+    "marque": "On",
+    "modele": "Cloudmonster 3",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 3,
+    "drop_mm": 6,
+    "poids_g": 295,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 200,
+      "max": 200
+    },
+    "lien_officiel": "https://www.on.com/en-fr/products/cloudmonster-3-m-3mg1005/mens/wolf-wolf-shoes-3MG10054747",
+    "source": "Site officiel on.com (boutique France), fiche Cloudmonster 3, consultée le 21/10/2026. Prix public 200 €. On ne publie pas le drop ni le poids : valeurs annoncées par la marque, relevées sur RunRepeat (https://runrepeat.com/on-cloudmonster-3). Type neutre : On ne décrit aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots et les notes de On.",
+    "verifie": true
+  },
+  {
+    "id": "on-cloudsurfer-2",
+    "exemple": false,
+    "marque": "On",
+    "modele": "Cloudsurfer 2",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 2,
+    "drop_mm": 9,
+    "poids_g": 260,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km"
+    ],
+    "prix": {
+      "min": 170,
+      "max": 170
+    },
+    "lien_officiel": "https://www.on.com/en-fr/products/cloudsurfer-2-3mf1012/mens/black-malibu-shoes-3MF10120074",
+    "source": "Site officiel on.com (boutique France), fiche Cloudsurfer 2, consultée le 21/10/2026. Prix public 170 €. On ne publie pas le drop ni le poids : valeurs annoncées par la marque, relevées sur RunRepeat (https://runrepeat.com/on-cloudsurfer-2). Type neutre : On ne décrit aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots et les notes de On.",
+    "verifie": true
+  },
+  {
+    "id": "on-cloudrunner-3",
+    "exemple": false,
+    "marque": "On",
+    "modele": "Cloudrunner 3",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "stable",
+    "amorti": 3,
+    "dynamisme": 1,
+    "drop_mm": 8,
+    "poids_g": 296,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 160,
+      "max": 160
+    },
+    "lien_officiel": "https://www.on.com/en-fr/products/cloudrunner-3-m-3mg3139/mens/ivory-flame-shoes-3MG31390849",
+    "source": "Site officiel on.com (boutique France), fiche Cloudrunner 3, consultée le 21/10/2026. Prix public 160 €. Poids 296 g indiqué par On. On ne publie pas le drop : valeurs annoncées par la marque, relevées sur RunRepeat (https://runrepeat.com/on-cloudrunner-3). Type stable : On parle de maintien et de stabilité. Amorti, dynamisme et usage : propositions d'après les mots et les notes de On.",
+    "verifie": true
+  },
+  {
+    "id": "on-cloudflyer-5",
+    "exemple": false,
+    "marque": "On",
+    "modele": "Cloudflyer 5",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "stable",
+    "amorti": 4,
+    "dynamisme": 2,
+    "drop_mm": 10,
+    "poids_g": 320,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 180,
+      "max": 180
+    },
+    "lien_officiel": "https://www.on.com/en-fr/products/cloudflyer-5-3me3001/mens/black-white-shoes-3ME30010299",
+    "source": "Site officiel on.com (boutique France), fiche Cloudflyer 5, consultée le 21/10/2026. Prix public 180 € (fin de saison à 140 € le 21/10/2026). On ne publie pas le drop ni le poids : valeurs annoncées par la marque, relevées sur RunRepeat (https://runrepeat.com/on-cloudflyer-5). Type stable : On parle de maintien et de stabilité. Amorti, dynamisme et usage : propositions d'après les mots et les notes de On.",
+    "verifie": true
+  },
+  {
+    "id": "on-cloudswift-4",
+    "exemple": false,
+    "marque": "On",
+    "modele": "Cloudswift 4",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 3,
+    "drop_mm": 8,
+    "poids_g": 278,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km"
+    ],
+    "prix": {
+      "min": 170,
+      "max": 170
+    },
+    "lien_officiel": "https://www.on.com/en-fr/products/cloudswift-4-3mf1013/mens/white-glacier-shoes-3MF10130813",
+    "source": "Site officiel on.com (boutique France), fiche Cloudswift 4, consultée le 21/10/2026. Prix public 170 €. On ne publie pas le drop ni le poids : valeurs annoncées par la marque, relevées sur RunRepeat (https://runrepeat.com/on-cloudswift-4). Type neutre : On ne décrit aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots et les notes de On.",
+    "verifie": true
+  },
+  {
+    "id": "on-cloudflow-5",
+    "exemple": false,
+    "marque": "On",
+    "modele": "Cloudflow 5",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 4,
+    "drop_mm": 6,
+    "poids_g": 269,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 190,
+      "max": 190
+    },
+    "lien_officiel": "https://www.on.com/en-fr/products/cloudflow-5-m-3mf1011/mens/black-black-shoes-3MF10111043",
+    "source": "Site officiel on.com (boutique France), fiche Cloudflow 5, consultée le 21/10/2026. Prix public 190 €. On ne publie pas le drop ni le poids : valeurs annoncées par la marque, relevées sur RunRepeat (https://runrepeat.com/on-cloudflow-5). Type neutre : On ne décrit aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots et les notes de On.",
+    "verifie": true
+  },
+  {
+    "id": "on-cloudboom-strike-2",
+    "exemple": false,
+    "marque": "On",
+    "modele": "Cloudboom Strike 2",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "unisexe": true,
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 5,
+    "dynamisme": 5,
+    "drop_mm": 5,
+    "poids_g": 191,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 250,
+      "max": 250
+    },
+    "lien_officiel": "https://www.on.com/en-fr/products/cloudboom-strike-2-u-3ug3005/unisex/white-lime-shoes-3UG30052929",
+    "source": "Site officiel on.com (boutique France), fiche Cloudboom Strike 2, consultée le 21/10/2026. Prix public 250 €. Poids 191 g indiqué par On. On ne publie pas le drop : valeurs annoncées par la marque, relevées sur RTINGS (https://www.rtings.com/running-shoes/reviews/on/cloudboom-strike-2). Type neutre : On ne décrit aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots et les notes de On.",
+    "verifie": true
+  },
+  {
+    "id": "on-cloudboom-max",
+    "exemple": false,
+    "marque": "On",
+    "modele": "Cloudboom Max",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 5,
+    "dynamisme": 4,
+    "drop_mm": 8,
+    "poids_g": 296,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 240,
+      "max": 240
+    },
+    "lien_officiel": "https://www.on.com/en-fr/products/cloudboom-max-m-3mf3031/mens/white-pearl-shoes-3MF30310590",
+    "source": "Site officiel on.com (boutique France), fiche Cloudboom Max, consultée le 21/10/2026. Prix public 240 € (fin de saison à 165 € le 21/10/2026). Poids 296 g indiqué par On. On ne publie pas le drop : valeurs annoncées par la marque, relevées sur RunRepeat (https://runrepeat.com/on-cloudboom-max). Type neutre : On ne décrit aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots et les notes de On.",
+    "verifie": true
+  },
+  {
+    "id": "on-cloudboom-volt",
+    "exemple": false,
+    "marque": "On",
+    "modele": "Cloudboom Volt",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 5,
+    "drop_mm": 4,
+    "poids_g": 210,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 210,
+      "max": 210
+    },
+    "lien_officiel": "https://www.on.com/en-fr/collection/cloudboom",
+    "source": "Site officiel on.com (boutique France), fiche Cloudboom Volt, consultée le 21/10/2026. Prix public 210 €. Poids 210 g indiqué par On. On ne publie pas le drop : valeurs annoncées par la marque, relevées sur test (Running Warehouse) (https://www.runningwarehouse.com/On_Cloudboom_Volt/descpage-ONCBNM1.html?img=3). Type neutre : On ne décrit aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots et les notes de On.",
+    "verifie": true
+  },
+  {
+    "id": "on-cloudsurfer-trail-2",
+    "exemple": false,
+    "marque": "On",
+    "modele": "Cloudsurfer Trail 2",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "mixte",
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 2,
+    "drop_mm": 8,
+    "poids_g": 287,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km"
+    ],
+    "prix": {
+      "min": 170,
+      "max": 170
+    },
+    "lien_officiel": "https://www.on.com/en-fr/products/cloudsurfer-trail-2-w-3wf3010/womens/glacier-dust-shoes-3WF30103660",
+    "source": "Site officiel on.com (boutique France), fiche Cloudsurfer Trail 2, consultée le 21/10/2026. Prix public 170 € (fin de saison à 115 € le 21/10/2026). On ne publie pas le drop ni le poids : valeurs annoncées par la marque, relevées sur RunRepeat (https://runrepeat.com/on-cloudsurfer-trail-2). Type neutre : On ne décrit aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots et les notes de On.",
+    "verifie": true
+  },
+  {
+    "id": "on-cloudultra-3",
+    "exemple": false,
+    "marque": "On",
+    "modele": "Cloudultra 3",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 3,
+    "drop_mm": 6,
+    "poids_g": 295,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "marathon",
+      "ultra"
+    ],
+    "prix": {
+      "min": 200,
+      "max": 200
+    },
+    "lien_officiel": "https://www.on.com/en-fr/products/cloudultra-3-m-3mf3023/mens/iceberg-glacier-shoes-3MF30234788",
+    "source": "Site officiel on.com (boutique France), fiche Cloudultra 3, consultée le 21/10/2026. Prix public 200 €. On ne publie pas le drop ni le poids : valeurs annoncées par la marque, relevées sur RunRepeat (https://runrepeat.com/on-cloudultra-3). Type neutre : On ne décrit aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots et les notes de On.",
+    "verifie": true
+  },
+  {
+    "id": "on-cloudultra-pro",
+    "exemple": false,
+    "marque": "On",
+    "modele": "Cloudultra Pro",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 4,
+    "drop_mm": 6,
+    "poids_g": 275,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "ultra"
+    ],
+    "prix": {
+      "min": 270,
+      "max": 270
+    },
+    "lien_officiel": "https://www.on.com/en-fr/products/cloudultra-pro-m-3mf3017/mens/ivory-celeste-shoes-3MF30175298",
+    "source": "Site officiel on.com (boutique France), fiche Cloudultra Pro, consultée le 21/10/2026. Prix public 270 €. On ne publie pas le drop ni le poids : valeurs annoncées par la marque, relevées sur RunRepeat (https://runrepeat.com/on-cloudultra-pro). Type neutre : On ne décrit aucun système de stabilité. Amorti, dynamisme et usage : propositions d'après les mots et les notes de On.",
+    "verifie": true
   }
 ]
