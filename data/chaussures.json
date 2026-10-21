@@ -215,11 +215,14 @@
     "verifie": true
   },
   {
-    "id": "asics-gt-2000-14",
+    "id": "asics-gt-2000-15",
     "exemple": false,
     "marque": "Asics",
-    "modele": "GT-2000 14",
-    "sexe": ["homme", "femme"],
+    "modele": "GT-2000 15",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
     "terrain": [
       "route"
     ],
@@ -227,7 +230,7 @@
     "amorti": 4,
     "dynamisme": 3,
     "drop_mm": 8,
-    "poids_g": 270,
+    "poids_g": 252,
     "largeur_disponible": [
       "normale",
       "large"
@@ -235,14 +238,15 @@
     "usage": [
       "plaisir",
       "10km",
-      "semi"
+      "semi",
+      "marathon"
     ],
     "prix": {
-      "min": 160,
-      "max": 160
+      "min": 150,
+      "max": 150
     },
-    "lien_officiel": "https://www.asics.com/us/en-us/gt-2000-14/p/ANA_1011C056-406.html",
-    "source": "Site officiel Asics (États-Unis), fiche GT-2000 14, consulté le 19/10/2026. Poids 270 g, taille non précisée. Version « GT-2000 14 WIDE » vue sur asics.com. Prix FR : 160 € relevé sur The Running Collective.",
+    "lien_officiel": "https://www.asics.com/fr/fr-fr/gt-2000-15/p/1011C235-001.html",
+    "source": "Site officiel Asics (États-Unis pour le drop et le poids, France pour le prix), fiche GT-2000 15 homme, consultée le 21/10/2026. Drop 8 mm, poids 252 g (US 9 homme (blog asics us)). Prix asics.com/fr : 150 €. Version WIDE vue sur un site officiel Asics (hors France). Version femme : https://www.asics.com/fr/fr-fr/gt-2000-15/p/1012B998-701.html. Type, amorti, dynamisme et usage : propositions d'après les mots d'Asics.",
     "verifie": true
   },
   {
@@ -4654,6 +4658,343 @@
     },
     "lien_officiel": "https://www.hoka.com/fr/fr/trail-hommes/rocket-x-trail/1176330.html",
     "source": "Site officiel hoka.com (boutique France), fiche Rocket X Trail homme, consultée le 21/10/2026. Drop 6 mm, poids 268 g (pointure non précisée). Prix public 225 €. Type neutre : Hoka la classe « Neutre » dans sa liste. Amorti, dynamisme et usage : propositions d'après les mots de Hoka.",
+    "verifie": true
+  },
+  {
+    "id": "asics-gel-cumulus-28",
+    "exemple": false,
+    "marque": "Asics",
+    "modele": "Gel-Cumulus 28",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 3,
+    "drop_mm": 8,
+    "poids_g": 259,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 150,
+      "max": 150
+    },
+    "lien_officiel": "https://www.asics.com/fr/fr-fr/gel-cumulus--28/p/1011C143-002.html",
+    "source": "Site officiel Asics (France), fiche Gel-Cumulus 28 homme, consultée le 21/10/2026. Drop 8 mm, poids 259 g (non indiquée sur la page). Prix asics.com/fr : 150 €. Version WIDE vue sur un site officiel Asics (hors France). Version femme : https://www.asics.com/fr/fr-fr/gel-cumulus--28/p/1012B916-100.html. Type, amorti, dynamisme et usage : propositions d'après les mots d'Asics.",
+    "verifie": true
+  },
+  {
+    "id": "asics-gel-pulse-17",
+    "exemple": false,
+    "marque": "Asics",
+    "modele": "Gel-Pulse 17",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 2,
+    "drop_mm": 8,
+    "poids_g": 271,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "10km"
+    ],
+    "prix": {
+      "min": 110,
+      "max": 110
+    },
+    "lien_officiel": "https://www.asics.com/fr/fr-fr/gel-pulse-17/p/1011C153-001.html",
+    "source": "Site officiel Asics (France), fiche Gel-Pulse 17 homme, consultée le 21/10/2026. Drop 8 mm, poids 271 g (non indiquée sur la page). Prix asics.com/fr : 110 €. Version WIDE vue sur un site officiel Asics (hors France). Version femme : https://www.asics.com/fr/fr-fr/gel-pulse--17/p/1012B930-400.html. Type, amorti, dynamisme et usage : propositions d'après les mots d'Asics.",
+    "verifie": true
+  },
+  {
+    "id": "asics-gt-1000-15",
+    "exemple": false,
+    "marque": "Asics",
+    "modele": "GT-1000 15",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "stable",
+    "amorti": 3,
+    "dynamisme": 2,
+    "drop_mm": 8,
+    "poids_g": 278,
+    "largeur_disponible": [
+      "normale",
+      "large"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 130,
+      "max": 130
+    },
+    "lien_officiel": "https://www.asics.com/fr/fr-fr/gt-1000-15/p/1011C230-002.html",
+    "source": "Site officiel Asics (France), fiche GT-1000 15 homme, consultée le 21/10/2026. Drop 8 mm, poids 278 g (non indiquée sur la page). Prix asics.com/fr : 130 €. Version WIDE vue sur un site officiel Asics (hors France). Version femme : https://www.asics.com/fr/fr-fr/gt-1000-15/p/1012B994-002.html. Type, amorti, dynamisme et usage : propositions d'après les mots d'Asics (la page France indique « Soutien Neutre », mais Asics la range dans sa collection stabilité avec le 3D GUIDANCE SYSTEM).",
+    "verifie": true
+  },
+  {
+    "id": "asics-superblast-3",
+    "exemple": false,
+    "marque": "Asics",
+    "modele": "Superblast 3",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "unisexe": true,
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 5,
+    "dynamisme": 4,
+    "drop_mm": 8,
+    "poids_g": 239,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 220,
+      "max": 220
+    },
+    "lien_officiel": "https://www.asics.com/fr/fr-fr/superblast--3/p/1013A177-400.html",
+    "source": "Site officiel Asics (France), fiche Superblast 3 (unisexe), consultée le 21/10/2026. Drop 8 mm, poids 239 g (non indiquée sur la page (modèle unisexe)). Prix asics.com/fr : 220 €. Type, amorti, dynamisme et usage : propositions d'après les mots d'Asics.",
+    "verifie": true
+  },
+  {
+    "id": "asics-magic-speed-5",
+    "exemple": false,
+    "marque": "Asics",
+    "modele": "Magic Speed 5",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "unisexe": true,
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 5,
+    "drop_mm": 7,
+    "poids_g": 196,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 190,
+      "max": 190
+    },
+    "lien_officiel": "https://www.asics.com/fr/fr-fr/magic-speed-5/p/1013A183-300.html",
+    "source": "Site officiel Asics (France), fiche Magic Speed 5 (unisexe), consultée le 21/10/2026. Drop 7 mm, poids 196 g (non indiquée sur la page (modèle unisexe)). Prix asics.com/fr : 190 € (promo à 133 € vue sur un coloris). Type, amorti, dynamisme et usage : propositions d'après les mots d'Asics.",
+    "verifie": true
+  },
+  {
+    "id": "asics-metaspeed-sky-tokyo",
+    "exemple": false,
+    "marque": "Asics",
+    "modele": "Metaspeed Sky Tokyo",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "unisexe": true,
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 5,
+    "drop_mm": 5,
+    "poids_g": 170,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 270,
+      "max": 270
+    },
+    "lien_officiel": "https://www.asics.com/fr/fr-fr/metaspeed-sky-tokyo/p/1013A162-600.html",
+    "source": "Site officiel Asics (France), fiche Metaspeed Sky Tokyo (unisexe), consultée le 21/10/2026. Drop 5 mm, poids 170 g (US 9 homme (blog asics us)). Prix asics.com/fr : 270 €. Type, amorti, dynamisme et usage : propositions d'après les mots d'Asics.",
+    "verifie": true
+  },
+  {
+    "id": "asics-gel-sonoma-8",
+    "exemple": false,
+    "marque": "Asics",
+    "modele": "Gel-Sonoma 8",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 2,
+    "drop_mm": 8,
+    "poids_g": 300,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km"
+    ],
+    "prix": {
+      "min": 100,
+      "max": 100
+    },
+    "lien_officiel": "https://www.asics.com/fr/fr-fr/gel-sonoma-8/p/1011B979-020.html",
+    "source": "Site officiel Asics (France), fiche Gel-Sonoma 8 homme, consultée le 21/10/2026. Drop 8 mm, poids 300 g (non indiquée sur la page). Prix asics.com/fr : 100 €. Version femme : https://www.asics.com/fr/fr-fr/gel-sonoma-8/p/1012B771-700.html. Type, amorti, dynamisme et usage : propositions d'après les mots d'Asics.",
+    "verifie": true
+  },
+  {
+    "id": "asics-trabuco-14",
+    "exemple": false,
+    "marque": "Asics",
+    "modele": "Trabuco 14",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 2,
+    "drop_mm": 8,
+    "poids_g": 281,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon",
+      "ultra"
+    ],
+    "prix": {
+      "min": 160,
+      "max": 160
+    },
+    "lien_officiel": "https://www.asics.com/fr/fr-fr/trabuco--14/p/1011C166-001.html",
+    "source": "Site officiel Asics (France), fiche Trabuco 14 homme, consultée le 21/10/2026. Drop 8 mm, poids 281 g (non indiquée sur la page). Prix asics.com/fr : 160 € (promo à 112 € vue sur un coloris). Version femme : https://www.asics.com/fr/fr-fr/trabuco--14/p/1012B938-800.html. Type, amorti, dynamisme et usage : propositions d'après les mots d'Asics.",
+    "verifie": true
+  },
+  {
+    "id": "asics-fuji-lite-7",
+    "exemple": false,
+    "marque": "Asics",
+    "modele": "Fuji Lite 7",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "unisexe": true,
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 2,
+    "dynamisme": 4,
+    "drop_mm": 4,
+    "poids_g": 241,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 140,
+      "max": 140
+    },
+    "lien_officiel": "https://www.asics.com/fr/fr-fr/fuji-lite-7/p/1013A232-700.html",
+    "source": "Site officiel Asics (France), fiche Fuji Lite 7 (unisexe), consultée le 21/10/2026. Drop 4 mm, poids 241 g (non indiquée sur la page (modèle unisexe)). Prix asics.com/fr : 140 €. Type, amorti, dynamisme et usage : propositions d'après les mots d'Asics.",
+    "verifie": true
+  },
+  {
+    "id": "asics-metafuji-trail-2",
+    "exemple": false,
+    "marque": "Asics",
+    "modele": "Metafuji Trail 2",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "unisexe": true,
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 5,
+    "drop_mm": 5,
+    "poids_g": 255,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "semi",
+      "marathon",
+      "ultra"
+    ],
+    "prix": {
+      "min": 250,
+      "max": 250
+    },
+    "lien_officiel": "https://www.asics.com/fr/fr-fr/metafuji-trail-2/p/1013A178-750.html",
+    "source": "Site officiel Asics (États-Unis pour le drop et le poids, France pour le prix), fiche Metafuji Trail 2 (unisexe), consultée le 21/10/2026. Drop 5 mm, poids 255 g (non indiquée (modèle unisexe)). Prix asics.com/fr : 250 €. Type, amorti, dynamisme et usage : propositions d'après les mots d'Asics.",
     "verifie": true
   }
 ]
