@@ -4996,5 +4996,369 @@
     "lien_officiel": "https://www.asics.com/fr/fr-fr/metafuji-trail-2/p/1013A178-750.html",
     "source": "Site officiel Asics (États-Unis pour le drop et le poids, France pour le prix), fiche Metafuji Trail 2 (unisexe), consultée le 21/10/2026. Drop 5 mm, poids 255 g (non indiquée (modèle unisexe)). Prix asics.com/fr : 250 €. Type, amorti, dynamisme et usage : propositions d'après les mots d'Asics.",
     "verifie": true
+  },
+  {
+    "id": "puma-velocity-nitro-5",
+    "exemple": false,
+    "marque": "Puma",
+    "modele": "Velocity NITRO 5",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 3,
+    "drop_mm": 8,
+    "poids_g": 242,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 130,
+      "max": 130
+    },
+    "lien_officiel": "https://eu.puma.com/fr/fr/pd/chaussures-de-running-velocity-nitro-5-homme/312944",
+    "source": "Site officiel Puma (eu.puma.com, France), fiche Velocity NITRO 5 homme, consultée le 23/10/2026. Drop 8 mm. Poids 242 g (US 9 homme (mesure labo RTINGS)) : mesure du laboratoire RTINGS, Puma ne l'indique pas. Prix public 130 €. Version femme : https://eu.puma.com/fr/fr/pd/chaussure-de-running-velocity-nitro-5-femme/312945. Type, amorti, dynamisme et usage : propositions d'après les mots de Puma.",
+    "verifie": true
+  },
+  {
+    "id": "puma-magmax-nitro-2",
+    "exemple": false,
+    "marque": "Puma",
+    "modele": "MagMax NITRO 2",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 5,
+    "dynamisme": 3,
+    "drop_mm": 8,
+    "poids_g": 275,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 190,
+      "max": 190
+    },
+    "lien_officiel": "https://eu.puma.com/fr/fr/pd/chaussures-de-running-magmax-nitro-2-homme/312125",
+    "source": "Site officiel Puma (eu.puma.com, France), fiche MagMax NITRO 2 homme, consultée le 23/10/2026. Drop 8 mm. Poids 275 g (EU 42). Prix public 190 €. Version femme : https://eu.puma.com/fr/fr/pd/chaussures-de-running-magmax-nitro-2-femme/312126. Type, amorti, dynamisme et usage : propositions d'après les mots de Puma.",
+    "verifie": true
+  },
+  {
+    "id": "puma-foreverrun-nitro-3",
+    "exemple": false,
+    "marque": "Puma",
+    "modele": "ForeverRun NITRO 3",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "stable",
+    "amorti": 3,
+    "dynamisme": 2,
+    "drop_mm": 8,
+    "poids_g": 290,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 160,
+      "max": 160
+    },
+    "lien_officiel": "https://eu.puma.com/fr/fr/pd/chaussures-de-running-foreverrun-nitro-3-homme/312942",
+    "source": "Site officiel Puma (eu.puma.com, France), fiche ForeverRun NITRO 3 homme, consultée le 23/10/2026. Drop 8 mm. Poids 290 g (pointure non précisée). Prix public 160 €. Version femme : https://eu.puma.com/fr/fr/pd/chaussures-de-running-foreverrun-nitro-3-femme/312943. Type, amorti, dynamisme et usage : propositions d'après les mots de Puma.",
+    "verifie": true
+  },
+  {
+    "id": "puma-deviate-nitro-4",
+    "exemple": false,
+    "marque": "Puma",
+    "modele": "Deviate NITRO 4",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 4,
+    "drop_mm": 8,
+    "poids_g": 250,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 170,
+      "max": 170
+    },
+    "lien_officiel": "https://eu.puma.com/fr/fr/pd/chaussures-de-running-deviate-nitro-4-homme/312123",
+    "source": "Site officiel Puma (eu.puma.com, France), fiche Deviate NITRO 4 homme, consultée le 23/10/2026. Drop 8 mm. Poids 250 g (EU 42). Prix public 170 €. Version femme : https://eu.puma.com/fr/fr/pd/chaussures-de-running-deviate-nitro-4-femme/312124. Type, amorti, dynamisme et usage : propositions d'après les mots de Puma.",
+    "verifie": true
+  },
+  {
+    "id": "puma-deviate-pure-nitro",
+    "exemple": false,
+    "marque": "Puma",
+    "modele": "Deviate Pure NITRO",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 4,
+    "drop_mm": 8,
+    "poids_g": 220,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 150,
+      "max": 150
+    },
+    "lien_officiel": "https://eu.puma.com/fr/fr/pd/chaussures-de-running-deviate-pure-nitro-homme/313904",
+    "source": "Site officiel Puma (eu.puma.com, France), fiche Deviate Pure NITRO homme, consultée le 23/10/2026. Drop 8 mm. Poids 220 g (UK 8). Prix public 150 €. Version femme : https://eu.puma.com/fr/fr/pd/chaussures-de-running-deviate-pure-nitro-femme/313905. Type, amorti, dynamisme et usage : propositions d'après les mots de Puma.",
+    "verifie": true
+  },
+  {
+    "id": "puma-fast-fwd-nitro-2-elite",
+    "exemple": false,
+    "marque": "Puma",
+    "modele": "Fast-FWD NITRO 2 Elite",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 2,
+    "dynamisme": 5,
+    "drop_mm": 8,
+    "poids_g": 127,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km"
+    ],
+    "prix": {
+      "min": 200,
+      "max": 200
+    },
+    "lien_officiel": "https://eu.puma.com/fr/fr/pd/chaussures-de-running-fast-fwd-nitro-2-elite-homme/313692",
+    "source": "Site officiel Puma (eu.puma.com, France), fiche Fast-FWD NITRO 2 Elite homme, consultée le 23/10/2026. Drop 8 mm. Poids 127 g (US 9 homme (mesure labo RTINGS)) : mesure du laboratoire RTINGS, Puma ne l'indique pas. Prix public 200 €. Version femme : https://eu.puma.com/fr/fr/pd/chaussures-de-running-fast-fwd-nitro-2-elite-femme/313693. Type, amorti, dynamisme et usage : propositions d'après les mots de Puma.",
+    "verifie": true
+  },
+  {
+    "id": "puma-deviate-nitro-elite-4",
+    "exemple": false,
+    "marque": "Puma",
+    "modele": "Deviate NITRO Elite 4",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "route"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 5,
+    "drop_mm": 8,
+    "poids_g": 170,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 250,
+      "max": 250
+    },
+    "lien_officiel": "https://eu.puma.com/fr/fr/pd/chaussures-de-running-deviate-nitro-elite-4-homme/312127",
+    "source": "Site officiel Puma (eu.puma.com, France), fiche Deviate NITRO Elite 4 homme, consultée le 23/10/2026. Drop 8 mm. Poids 170 g (EU 42). Prix public 250 €. Version femme : https://eu.puma.com/fr/fr/pd/chaussures-de-running-deviate-nitro-elite-4-femme/312128. Type, amorti, dynamisme et usage : propositions d'après les mots de Puma.",
+    "verifie": true
+  },
+  {
+    "id": "puma-velocity-nitro-trail",
+    "exemple": false,
+    "marque": "Puma",
+    "modele": "Velocity NITRO Trail",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 3,
+    "drop_mm": 8,
+    "poids_g": 255,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 140,
+      "max": 140
+    },
+    "lien_officiel": "https://eu.puma.com/fr/fr/pd/chaussures-de-trail-velocity-nitro-homme/312950",
+    "source": "Site officiel Puma (eu.puma.com, France), fiche Velocity NITRO Trail homme, consultée le 23/10/2026. Drop 8 mm. Poids 255 g (EU 42). Prix public 140 €. Version femme : https://eu.puma.com/fr/fr/pd/chaussures-de-trail-velocity-nitro-femme/312951. Type, amorti, dynamisme et usage : propositions d'après les mots de Puma.",
+    "verifie": true
+  },
+  {
+    "id": "puma-fast-trac-nitro-4",
+    "exemple": false,
+    "marque": "Puma",
+    "modele": "FAST-Trac NITRO 4",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 3,
+    "dynamisme": 3,
+    "drop_mm": 6,
+    "poids_g": 286,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "10km",
+      "semi"
+    ],
+    "prix": {
+      "min": 140,
+      "max": 140
+    },
+    "lien_officiel": "https://eu.puma.com/fr/fr/pd/chaussures-de-trail-fast-trac-nitro-4-homme/312134",
+    "source": "Site officiel Puma (eu.puma.com, France), fiche FAST-Trac NITRO 4 homme, consultée le 23/10/2026. Drop 6 mm. Poids 286 g (EU 42). Prix public 140 € (promo à 98 € vue sur un coloris). La page Puma affiche à la fois 6 mm et 12 mm : 6 mm retenu, cohérent avec la hauteur 32/26 mm et le tableau comparatif. Version femme : https://eu.puma.com/fr/fr/pd/chaussures-de-trail-fast-trac-nitro-4-femme/312135. Type, amorti, dynamisme et usage : propositions d'après les mots de Puma.",
+    "verifie": true
+  },
+  {
+    "id": "puma-voyage-nitro-4",
+    "exemple": false,
+    "marque": "Puma",
+    "modele": "Voyage NITRO 4",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 2,
+    "drop_mm": 6,
+    "poids_g": 290,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "plaisir",
+      "semi",
+      "marathon",
+      "ultra"
+    ],
+    "prix": {
+      "min": 150,
+      "max": 150
+    },
+    "lien_officiel": "https://eu.puma.com/fr/fr/pd/chaussures-de-running-voyage-nitro-4-homme/311041",
+    "source": "Site officiel Puma (eu.puma.com, France), fiche Voyage NITRO 4 homme, consultée le 23/10/2026. Drop 6 mm. Poids 290 g (EU 42). Prix public 150 € (promo à 105 € vue sur un coloris). Version femme : https://eu.puma.com/fr/fr/pd/chaussures-de-trail-voyage-nitro-4-femme/311042. Type, amorti, dynamisme et usage : propositions d'après les mots de Puma.",
+    "verifie": true
+  },
+  {
+    "id": "puma-deviate-nitro-elite-trail",
+    "exemple": false,
+    "marque": "Puma",
+    "modele": "Deviate NITRO Elite Trail",
+    "sexe": [
+      "homme",
+      "femme"
+    ],
+    "terrain": [
+      "trail"
+    ],
+    "type": "neutre",
+    "amorti": 4,
+    "dynamisme": 5,
+    "drop_mm": 6,
+    "poids_g": 265,
+    "largeur_disponible": [
+      "normale"
+    ],
+    "usage": [
+      "10km",
+      "semi",
+      "marathon"
+    ],
+    "prix": {
+      "min": 230,
+      "max": 230
+    },
+    "lien_officiel": "https://eu.puma.com/fr/fr/pd/chaussures-de-trail-deviate-nitro-elite-homme/310034",
+    "source": "Site officiel Puma (eu.puma.com, France), fiche Deviate NITRO Elite Trail homme, consultée le 23/10/2026. Drop 6 mm. Poids 265 g (EU 42). Prix public 230 €. Le tableau comparatif indique 8 mm, mais la fiche technique et la hauteur 35/29 mm donnent 6 mm. Version femme : https://eu.puma.com/fr/fr/pd/chaussures-de-trail-deviate-nitro-elite-femme/310468. Type, amorti, dynamisme et usage : propositions d'après les mots de Puma.",
+    "verifie": true
   }
 ]
