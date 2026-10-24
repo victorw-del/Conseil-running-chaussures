@@ -2,7 +2,7 @@
    RESULTATS.JS : LA PAGE DES RÉSULTATS (page resultats.html)
    1. On relit les réponses dans l'adresse de la page.
    2. On calcule le top 5 avec les fonctions de recommandation.js.
-   3. On affiche une grande carte par chaussure.
+   3. On affiche une carte par chaussure.
    ========================================================= */
 
 
@@ -77,7 +77,43 @@ function listeHTML(phrases) {
 }
 
 
-/* ---------- 5. Fabriquer la grande carte d'une chaussure ---------- */
+/* ---------- 5. Les petits morceaux d'une carte ---------- */
+
+// Une jauge de 5 cases, dont "note" cases colorées. Exemple : jauge("Amorti", 3).
+// role="img" et aria-label : un lecteur d'écran lit « Amorti : 3 sur 5 ».
+function jauge(nom, note) {
+  let cases = "";
+  for (let i = 1; i <= 5; i++) {
+    cases += `<span class="${i <= note ? "case pleine" : "case"}"></span>`;
+  }
+  return `
+    <div class="jauge">
+      <span class="jauge-nom">${nom}</span>
+      <span class="jauge-cases" role="img" aria-label="${nom} : ${note} sur 5">${cases}</span>
+      <span class="jauge-note">${note}/5</span>
+    </div>`;
+}
+
+// Les pastilles sous le nom : terrain(s), type et modèle unisexe.
+const nomsTerrain = { route: "Route", trail: "Trail", mixte: "Mixte" };
+
+function pastilles(c) {
+  const liste = c.terrain.map(function (terrain) {
+    return `<span class="pastille pastille-${terrain}">${nomsTerrain[terrain]}</span>`;
+  });
+  if (c.type === "stable") {
+    liste.push(`<span class="pastille pastille-stable">Stable</span>`);
+  } else {
+    liste.push(`<span class="pastille">Neutre</span>`);
+  }
+  if (c.unisexe) {
+    liste.push(`<span class="pastille">Unisexe</span>`);
+  }
+  return liste.join("");
+}
+
+
+/* ---------- 6. Fabriquer la carte d'une chaussure ---------- */
 function carteChaussure(resultat, position, reponses) {
   const c = resultat.chaussure;
 
@@ -90,12 +126,10 @@ function carteChaussure(resultat, position, reponses) {
     "Une dernière piste intéressante."
   ];
 
-  // L'image si la chaussure en a une, sinon un visuel de remplacement avec un emoji.
-  let visuel;
+  // La photo, seulement si la chaussure en a une.
+  let photo = "";
   if (c.image) {
-    visuel = `<img class="photo-chaussure" src="${c.image}" alt="${c.marque} ${c.modele}" loading="lazy">`;
-  } else {
-    visuel = `<div class="visuel-vide" aria-hidden="true">👟</div>`;
+    photo = `<img class="photo-chaussure" src="${c.image}" alt="${c.marque} ${c.modele}" loading="lazy">`;
   }
 
   // Le lien vers la fiche officielle, seulement s'il est renseigné.
@@ -125,39 +159,47 @@ function carteChaussure(resultat, position, reponses) {
   // La première carte reçoit une classe en plus pour être mise en avant.
   const classePremiere = position === 0 ? " carte-premiere" : "";
 
+  // style="--i: ..." donne au CSS la position de la carte :
+  // il s'en sert pour faire apparaître les cartes l'une après l'autre.
   return `
-    <article class="carte-resultat${classePremiere}">
-      <div class="carte-visuel">
-        ${visuel}
+    <article class="carte-resultat${classePremiere}" style="--i: ${position}">
+      <div class="carte-entete">
         <span class="rang">${position + 1}</span>
+        <div class="carte-nom">
+          <p class="marque">${c.marque}</p>
+          <h2>${c.modele}</h2>
+        </div>
+        <p class="prix">${prix}</p>
+      </div>
+      ${photo}
+
+      <div class="pastilles">
+        <span class="score-badge">${resultat.score} % de correspondance</span>
+        ${pastilles(c)}
       </div>
 
-      <div class="carte-contenu">
-        <p class="marque">${c.marque}</p>
-        <h2>${c.modele}</h2>
-        <p class="score-badge">${resultat.score} % de correspondance</p>
+      <p class="intro">${introductions[position]}</p>
 
-        <p class="intro">${introductions[position]}</p>
-
-        <h4>Pourquoi elle te correspond</h4>
-        <ul class="raisons">${listeHTML(resultat.raisons)}</ul>
-        ${blocAlertes}
-
-        <dl class="caracteristiques">
-          <div><dt>Type</dt><dd>${c.type === "stable" ? "Stable" : "Neutre"}</dd></div>
-          <div><dt>Amorti</dt><dd>${c.amorti} / 5</dd></div>
-          <div><dt>Drop</dt><dd>${c.drop_mm} mm</dd></div>
-          <div><dt>Poids</dt><dd>${c.poids_g} g</dd></div>
-          <div><dt>Prix</dt><dd>${prix}</dd></div>
-        </dl>
-        ${noteModele}
-        ${lien}
+      <div class="jauges">
+        ${jauge("Amorti", c.amorti)}
+        ${jauge("Dynamisme", c.dynamisme)}
       </div>
+
+      <dl class="caracteristiques">
+        <div><dt>Drop</dt><dd>${c.drop_mm} mm</dd></div>
+        <div><dt>Poids</dt><dd>${c.poids_g} g</dd></div>
+      </dl>
+
+      <h4>Pourquoi elle te correspond</h4>
+      <ul class="raisons">${listeHTML(resultat.raisons)}</ul>
+      ${blocAlertes}
+      ${noteModele}
+      ${lien}
     </article>`;
 }
 
 
-/* ---------- 6. Afficher la page ---------- */
+/* ---------- 7. Afficher la page ---------- */
 async function afficherPage() {
   const reponses = lireReponses();
 
@@ -217,5 +259,5 @@ async function afficherPage() {
 }
 
 
-/* ---------- 7. Démarrage ---------- */
+/* ---------- 8. Démarrage ---------- */
 afficherPage();
