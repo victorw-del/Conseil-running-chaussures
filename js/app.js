@@ -5,6 +5,7 @@
    Ici, on s'occupe seulement :
    - d'afficher la suite du questionnaire une fois le sexe choisi ;
    - d'adapter les tranches de poids au parcours homme ou femme ;
+   - de remplir la barre de progression au fil des réponses ;
    - d'envoyer les réponses vers la page des résultats.
    ========================================================= */
 
@@ -14,6 +15,9 @@ const formulaire = document.getElementById("formulaire");
 const suiteQuestions = document.getElementById("suite-questions");
 const listePoids = document.getElementById("poids");
 const boutonsSexe = document.querySelectorAll('input[name="sexe"]');
+const progression = document.getElementById("progression");
+const progressionTexte = document.getElementById("progression-texte");
+const progressionBarre = document.getElementById("progression-barre");
 
 
 /* ---------- 2. Les tranches de poids de chaque parcours ----------
@@ -44,8 +48,11 @@ function preparerParcours(sexe) {
   }).join("");
   listePoids.innerHTML = `<option value="">Choisis une réponse</option>` + options;
 
-  // On affiche la suite des questions. L'attribut "hidden" les cachait jusqu'ici.
+  // On affiche la suite des questions et la barre de progression.
+  // L'attribut "hidden" les cachait jusqu'ici.
   suiteQuestions.hidden = false;
+  progression.hidden = false;
+  mettreAJourProgression();
 }
 
 // À chaque clic sur "Homme" ou "Femme", on prépare le parcours correspondant.
@@ -55,14 +62,30 @@ boutonsSexe.forEach(function (bouton) {
   });
 });
 
-// Si le navigateur a gardé les réponses (bouton "Retour"), on réaffiche tout de suite la suite.
-const sexeDejaCoche = document.querySelector('input[name="sexe"]:checked');
-if (sexeDejaCoche) {
-  preparerParcours(sexeDejaCoche.value);
+
+/* ---------- 4. La barre de progression ----------
+   On compte les questions obligatoires qui ont déjà une réponse.
+   La question sur les blessures est facultative : elle n'est pas comptée. */
+const questionsObligatoires = ["sexe", "niveau", "km", "objectif", "terrain", "poids", "foulee", "sensation", "largeur", "budget"];
+
+function mettreAJourProgression() {
+  const donnees = new FormData(formulaire);
+  // filter() garde seulement les questions dont la réponse n'est pas vide.
+  const repondues = questionsObligatoires.filter(function (question) {
+    return donnees.get(question);
+  }).length;
+  const total = questionsObligatoires.length;
+
+  progressionTexte.textContent = `${repondues} réponse${repondues > 1 ? "s" : ""} sur ${total}`;
+  // La largeur de la barre orange suit le pourcentage de réponses.
+  progressionBarre.style.width = `${(repondues / total) * 100}%`;
 }
 
+// "change" se déclenche à chaque réponse cochée ou choisie dans une liste.
+formulaire.addEventListener("change", mettreAJourProgression);
 
-/* ---------- 4. Réagir au clic sur "Voir mes chaussures" ----------
+
+/* ---------- 5. Réagir au clic sur "Voir mes chaussures" ----------
    Au lieu d'afficher les résultats ici, on part vers resultats.html en emportant
    les réponses dans l'adresse de la page. Exemple :
    resultats.html?sexe=femme&niveau=debutant&km=15a30...
@@ -73,3 +96,12 @@ formulaire.addEventListener("submit", function (evenement) {
   const reponses = new URLSearchParams(new FormData(formulaire));
   window.location.href = "resultats.html?" + reponses.toString();
 });
+
+
+/* ---------- 6. Retour sur la page ----------
+   Si le navigateur a gardé les réponses (bouton "Retour"), on réaffiche tout de suite la suite.
+   Ce bloc est à la fin pour que tout ce qu'il utilise soit déjà défini plus haut. */
+const sexeDejaCoche = document.querySelector('input[name="sexe"]:checked');
+if (sexeDejaCoche) {
+  preparerParcours(sexeDejaCoche.value);
+}

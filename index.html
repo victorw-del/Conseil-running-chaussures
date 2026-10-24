@@ -6,19 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trouver la bonne paire de chaussures</title>
     <meta name="description" content="Réponds à quelques questions (niveau, foulée, terrain, poids…) et découvre les 5 chaussures de running qui te correspondent, expliquées comme par un vendeur spécialisé.">
+    <!-- Indique au navigateur que le site existe en version claire ET sombre. -->
+    <meta name="color-scheme" content="light dark">
         <!-- L'icône de l'onglet (favicon). Ici, un emoji chaussure dessiné en SVG directement dans le lien :
          pas besoin de fichier image. -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👟</text></svg>">
+    <!-- La police des titres, "Outfit", vient de Google Fonts (gratuite).
+         Les deux "preconnect" font gagner un peu de temps au chargement. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&display=swap">
     <!-- Relie la page à sa feuille de style. href = le chemin du fichier CSS. -->
         <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
 
-    <!-- ===================== EN-TÊTE ===================== -->
+    <!-- ===================== EN-TÊTE : L'ACCUEIL =====================
+         Un grand bandeau orange qui présente le site en 3 étapes. -->
     <header>
-      <h1>Trouver la bonne paire de chaussures</h1>
-      <p>Réponds à quelques questions, comme avec un vendeur en magasin, et découvre les 5 chaussures les plus adaptées à ta façon de courir.</p>
+      <div class="accueil">
+        <p class="accueil-emoji" aria-hidden="true">👟</p>
+        <h1>Trouver la bonne paire de chaussures</h1>
+        <p class="accueil-texte">Réponds à quelques questions, comme avec un vendeur en magasin, et découvre les 5 chaussures les plus adaptées à ta façon de courir.</p>
+
+        <!-- <ol> = liste numérotée : les 3 étapes du site. -->
+        <ol class="etapes">
+          <li><span class="etape-numero">1</span> Réponds</li>
+          <li><span class="etape-numero">2</span> Compare</li>
+          <li><span class="etape-numero">3</span> Choisis</li>
+        </ol>
+
+        <!-- Un lien vers la première question, habillé en bouton. -->
+        <a class="bouton-commencer" href="#questionnaire">Commencer</a>
+      </div>
     </header>
 
     <!-- ===================== CONTENU PRINCIPAL ===================== -->
@@ -28,20 +49,39 @@
       <section id="questionnaire">
         <h2>Ton profil de coureur</h2>
 
+        <!-- La barre de progression. Elle reste collée en haut de l'écran pendant
+             qu'on descend, et app.js la remplit au fur et à mesure des réponses.
+             "hidden" la cache tant que le sexe n'est pas choisi. -->
+        <div id="progression" class="progression" hidden>
+          <p id="progression-texte">1 réponse sur 10</p>
+          <div class="progression-fond">
+            <div id="progression-barre" class="progression-barre"></div>
+          </div>
+        </div>
+
         <!-- <form> regroupe toutes les questions.
-             id="formulaire" permettra au JavaScript de le retrouver. -->
+             id="formulaire" permettra au JavaScript de le retrouver.
+             Chaque réponse est rangée dans un <div class="choix"> : le CSS en fait
+             une grande case cliquable. -->
         <form id="formulaire">
 
           <!-- ----- Question 1 : le sexe -----
                C'est elle qui choisit le parcours (homme ou femme) : la suite du questionnaire
                reste cachée tant qu'on n'a pas répondu, et seules les chaussures du bon
-               modèle (homme ou femme) seront proposées. -->
+               modèle (homme ou femme) seront proposées.
+               La classe "choix-deux" place les deux réponses côte à côte. -->
           <fieldset>
             <legend>1. Vous êtes :</legend>
-            <input type="radio" id="sexe-homme" name="sexe" value="homme" required>
-            <label for="sexe-homme">Homme</label><br>
-            <input type="radio" id="sexe-femme" name="sexe" value="femme">
-            <label for="sexe-femme">Femme</label>
+            <div class="choix-deux">
+            <div class="choix">
+              <input type="radio" id="sexe-homme" name="sexe" value="homme" required>
+              <label for="sexe-homme"><span class="icone" aria-hidden="true">🏃‍♂️</span>Homme</label>
+            </div>
+            <div class="choix">
+              <input type="radio" id="sexe-femme" name="sexe" value="femme">
+              <label for="sexe-femme"><span class="icone" aria-hidden="true">🏃‍♀️</span>Femme</label>
+            </div>
+            </div>
           </fieldset>
 
           <!-- La suite des questions. "hidden" la cache au départ :
@@ -53,12 +93,18 @@
                "required" sur le premier oblige à répondre avant d'envoyer. -->
           <fieldset>
             <legend>2. Quel est ton niveau ?</legend>
-            <input type="radio" id="niveau-debutant" name="niveau" value="debutant" required>
-            <label for="niveau-debutant">Débutant (moins d'un an de course)</label><br>
-            <input type="radio" id="niveau-intermediaire" name="niveau" value="intermediaire">
-            <label for="niveau-intermediaire">Intermédiaire (je cours régulièrement)</label><br>
-            <input type="radio" id="niveau-confirme" name="niveau" value="confirme">
-            <label for="niveau-confirme">Confirmé (je m'entraîne avec des objectifs de temps)</label>
+            <div class="choix">
+              <input type="radio" id="niveau-debutant" name="niveau" value="debutant" required>
+              <label for="niveau-debutant"><span class="icone" aria-hidden="true">🌱</span>Débutant (moins d'un an de course)</label>
+            </div>
+            <div class="choix">
+              <input type="radio" id="niveau-intermediaire" name="niveau" value="intermediaire">
+              <label for="niveau-intermediaire"><span class="icone" aria-hidden="true">🏃</span>Intermédiaire (je cours régulièrement)</label>
+            </div>
+            <div class="choix">
+              <input type="radio" id="niveau-confirme" name="niveau" value="confirme">
+              <label for="niveau-confirme"><span class="icone" aria-hidden="true">🏆</span>Confirmé (je m'entraîne avec des objectifs de temps)</label>
+            </div>
           </fieldset>
 
           <!-- ----- Question 3 : le kilométrage -----
@@ -79,27 +125,43 @@
           <!-- ----- Question 4 : l'objectif ----- -->
           <fieldset>
             <legend>4. Quel est ton objectif principal ?</legend>
-            <input type="radio" id="objectif-plaisir" name="objectif" value="plaisir" required>
-            <label for="objectif-plaisir">Courir pour le plaisir et la forme</label><br>
-            <input type="radio" id="objectif-10km" name="objectif" value="10km">
-            <label for="objectif-10km">Courses de 5 à 10 km</label><br>
-            <input type="radio" id="objectif-semi" name="objectif" value="semi">
-            <label for="objectif-semi">Semi-marathon</label><br>
-            <input type="radio" id="objectif-marathon" name="objectif" value="marathon">
-            <label for="objectif-marathon">Marathon</label><br>
-            <input type="radio" id="objectif-ultra" name="objectif" value="ultra">
-            <label for="objectif-ultra">Trail long ou ultra</label>
+            <div class="choix">
+              <input type="radio" id="objectif-plaisir" name="objectif" value="plaisir" required>
+              <label for="objectif-plaisir"><span class="icone" aria-hidden="true">😊</span>Courir pour le plaisir et la forme</label>
+            </div>
+            <div class="choix">
+              <input type="radio" id="objectif-10km" name="objectif" value="10km">
+              <label for="objectif-10km"><span class="icone" aria-hidden="true">⏱️</span>Courses de 5 à 10 km</label>
+            </div>
+            <div class="choix">
+              <input type="radio" id="objectif-semi" name="objectif" value="semi">
+              <label for="objectif-semi"><span class="icone" aria-hidden="true">🏅</span>Semi-marathon</label>
+            </div>
+            <div class="choix">
+              <input type="radio" id="objectif-marathon" name="objectif" value="marathon">
+              <label for="objectif-marathon"><span class="icone" aria-hidden="true">🏁</span>Marathon</label>
+            </div>
+            <div class="choix">
+              <input type="radio" id="objectif-ultra" name="objectif" value="ultra">
+              <label for="objectif-ultra"><span class="icone" aria-hidden="true">⛰️</span>Trail long ou ultra</label>
+            </div>
           </fieldset>
 
           <!-- ----- Question 5 : le terrain ----- -->
           <fieldset>
             <legend>5. Sur quel terrain cours-tu le plus ?</legend>
-            <input type="radio" id="terrain-route" name="terrain" value="route" required>
-            <label for="terrain-route">Route, trottoirs, piste</label><br>
-            <input type="radio" id="terrain-trail" name="terrain" value="trail">
-            <label for="terrain-trail">Trail : sentiers, montagne, boue</label><br>
-            <input type="radio" id="terrain-mixte" name="terrain" value="mixte">
-            <label for="terrain-mixte">Mixte : un peu des deux, chemins de parc</label>
+            <div class="choix">
+              <input type="radio" id="terrain-route" name="terrain" value="route" required>
+              <label for="terrain-route"><span class="icone" aria-hidden="true">🛣️</span>Route, trottoirs, piste</label>
+            </div>
+            <div class="choix">
+              <input type="radio" id="terrain-trail" name="terrain" value="trail">
+              <label for="terrain-trail"><span class="icone" aria-hidden="true">🌲</span>Trail : sentiers, montagne, boue</label>
+            </div>
+            <div class="choix">
+              <input type="radio" id="terrain-mixte" name="terrain" value="mixte">
+              <label for="terrain-mixte"><span class="icone" aria-hidden="true">🌳</span>Mixte : un peu des deux, chemins de parc</label>
+            </div>
           </fieldset>
 
           <!-- ----- Question 6 : le poids -----
@@ -120,14 +182,22 @@
           <fieldset>
             <legend>7. Comment ton pied se pose-t-il ?</legend>
             <p><small>Astuce : regarde l'usure de tes anciennes chaussures. Usées côté intérieur : plutôt pronateur. Côté extérieur : plutôt supinateur. Usure centrée : neutre.</small></p>
-            <input type="radio" id="foulee-neutre" name="foulee" value="neutre" required>
-            <label for="foulee-neutre">Neutre</label><br>
-            <input type="radio" id="foulee-pronateur" name="foulee" value="pronateur">
-            <label for="foulee-pronateur">Pronateur (le pied s'écrase vers l'intérieur)</label><br>
-            <input type="radio" id="foulee-supinateur" name="foulee" value="supinateur">
-            <label for="foulee-supinateur">Supinateur (le pied roule vers l'extérieur)</label><br>
-            <input type="radio" id="foulee-inconnue" name="foulee" value="inconnue">
-            <label for="foulee-inconnue">Je ne sais pas</label>
+            <div class="choix">
+              <input type="radio" id="foulee-neutre" name="foulee" value="neutre" required>
+              <label for="foulee-neutre"><span class="icone" aria-hidden="true">🎯</span>Neutre</label>
+            </div>
+            <div class="choix">
+              <input type="radio" id="foulee-pronateur" name="foulee" value="pronateur">
+              <label for="foulee-pronateur"><span class="icone" aria-hidden="true">↘️</span>Pronateur (le pied s'écrase vers l'intérieur)</label>
+            </div>
+            <div class="choix">
+              <input type="radio" id="foulee-supinateur" name="foulee" value="supinateur">
+              <label for="foulee-supinateur"><span class="icone" aria-hidden="true">↙️</span>Supinateur (le pied roule vers l'extérieur)</label>
+            </div>
+            <div class="choix">
+              <input type="radio" id="foulee-inconnue" name="foulee" value="inconnue">
+              <label for="foulee-inconnue"><span class="icone" aria-hidden="true">🤔</span>Je ne sais pas</label>
+            </div>
           </fieldset>
 
           <!-- ----- Question 8 : les blessures passées -----
@@ -135,38 +205,60 @@
                Pas de "required" : on peut n'en cocher aucune. -->
           <fieldset>
             <legend>8. As-tu déjà eu une de ces blessures ? (plusieurs choix possibles)</legend>
-            <input type="checkbox" id="blessure-genou" name="blessures" value="genou">
-            <label for="blessure-genou">Douleur au genou</label><br>
-            <input type="checkbox" id="blessure-tibia" name="blessures" value="tibia">
-            <label for="blessure-tibia">Douleur au tibia (périostite)</label><br>
-            <input type="checkbox" id="blessure-achille" name="blessures" value="achille">
-            <label for="blessure-achille">Tendon d'Achille</label><br>
-            <input type="checkbox" id="blessure-plantaire" name="blessures" value="plantaire">
-            <label for="blessure-plantaire">Sous le pied (aponévrosite plantaire)</label><br>
-            <input type="checkbox" id="blessure-cheville" name="blessures" value="cheville">
-            <label for="blessure-cheville">Entorses de cheville à répétition</label>
+            <div class="choix">
+              <input type="checkbox" id="blessure-genou" name="blessures" value="genou">
+              <label for="blessure-genou">Douleur au genou</label>
+            </div>
+            <div class="choix">
+              <input type="checkbox" id="blessure-tibia" name="blessures" value="tibia">
+              <label for="blessure-tibia">Douleur au tibia (périostite)</label>
+            </div>
+            <div class="choix">
+              <input type="checkbox" id="blessure-achille" name="blessures" value="achille">
+              <label for="blessure-achille">Tendon d'Achille</label>
+            </div>
+            <div class="choix">
+              <input type="checkbox" id="blessure-plantaire" name="blessures" value="plantaire">
+              <label for="blessure-plantaire">Sous le pied (aponévrosite plantaire)</label>
+            </div>
+            <div class="choix">
+              <input type="checkbox" id="blessure-cheville" name="blessures" value="cheville">
+              <label for="blessure-cheville">Entorses de cheville à répétition</label>
+            </div>
           </fieldset>
 
           <!-- ----- Question 9 : les sensations ----- -->
           <fieldset>
             <legend>9. Quelles sensations recherches-tu ?</legend>
-            <input type="radio" id="sensation-amorti" name="sensation" value="amorti" required>
-            <label for="sensation-amorti">Beaucoup d'amorti, du confort</label><br>
-            <input type="radio" id="sensation-equilibre" name="sensation" value="equilibre">
-            <label for="sensation-equilibre">Un équilibre entre confort et dynamisme</label><br>
-            <input type="radio" id="sensation-dynamisme" name="sensation" value="dynamisme">
-            <label for="sensation-dynamisme">Du dynamisme, une chaussure légère et réactive</label>
+            <div class="choix">
+              <input type="radio" id="sensation-amorti" name="sensation" value="amorti" required>
+              <label for="sensation-amorti"><span class="icone" aria-hidden="true">☁️</span>Beaucoup d'amorti, du confort</label>
+            </div>
+            <div class="choix">
+              <input type="radio" id="sensation-equilibre" name="sensation" value="equilibre">
+              <label for="sensation-equilibre"><span class="icone" aria-hidden="true">⚖️</span>Un équilibre entre confort et dynamisme</label>
+            </div>
+            <div class="choix">
+              <input type="radio" id="sensation-dynamisme" name="sensation" value="dynamisme">
+              <label for="sensation-dynamisme"><span class="icone" aria-hidden="true">⚡</span>Du dynamisme, une chaussure légère et réactive</label>
+            </div>
           </fieldset>
 
           <!-- ----- Question 10 : la largeur du pied ----- -->
           <fieldset>
             <legend>10. Comment est la largeur de ton pied ?</legend>
-            <input type="radio" id="largeur-normale" name="largeur" value="normale" required>
-            <label for="largeur-normale">Normale</label><br>
-            <input type="radio" id="largeur-large" name="largeur" value="large">
-            <label for="largeur-large">Large (je me sens souvent serré)</label><br>
-            <input type="radio" id="largeur-inconnue" name="largeur" value="inconnue">
-            <label for="largeur-inconnue">Je ne sais pas</label>
+            <div class="choix">
+              <input type="radio" id="largeur-normale" name="largeur" value="normale" required>
+              <label for="largeur-normale"><span class="icone" aria-hidden="true">🦶</span>Normale</label>
+            </div>
+            <div class="choix">
+              <input type="radio" id="largeur-large" name="largeur" value="large">
+              <label for="largeur-large"><span class="icone" aria-hidden="true">↔️</span>Large (je me sens souvent serré)</label>
+            </div>
+            <div class="choix">
+              <input type="radio" id="largeur-inconnue" name="largeur" value="inconnue">
+              <label for="largeur-inconnue"><span class="icone" aria-hidden="true">🤔</span>Je ne sais pas</label>
+            </div>
           </fieldset>
 
           <!-- ----- Question 11 : le budget ----- -->

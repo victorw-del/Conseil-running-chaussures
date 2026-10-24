@@ -5,22 +5,57 @@
 /* ---------- 1. Les variables ----------
    :root désigne toute la page. On y range nos couleurs dans des "variables"
    (elles commencent par --). Pour changer une couleur partout sur le site,
-   il suffit de la modifier ICI. */
+   il suffit de la modifier ICI. Le mode sombre (section 2) les remplace. */
 :root {
   --couleur-principale: #e8590c;   /* orange : boutons, réponses choisies */
+  --couleur-secondaire: #f59f00;   /* orange doré : fin des barres orange */
+  --degrade: linear-gradient(135deg, #e8590c, #f59f00);   /* le dégradé orange des bandeaux et boutons */
   --couleur-fond: #f4f6f8;         /* gris très clair : fond de la page */
   --couleur-carte: #ffffff;        /* blanc : fond des blocs de questions */
+  --couleur-pale: #fff4e6;         /* orange très pâle : réponse choisie, pastilles */
   --couleur-texte: #1d2733;        /* presque noir : texte principal */
   --couleur-texte-doux: #5b6672;   /* gris : textes d'aide */
   --couleur-bordure: #d9dee3;      /* gris clair : contours */
-  --arrondi: 12px;                 /* arrondi des coins des blocs */
+  --couleur-case-vide: #e6e9ed;    /* gris : cases vides des jauges */
+  --couleur-route: #1971c2;        /* bleu : pastille Route */
+  --couleur-trail: #2f9e44;        /* vert : pastille Trail */
+  --couleur-stable: #7048e8;       /* violet : pastille Stable */
+  --ombre: 0 6px 20px rgba(29, 39, 51, 0.08);   /* ombre douce : les cartes "flottent" */
+  --arrondi: 14px;                 /* arrondi des coins des blocs */
+  --police-titres: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
-/* ---------- 2. Réglage de base ----------
+/* ---------- 2. Le mode sombre ----------
+   Cette "media query" s'applique seulement si le téléphone ou l'ordinateur
+   est réglé en mode sombre. On change juste les variables : tout le site suit. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --couleur-principale: #ff7a2e;
+    --degrade: linear-gradient(135deg, #c2410c, #e8590c);   /* plus foncé : le texte blanc reste lisible */
+    --couleur-fond: #10151b;
+    --couleur-carte: #1a222c;
+    --couleur-pale: #3a2414;
+    --couleur-texte: #e9edf1;
+    --couleur-texte-doux: #9aa5b1;
+    --couleur-bordure: #2e3a47;
+    --couleur-case-vide: #2e3a47;
+    --couleur-route: #4dabf7;
+    --couleur-trail: #69db7c;
+    --couleur-stable: #9775fa;
+    --ombre: 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* ---------- 3. Réglage de base ----------
    box-sizing: border-box fait que la largeur d'un élément INCLUT ses marges intérieures.
    Sans ça, les calculs de taille deviennent vite casse-tête. Le * veut dire "tous les éléments". */
 * {
   box-sizing: border-box;
+}
+
+/* Quand on clique sur "Commencer", la page glisse doucement jusqu'aux questions. */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -33,7 +68,17 @@ body {
   background-color: var(--couleur-fond);
 }
 
-/* ---------- 3. La largeur du contenu ----------
+/* Les titres utilisent la police sportive "Outfit". */
+h1,
+h2,
+h3,
+legend,
+.bouton-commencer,
+button {
+  font-family: var(--police-titres);
+}
+
+/* ---------- 4. La largeur du contenu ----------
    On limite la largeur pour que les lignes ne soient pas trop longues sur grand écran,
    et margin: 0 auto centre le bloc horizontalement. padding = marge intérieure. */
 header,
@@ -44,97 +89,331 @@ footer {
   padding: 0 16px;
 }
 
-/* ---------- 4. L'en-tête ---------- */
+/* ---------- 5. Les animations ----------
+   @keyframes décrit une animation : ici, l'élément apparaît en glissant un peu vers le haut. */
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Les éléments qui apparaissent en douceur. */
+.accueil,
+#suite-questions fieldset,
+.bandeau-resultats {
+  animation: apparition 0.5s ease-out both;
+}
+
+/* Si la personne a demandé moins d'animations dans les réglages de son appareil,
+   on les coupe toutes. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---------- 6. L'accueil ----------
+   Le grand bandeau orange en haut de la page du questionnaire.
+   linear-gradient() crée un dégradé entre deux couleurs. */
 header {
-  padding-top: 40px;
-  padding-bottom: 16px;
+  padding-top: 20px;
+}
+
+.accueil {
+  padding: 32px 24px;
+  border-radius: var(--arrondi);
+  color: #ffffff;
+  text-align: center;
+  background: var(--degrade);
+  box-shadow: var(--ombre);
+}
+
+.accueil-emoji {
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0 0 8px;
 }
 
 h1 {
   font-size: 2rem;              /* rem = multiple de la taille de texte de base */
-  line-height: 1.15;
-  margin: 0 0 8px;              /* haut, côtés, bas */
-  color: var(--couleur-principale);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 12px;
+  color: #ffffff;
 }
 
-header p {
-  color: var(--couleur-texte-doux);
-  margin: 0;
+.accueil-texte {
+  margin: 0 auto;
+  max-width: 34em;
+  font-weight: 500;
+}
+
+/* Les 3 étapes, côte à côte. display: flex aligne les éléments sur une ligne. */
+.etapes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;              /* passent à la ligne si l'écran est trop étroit */
+  gap: 10px 18px;
+  list-style: none;             /* enlève les numéros automatiques de la liste */
+  padding: 0;
+  margin: 22px 0;
+  font-weight: 700;
+}
+
+.etapes li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Le numéro de l'étape dans un rond blanc transparent. */
+.etape-numero {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Le bouton "Commencer" : blanc sur le fond orange. */
+.bouton-commencer {
+  display: inline-block;
+  padding: 12px 36px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--couleur-principale);
+  background-color: #ffffff;
+  border-radius: 999px;         /* très arrondi : forme de pilule */
+  text-decoration: none;
+  transition: transform 0.15s;
+}
+
+.bouton-commencer:hover {
+  transform: scale(1.04);
 }
 
 h2 {
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   margin: 32px 0 16px;
 }
 
-/* ---------- 5. Les blocs de questions ----------
-   Chaque <fieldset> devient une "carte" blanche aux coins arrondis. */
+/* ---------- 7. La barre de progression ----------
+   position: sticky la garde collée en haut de l'écran quand on descend. */
+.progression {
+  position: sticky;
+  top: 0;
+  z-index: 10;                  /* passe au-dessus des questions */
+  padding: 10px 0 12px;
+  margin-bottom: 8px;
+  background-color: var(--couleur-fond);
+}
+
+.progression p {
+  margin: 0 0 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--couleur-texte-doux);
+}
+
+.progression-fond {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  background-color: var(--couleur-case-vide);
+}
+
+/* La partie orange : sa largeur est changée par app.js.
+   transition anime le remplissage. */
+.progression-barre {
+  width: 0;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--couleur-principale), var(--couleur-secondaire));
+  transition: width 0.4s ease;
+}
+
+/* ---------- 8. Les blocs de questions ----------
+   Chaque <fieldset> devient une "carte" aux coins arrondis. */
 fieldset {
   background-color: var(--couleur-carte);
   border: 1px solid var(--couleur-bordure);
   border-radius: var(--arrondi);
-  padding: 16px 20px 20px;
+  padding: 18px 18px 14px;
   margin: 0 0 16px;
+  min-width: 0;                 /* sans ça, un fieldset peut déborder de l'écran sur téléphone */
+  box-shadow: var(--ombre);
 }
 
+/* La question. float: left la place DANS la carte au lieu de sur son contour. */
 legend {
-  font-weight: 700;             /* texte en gras */
-  padding: 0 6px;
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Ce qui suit la question repart bien en dessous d'elle. */
+legend + * {
+  clear: both;
 }
 
 small {
   color: var(--couleur-texte-doux);
 }
 
-/* ---------- 6. Les réponses ----------
-   On agrandit la zone cliquable des réponses : plus facile au doigt sur téléphone. */
-fieldset label {
-  display: inline-block;
-  padding: 6px 4px;
-  cursor: pointer;              /* le curseur devient une petite main au survol */
+fieldset p {
+  margin: 0 0 12px;
 }
 
-/* accent-color colore les boutons ronds et cases à cocher avec notre orange. */
-input[type="radio"],
-input[type="checkbox"] {
+/* ---------- 9. Les réponses en grandes cases cliquables ----------
+   Chaque réponse est un <div class="choix"> qui contient le bouton rond (input)
+   et son texte (label). Le label devient une grande case ; le bouton rond est
+   posé à l'intérieur, à gauche (position: absolute). */
+.choix {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.choix label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 12px 14px 12px 50px;   /* la place à gauche est pour le bouton rond */
+  border: 2px solid var(--couleur-bordure);
+  border-radius: 12px;
+  cursor: pointer;                /* le curseur devient une petite main au survol */
+  transition: border-color 0.15s, background-color 0.15s, transform 0.1s;
+}
+
+.choix label:hover {
+  border-color: var(--couleur-principale);
+}
+
+.choix label:active {
+  transform: scale(0.98);         /* la case "s'enfonce" un peu quand on appuie */
+}
+
+/* Le bouton rond ou la case à cocher, centré verticalement à gauche de la case.
+   accent-color le colore avec notre orange. */
+.choix input {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  margin: 0;
   accent-color: var(--couleur-principale);
-  width: 18px;
-  height: 18px;
-  vertical-align: middle;
+  cursor: pointer;
 }
 
-/* La réponse choisie passe en gras et en orange.
+/* L'icône (emoji) de la réponse. */
+.icone {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* La réponse choisie : contour orange et fond orange pâle.
    Le + veut dire "le <label> placé juste après la case cochée". */
-input:checked + label {
-  color: var(--couleur-principale);
+.choix input:checked + label {
+  border-color: var(--couleur-principale);
+  background-color: var(--couleur-pale);
   font-weight: 600;
+}
+
+/* Au clavier (touche Tab), la case qui a le focus reçoit un contour bien visible. */
+.choix input:focus-visible + label {
+  outline: 3px solid var(--couleur-texte);
+  outline-offset: 2px;
+}
+
+/* La question 1 : "Homme" et "Femme" côte à côte, en grandes cases.
+   display: grid les range en deux colonnes égales. */
+.choix-deux {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);   /* minmax(0, …) : ne déborde jamais de l'écran */
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.choix-deux .choix {
+  margin: 0;
+}
+
+.choix-deux label {
+  min-height: 72px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Dans ces deux cases, l'icône est au-dessus du mot, pour tenir sur un téléphone. */
+.choix-deux label {
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 14px 10px 14px 42px;
+}
+
+.choix-deux .icone {
+  font-size: 2rem;
+}
+
+/* Le texte au-dessus des listes déroulantes. */
+fieldset > label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--couleur-texte-doux);
 }
 
 /* Les listes déroulantes prennent toute la largeur du bloc. */
 select {
   display: block;
   width: 100%;
-  margin-top: 6px;
-  padding: 10px;
+  margin: 6px 0 4px;
+  padding: 14px 12px;
   font-size: 1rem;
-  border: 1px solid var(--couleur-bordure);
-  border-radius: 8px;
+  color: var(--couleur-texte);
+  border: 2px solid var(--couleur-bordure);
+  border-radius: 12px;
   background-color: var(--couleur-carte);
+  cursor: pointer;
 }
 
-/* ---------- 7. Le bouton ---------- */
+select:hover {
+  border-color: var(--couleur-principale);
+}
+
+/* ---------- 10. Le bouton ---------- */
 button {
   display: block;
   width: 100%;
-  padding: 14px;
-  font-size: 1.1rem;
+  padding: 16px;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;
-  background-color: var(--couleur-principale);
+  background: var(--degrade);
   border: none;
-  border-radius: var(--arrondi);
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(232, 89, 12, 0.3);
   cursor: pointer;
-  transition: transform 0.1s;   /* anime doucement le changement ci-dessous */
+  transition: transform 0.15s;  /* anime doucement le changement ci-dessous */
 }
 
 /* :hover = quand la souris survole le bouton. Il grossit très légèrement. */
@@ -146,17 +425,17 @@ button:hover {
    Le contour visible aide les personnes qui naviguent sans souris. */
 button:focus-visible,
 select:focus-visible,
-input:focus-visible {
+a:focus-visible {
   outline: 3px solid var(--couleur-texte);
   outline-offset: 2px;
 }
 
-/* ---------- 8. L'avertissement ----------
+/* ---------- 11. L'avertissement ----------
    Fond orange très pâle et bordure à gauche pour attirer l'œil. */
 #avertissement {
-  background-color: #fff4e6;
+  background-color: var(--couleur-pale);
   border-left: 5px solid var(--couleur-principale);
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 4px 20px;
   margin: 32px 0;
 }
@@ -166,190 +445,49 @@ input:focus-visible {
   font-size: 1.1rem;
 }
 
-/* ---------- 9. Le pied de page ---------- */
+/* ---------- 12. Le pied de page ---------- */
 footer {
   color: var(--couleur-texte-doux);
   font-size: 0.85rem;
   padding-bottom: 40px;
 }
 
-/* ---------- 10. Adaptation aux grands écrans ----------
+/* ---------- 13. Adaptation aux grands écrans ----------
    Une "media query" : les règles à l'intérieur ne s'appliquent que si l'écran
    fait au moins 700px de large (tablette, ordinateur). Sur téléphone, elles sont ignorées.
    On écrit d'abord pour le téléphone, puis on améliore pour les grands écrans :
    c'est la méthode "mobile d'abord". */
 @media (min-width: 700px) {
-  h1 {
-    font-size: 2.6rem;
-  }
-
   header {
-    padding-top: 64px;
+    padding-top: 32px;
+  }
+
+  .accueil {
+    padding: 48px 40px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
   }
 }
 
 /* =========================================================
-   11. LES RÉSULTATS (ajouté à l'étape 9)
-   Ces classes sont créées par le JavaScript dans la section #resultats.
-   ========================================================= */
-
-/* Une carte par chaussure, sur le même modèle que les blocs de questions. */
-.carte-chaussure {
-  background-color: var(--couleur-carte);
-  border: 1px solid var(--couleur-bordure);
-  border-radius: var(--arrondi);
-  padding: 20px;
-  margin-bottom: 16px;
-}
-
-/* L'en-tête de la carte : rang, nom et score sur une même ligne.
-   display: flex aligne les éléments côte à côte ; gap les espace. */
-.carte-entete {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-/* Le numéro dans un rond orange. */
-.rang {
-  flex-shrink: 0;                 /* empêche le rond de s'écraser sur petit écran */
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;             /* 50 % d'arrondi transforme un carré en cercle */
-  background-color: var(--couleur-principale);
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* margin-left: auto pousse le score tout à droite de la ligne. */
-.score {
-  margin-left: auto;
-  font-weight: 700;
-  color: var(--couleur-principale);
-  white-space: nowrap;            /* "90 %" ne se coupe jamais en deux lignes */
-}
-
-.marque {
-  margin: 0;
-  font-size: 0.8rem;
-  text-transform: uppercase;      /* écrit la marque en majuscules */
-  letter-spacing: 0.05em;
-  color: var(--couleur-texte-doux);
-}
-
-.carte-chaussure h3 {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-.badge-exemple {
-  font-size: 0.7rem;
-  background-color: #fff4e6;
-  color: var(--couleur-principale);
-  border-radius: 999px;
-  padding: 2px 8px;
-  margin-left: 6px;
-}
-
-.intro {
-  font-weight: 600;
-  margin: 14px 0 6px;
-}
-
-.carte-chaussure h4 {
-  margin: 14px 0 4px;
-  font-size: 0.95rem;
-}
-
-.carte-chaussure ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-/* Les alertes en gris, pour les distinguer des points forts. */
-.alertes {
-  color: var(--couleur-texte-doux);
-}
-
-/* Les caractéristiques en petite grille : autant de colonnes que la place le permet.
-   repeat(auto-fit, minmax(100px, 1fr)) : "des colonnes d'au moins 100px, réparties
-   sur toute la largeur". Sur téléphone, elles passent à la ligne toutes seules. */
-.caracteristiques {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 10px;
-  margin: 16px 0 0;
-  padding-top: 14px;
-  border-top: 1px solid var(--couleur-bordure);
-}
-
-.caracteristiques dt {
-  font-size: 0.75rem;
-  color: var(--couleur-texte-doux);
-}
-
-.caracteristiques dd {
-  margin: 0;
-  font-weight: 600;
-}
-
-.lien-fiche {
-  display: inline-block;
-  margin-top: 14px;
-  color: var(--couleur-principale);
-  font-weight: 600;
-}
-
-.conseil-essai {
-  font-size: 0.9rem;
-  color: var(--couleur-texte-doux);
-}
-
-/* =========================================================
-   12. BOUTON SECONDAIRE (ajouté à l'étape 10)
-   Moins voyant que le bouton principal : contour orange, fond blanc.
-   ========================================================= */
-.bouton-secondaire {
-  width: auto;                                   /* contrairement au bouton principal, il ne prend pas toute la largeur */
-  display: inline-block;
-  padding: 10px 18px;
-  font-size: 1rem;
-  color: var(--couleur-principale);
-  background-color: var(--couleur-carte);
-  border: 2px solid var(--couleur-principale);
-}
-
-/* Le titre des résultats reçoit le focus : on évite le contour autour d'un titre cliqué à la souris. */
-#resultats h2:focus {
-  outline: none;
-}
-
-/* =========================================================
-   13. LA PAGE DES RÉSULTATS (resultats.html)
+   14. LA PAGE DES RÉSULTATS (resultats.html)
    Tout ce qui suit ne s'applique qu'à la page des résultats, grâce à la classe
-   "page-resultats" posée sur son <body>. On garde les mêmes couleurs et la même
-   police, mais en plus grand et plus spectaculaire.
+   "page-resultats" posée sur son <body>.
    ========================================================= */
 
-/* Une page plus large que le questionnaire, pour des cartes généreuses. */
+/* Une page plus large que le questionnaire, pour mettre deux cartes côte à côte. */
 .page-resultats header,
 .page-resultats main,
 .page-resultats footer {
   max-width: 1040px;
 }
 
-.page-resultats header {
-  padding-top: 20px;
-  padding-bottom: 0;
-}
-
 /* Le nom du site, en petit, qui ramène au questionnaire. */
 .nom-du-site {
   margin: 0;
+  font-family: var(--police-titres);
   font-weight: 700;
 }
 
@@ -358,18 +496,17 @@ footer {
   text-decoration: none;
 }
 
-/* Le bandeau orange en haut des résultats.
-   linear-gradient() crée un dégradé entre deux couleurs. */
+/* Le bandeau orange en haut des résultats. */
 .bandeau-resultats {
   margin: 16px 0 24px;
   padding: 28px 24px;
   border-radius: var(--arrondi);
   color: #ffffff;
-  background: linear-gradient(135deg, var(--couleur-principale), #f59f00);
+  background: var(--degrade);
+  box-shadow: var(--ombre);
 }
 
 .bandeau-resultats h1 {
-  color: #ffffff;
   margin: 0 0 6px;
 }
 
@@ -384,15 +521,23 @@ footer {
   outline: none;
 }
 
-/* ---------- Les grandes cartes ----------
-   Sur téléphone, l'image est au-dessus du texte. */
+/* ---------- Les cartes ----------
+   Sur téléphone, une carte sous l'autre. Sur grand écran, voir plus bas. */
+#resultats {
+  display: grid;
+  gap: 20px;
+}
+
 .carte-resultat {
   background-color: var(--couleur-carte);
   border: 1px solid var(--couleur-bordure);
   border-radius: var(--arrondi);
-  overflow: hidden;               /* l'image suit les coins arrondis de la carte */
-  margin-bottom: 24px;
-  box-shadow: 0 6px 20px rgba(29, 39, 51, 0.08);   /* une ombre douce : la carte "flotte" */
+  padding: 20px;
+  box-shadow: var(--ombre);
+  /* Les cartes apparaissent l'une après l'autre : la carte n° i attend i × 0,1 s.
+     --i est donné par resultats.js. calc() fait le calcul. */
+  animation: apparition 0.5s ease-out both;
+  animation-delay: calc(var(--i, 0) * 0.1s);
 }
 
 /* La carte n°1 est mise en avant avec un contour orange. */
@@ -400,77 +545,225 @@ footer {
   border: 3px solid var(--couleur-principale);
 }
 
-/* La zone de l'image. position: relative permet d'y placer le numéro par-dessus. */
-.carte-visuel {
-  position: relative;
-  background-color: #fff4e6;
+/* L'en-tête de la carte : numéro, nom et prix sur une même ligne. */
+.carte-entete {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Le numéro dans un rond orange. */
+.rang {
+  flex-shrink: 0;                 /* empêche le rond de s'écraser sur petit écran */
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;             /* 50 % d'arrondi transforme un carré en cercle */
+  background: var(--degrade);
+  color: #ffffff;
+  font-family: var(--police-titres);
+  font-weight: 800;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* min-width: 0 permet aux noms très longs de passer à la ligne au lieu de déborder. */
+.carte-nom {
+  min-width: 0;
+}
+
+.marque {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;      /* écrit la marque en majuscules */
+  letter-spacing: 0.06em;
+  color: var(--couleur-texte-doux);
+}
+
+.carte-resultat h2 {
+  font-size: 1.6rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* Le prix, en grand, poussé tout à droite par margin-left: auto. */
+.prix {
+  margin: 0 0 0 auto;
+  font-family: var(--police-titres);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--couleur-principale);
+  white-space: nowrap;            /* "140 €" ne se coupe jamais en deux lignes */
 }
 
 .photo-chaussure {
   display: block;
   width: 100%;
-  height: 240px;
+  height: 200px;
   object-fit: contain;            /* l'image entière est visible, sans être déformée */
-  background-color: #ffffff;
+  margin-top: 14px;
 }
 
-/* Quand une chaussure n'a pas encore d'image : un grand emoji sur fond orange pâle. */
-.visuel-vide {
-  height: 240px;
+/* ---------- Les pastilles ----------
+   Le score, le terrain, le type : de petites étiquettes arrondies. */
+.pastilles {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 6rem;
-  background: linear-gradient(135deg, #fff4e6, #ffe8cc);
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
 }
 
-/* Le numéro, posé en haut à gauche de l'image (position: absolute). */
-.carte-visuel .rang {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  width: 48px;
-  height: 48px;
-  font-size: 1.4rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.carte-contenu {
-  padding: 20px 22px 24px;
-}
-
-/* Le nom de la chaussure, en grand. */
-.carte-contenu h2 {
-  font-size: 1.8rem;
-  line-height: 1.15;
-  margin: 2px 0 10px;
-}
-
-/* Le score dans une pastille. */
-.score-badge {
-  display: inline-block;
+.score-badge,
+.pastille {
   margin: 0;
   padding: 4px 12px;
-  border-radius: 999px;           /* très arrondi : forme de pilule */
-  background-color: #fff4e6;
-  color: var(--couleur-principale);
+  border-radius: 999px;
+  font-size: 0.85rem;
   font-weight: 700;
 }
 
-.carte-contenu h4 {
-  margin: 14px 0 4px;
-  font-size: 1rem;
+.score-badge {
+  background-color: var(--couleur-pale);
+  color: var(--couleur-principale);
 }
 
-.carte-contenu ul {
+/* Les pastilles grises par défaut, colorées selon le terrain ou le type. */
+.pastille {
+  border: 2px solid var(--couleur-bordure);
+  color: var(--couleur-texte-doux);
+}
+
+.pastille-route {
+  border-color: var(--couleur-route);
+  color: var(--couleur-route);
+}
+
+.pastille-trail {
+  border-color: var(--couleur-trail);
+  color: var(--couleur-trail);
+}
+
+.pastille-mixte {
+  border-color: var(--couleur-trail);
+  color: var(--couleur-trail);
+}
+
+.pastille-stable {
+  border-color: var(--couleur-stable);
+  color: var(--couleur-stable);
+}
+
+.intro {
+  font-weight: 600;
+  margin: 14px 0 0;
+}
+
+/* ---------- Les jauges Amorti et Dynamisme ---------- */
+.jauges {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+/* Une jauge = le nom, les 5 cases, la note. Trois colonnes sur une ligne. */
+.jauge {
+  display: grid;
+  grid-template-columns: 6.5em 1fr auto;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.jauge-nom {
+  color: var(--couleur-texte-doux);
+}
+
+.jauge-cases {
+  display: flex;
+  gap: 4px;
+}
+
+.case {
+  flex: 1;
+  height: 10px;
+  border-radius: 999px;
+  background-color: var(--couleur-case-vide);
+}
+
+.case.pleine {
+  background: linear-gradient(90deg, var(--couleur-principale), var(--couleur-secondaire));
+}
+
+.jauge-note {
+  font-weight: 700;
+}
+
+/* ---------- Le drop et le poids ---------- */
+.caracteristiques {
+  display: flex;
+  gap: 28px;
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--couleur-bordure);
+}
+
+.caracteristiques dt {
+  font-size: 0.75rem;
+  color: var(--couleur-texte-doux);
+}
+
+.caracteristiques dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+/* ---------- Les explications ---------- */
+.carte-resultat h4 {
+  margin: 16px 0 4px;
+  font-size: 0.95rem;
+}
+
+.carte-resultat ul {
   margin: 0;
   padding-left: 20px;
+  font-size: 0.95rem;
+}
+
+/* Les alertes en gris, pour les distinguer des points forts. */
+.alertes {
+  color: var(--couleur-texte-doux);
 }
 
 .note-modele {
   font-size: 0.85rem;
   color: var(--couleur-texte-doux);
   margin: 12px 0 0;
+}
+
+/* Le lien vers la fiche officielle, habillé en bouton à contour orange. */
+.lien-fiche {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 8px 18px;
+  border: 2px solid var(--couleur-principale);
+  border-radius: 999px;
+  color: var(--couleur-principale);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.lien-fiche:hover {
+  background-color: var(--couleur-principale);
+  color: #ffffff;
+}
+
+.conseil-essai {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--couleur-texte-doux);
 }
 
 .aucun-resultat {
@@ -483,50 +776,46 @@ footer {
 /* Le bouton "Recommencer" : c'est un lien <a>, habillé comme le bouton principal. */
 .zone-recommencer {
   text-align: center;
-  margin: 8px 0 0;
+  margin: 24px 0 0;
 }
 
 .bouton-recommencer {
   display: inline-block;
-  padding: 14px 28px;
+  padding: 14px 32px;
+  font-family: var(--police-titres);
   font-size: 1.1rem;
   font-weight: 700;
   color: #ffffff;
-  background-color: var(--couleur-principale);
-  border-radius: var(--arrondi);
+  background: var(--degrade);
+  border-radius: 999px;
   text-decoration: none;
-  transition: transform 0.1s;
+  transition: transform 0.15s;
 }
 
 .bouton-recommencer:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
-.bouton-recommencer:focus-visible {
-  outline: 3px solid var(--couleur-texte);
-  outline-offset: 2px;
-}
-
-/* ---------- Sur grand écran : l'image à gauche, le texte à droite ----------
-   grid-template-columns: 2fr 3fr partage la largeur en 5 parts : 2 pour l'image, 3 pour le texte. */
+/* ---------- Sur grand écran : deux cartes par ligne ----------
+   La carte n°1 et les phrases sous les cartes prennent toute la largeur
+   (grid-column: 1 / -1 = de la première à la dernière colonne). */
 @media (min-width: 800px) {
+  #resultats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .carte-premiere,
+  .conseil-essai,
+  .aucun-resultat {
+    grid-column: 1 / -1;
+  }
+
   .carte-resultat {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
+    padding: 24px 28px;
   }
 
-  .photo-chaussure,
-  .visuel-vide {
-    height: 100%;
-    min-height: 320px;
-  }
-
-  .carte-contenu {
-    padding: 28px 32px;
-  }
-
-  .carte-contenu h2 {
-    font-size: 2.1rem;
+  .carte-premiere h2 {
+    font-size: 2rem;
   }
 
   .bandeau-resultats {
