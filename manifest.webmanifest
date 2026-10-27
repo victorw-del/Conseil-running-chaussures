@@ -1,0 +1,15 @@
+{
+  "name": "Trouver la bonne paire de chaussures",
+  "short_name": "Ma paire",
+  "description": "Réponds à quelques questions et découvre les 5 chaussures de running qui te correspondent.",
+  "lang": "fr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f6f8",
+  "theme_color": "#e8590c",
+  "icons": [
+    { "src": "icones/icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icones/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

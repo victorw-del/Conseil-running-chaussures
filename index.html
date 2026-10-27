@@ -8,6 +8,13 @@
     <meta name="description" content="Réponds à quelques questions (niveau, foulée, terrain, poids…) et découvre les 5 chaussures de running qui te correspondent, expliquées comme par un vendeur spécialisé.">
     <!-- Indique au navigateur que le site existe en version claire ET sombre. -->
     <meta name="color-scheme" content="light dark">
+    <!-- Pour l'appli de téléphone : la fiche de l'appli (nom, icône, couleurs),
+         la couleur de la barre du téléphone et l'icône pour les iPhone. -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#e8590c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Ma paire">
+    <link rel="apple-touch-icon" href="icones/icone-180.png">
         <!-- L'icône de l'onglet (favicon). Ici, un emoji chaussure dessiné en SVG directement dans le lien :
          pas besoin de fichier image. -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👟</text></svg>">
@@ -299,5 +306,7 @@
         <!-- Charge le JavaScript. On le place en bas de la page pour que tout le HTML
          soit déjà construit quand le script démarre (sinon il ne trouverait pas le formulaire). -->
     <script src="js/app.js"></script>
+    <!-- Installe l'appli de téléphone (voir js/appli.js). -->
+    <script src="js/appli.js"></script>
   </body>
 </html>

@@ -9,6 +9,13 @@
     <!-- Même favicon et même feuille de style que la page du questionnaire. -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👟</text></svg>">
     <meta name="color-scheme" content="light dark">
+    <!-- Pour l'appli de téléphone : la fiche de l'appli (nom, icône, couleurs),
+         la couleur de la barre du téléphone et l'icône pour les iPhone. -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#e8590c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Ma paire">
+    <link rel="apple-touch-icon" href="icones/icone-180.png">
     <!-- La police des titres, comme sur la page du questionnaire. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,5 +69,7 @@
          qui utilise ses fonctions. -->
     <script src="js/recommandation.js"></script>
     <script src="js/resultats.js"></script>
+    <!-- Installe l'appli de téléphone (voir js/appli.js). -->
+    <script src="js/appli.js"></script>
   </body>
 </html>
