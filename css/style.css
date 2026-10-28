@@ -382,10 +382,16 @@ fieldset p {
   cursor: pointer;
 }
 
-/* L'icône (emoji) de la réponse. */
+/* Le pictogramme doré de la réponse (dessin en trait fin, voir le haut d'index.html). */
 .icone {
-  font-size: 1.5rem;
-  line-height: 1;
+  display: inline-flex;
+  flex-shrink: 0;                 /* le dessin garde sa taille même si le texte est long */
+  color: var(--couleur-principale);
+}
+
+.icone svg {
+  width: 26px;
+  height: 26px;
 }
 
 /* La réponse choisie : contour doré et fond or pâle.
@@ -429,8 +435,9 @@ fieldset p {
   padding: 14px 10px 14px 42px;
 }
 
-.choix-deux .icone {
-  font-size: 2rem;
+.choix-deux .icone svg {
+  width: 34px;
+  height: 34px;
 }
 
 /* Le schéma de la foulée (question 7) : centré, jamais plus large que le bloc. */
