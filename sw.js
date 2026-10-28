@@ -9,7 +9,7 @@
 /* ---------- 1. Le nom de la copie ----------
    Si tu modifies beaucoup le site, change ce numéro (v2, v3…) :
    l'ancienne copie sera alors effacée et remplacée. */
-const NOM_DE_LA_COPIE = "ma-paire-v3";
+const NOM_DE_LA_COPIE = "ma-paire-v4";
 
 // Les fichiers enregistrés dès l'installation de l'appli.
 const FICHIERS = [
@@ -25,7 +25,8 @@ const FICHIERS = [
   "./manifest.webmanifest",
   "./icones/icone-192.png",
   "./icones/icone-512.png",
-  "./images/foulee.svg"
+  "./images/foulee.svg",
+  "./images/coureur.svg"
 ];
 
 
