@@ -151,6 +151,28 @@ header {
   background: var(--fond-bandeau);
 }
 
+/* L'illustration du coureur, centrée au-dessus du titre.
+   Elle arrive en glissant un peu depuis la gauche, comme s'il entrait en courant. */
+.illustration-coureur {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: auto;                   /* garde les proportions du dessin */
+  margin: 0 auto 8px;
+  animation: entree-coureur 1s ease-out both;
+}
+
+@keyframes entree-coureur {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* ::before ajoute un fin cadre doré, 10px à l'intérieur du bandeau.
    pointer-events: none : le cadre ne gêne pas les clics sur le bouton. */
 .accueil::before {
