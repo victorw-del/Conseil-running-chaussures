@@ -409,6 +409,26 @@ fieldset p {
   font-size: 2rem;
 }
 
+/* Le schéma de la foulée (question 7) : centré, jamais plus large que le bloc. */
+.schema-foulee {
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.schema-foulee img {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;                   /* garde les proportions du dessin */
+  margin: 0 auto;
+}
+
+.schema-foulee figcaption {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: var(--couleur-texte-doux);
+}
+
 /* Le texte au-dessus des listes déroulantes. */
 fieldset > label {
   display: block;

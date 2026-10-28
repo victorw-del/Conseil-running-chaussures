@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 228" role="img" aria-labelledby="titre">
+  <title id="titre">Les trois types de foulée : neutre, pronateur et supinateur, vus de dos et par l'usure de la semelle</title>
+  <!-- Schéma dessiné pour le site. En haut : les deux pieds vus de dos.
+       En bas : les deux semelles vues de dessus, la zone dorée montre où elles s'usent. -->
+  <style>
+    .trait { stroke: #1a1814; stroke-width: 2; fill: none; stroke-linecap: round; }
+    .semelle { stroke-width: 1.5; }
+    .talon { fill: #fffdf8; stroke: #1a1814; stroke-width: 2; }
+    .axe { stroke: #a8823f; stroke-width: 2; stroke-dasharray: 3 3; }
+    .sol { stroke: #756e60; stroke-width: 1; }
+    .zone { fill: #a8823f; opacity: 0.85; }
+    .texte { font-family: Georgia, serif; font-size: 15px; font-weight: 700; fill: #1a1814; }
+    @media (prefers-color-scheme: dark) {
+      .trait, .talon { stroke: #f3efe6; }
+      .talon { fill: #16161a; }
+      .axe { stroke: #c9a35b; }
+      .sol { stroke: #a39e93; }
+      .zone { fill: #c9a35b; }
+      .texte { fill: #f3efe6; }
+    }
+  </style>
+  <g>
+    <line class="trait" x1="38" y1="6" x2="38" y2="48"/>
+    <g transform="rotate(0 38 48)"><line class="trait" x1="38" y1="48" x2="38" y2="64"/><rect class="talon" x="26" y="62" width="24" height="14" rx="5"/><line class="axe" x1="38" y1="40" x2="38" y2="78"/></g>
+    <line class="trait" x1="82" y1="6" x2="82" y2="48"/>
+    <g transform="rotate(0 82 48)"><line class="trait" x1="82" y1="48" x2="82" y2="64"/><rect class="talon" x="70" y="62" width="24" height="14" rx="5"/><line class="axe" x1="82" y1="40" x2="82" y2="78"/></g>
+    <line class="sol" x1="12" y1="82" x2="108" y2="82"/>
+    <clipPath id="s0g"><path transform="translate(14 96)" d="M20,0 C34,0 40,14 40,30 C40,48 34,58 33,70 C32,86 30,100 20,100 C10,100 8,86 7,70 C6,58 0,48 0,30 C0,14 6,0 20,0 Z"/></clipPath>
+    <g class="zone" clip-path="url(#s0g)"><ellipse cx="34" cy="126" rx="12" ry="16"/><ellipse cx="34" cy="180" rx="9" ry="10"/></g>
+    <path class="trait semelle" transform="translate(14 96)" d="M20,0 C34,0 40,14 40,30 C40,48 34,58 33,70 C32,86 30,100 20,100 C10,100 8,86 7,70 C6,58 0,48 0,30 C0,14 6,0 20,0 Z"/>
+    <clipPath id="s0d"><path transform="translate(66 96)" d="M20,0 C34,0 40,14 40,30 C40,48 34,58 33,70 C32,86 30,100 20,100 C10,100 8,86 7,70 C6,58 0,48 0,30 C0,14 6,0 20,0 Z"/></clipPath>
+    <g class="zone" clip-path="url(#s0d)"><ellipse cx="86" cy="126" rx="12" ry="16"/><ellipse cx="86" cy="180" rx="9" ry="10"/></g>
+    <path class="trait semelle" transform="translate(66 96)" d="M20,0 C34,0 40,14 40,30 C40,48 34,58 33,70 C32,86 30,100 20,100 C10,100 8,86 7,70 C6,58 0,48 0,30 C0,14 6,0 20,0 Z"/>
+    <text class="texte" x="60" y="218" text-anchor="middle">Neutre</text>
+    <line class="trait" x1="158" y1="6" x2="158" y2="48"/>
+    <g transform="rotate(15 158 48)"><line class="trait" x1="158" y1="48" x2="158" y2="64"/><rect class="talon" x="146" y="62" width="24" height="14" rx="5"/><line class="axe" x1="158" y1="40" x2="158" y2="78"/></g>
+    <line class="trait" x1="202" y1="6" x2="202" y2="48"/>
+    <g transform="rotate(-15 202 48)"><line class="trait" x1="202" y1="48" x2="202" y2="64"/><rect class="talon" x="190" y="62" width="24" height="14" rx="5"/><line class="axe" x1="202" y1="40" x2="202" y2="78"/></g>
+    <line class="sol" x1="132" y1="82" x2="228" y2="82"/>
+    <clipPath id="s1g"><path transform="translate(134 96)" d="M20,0 C34,0 40,14 40,30 C40,48 34,58 33,70 C32,86 30,100 20,100 C10,100 8,86 7,70 C6,58 0,48 0,30 C0,14 6,0 20,0 Z"/></clipPath>
+    <g class="zone" clip-path="url(#s1g)"><rect x="158" y="96" width="16" height="100"/></g>
+    <path class="trait semelle" transform="translate(134 96)" d="M20,0 C34,0 40,14 40,30 C40,48 34,58 33,70 C32,86 30,100 20,100 C10,100 8,86 7,70 C6,58 0,48 0,30 C0,14 6,0 20,0 Z"/>
+    <clipPath id="s1d"><path transform="translate(186 96)" d="M20,0 C34,0 40,14 40,30 C40,48 34,58 33,70 C32,86 30,100 20,100 C10,100 8,86 7,70 C6,58 0,48 0,30 C0,14 6,0 20,0 Z"/></clipPath>
+    <g class="zone" clip-path="url(#s1d)"><rect x="186" y="96" width="16" height="100"/></g>
+    <path class="trait semelle" transform="translate(186 96)" d="M20,0 C34,0 40,14 40,30 C40,48 34,58 33,70 C32,86 30,100 20,100 C10,100 8,86 7,70 C6,58 0,48 0,30 C0,14 6,0 20,0 Z"/>
+    <text class="texte" x="180" y="218" text-anchor="middle">Pronateur</text>
+    <line class="trait" x1="278" y1="6" x2="278" y2="48"/>
+    <g transform="rotate(-15 278 48)"><line class="trait" x1="278" y1="48" x2="278" y2="64"/><rect class="talon" x="266" y="62" width="24" height="14" rx="5"/><line class="axe" x1="278" y1="40" x2="278" y2="78"/></g>
+    <line class="trait" x1="322" y1="6" x2="322" y2="48"/>
+    <g transform="rotate(15 322 48)"><line class="trait" x1="322" y1="48" x2="322" y2="64"/><rect class="talon" x="310" y="62" width="24" height="14" rx="5"/><line class="axe" x1="322" y1="40" x2="322" y2="78"/></g>
+    <line class="sol" x1="252" y1="82" x2="348" y2="82"/>
+    <clipPath id="s2g"><path transform="translate(254 96)" d="M20,0 C34,0 40,14 40,30 C40,48 34,58 33,70 C32,86 30,100 20,100 C10,100 8,86 7,70 C6,58 0,48 0,30 C0,14 6,0 20,0 Z"/></clipPath>
+    <g class="zone" clip-path="url(#s2g)"><rect x="254" y="96" width="16" height="100"/></g>
+    <path class="trait semelle" transform="translate(254 96)" d="M20,0 C34,0 40,14 40,30 C40,48 34,58 33,70 C32,86 30,100 20,100 C10,100 8,86 7,70 C6,58 0,48 0,30 C0,14 6,0 20,0 Z"/>
+    <clipPath id="s2d"><path transform="translate(306 96)" d="M20,0 C34,0 40,14 40,30 C40,48 34,58 33,70 C32,86 30,100 20,100 C10,100 8,86 7,70 C6,58 0,48 0,30 C0,14 6,0 20,0 Z"/></clipPath>
+    <g class="zone" clip-path="url(#s2d)"><rect x="330" y="96" width="16" height="100"/></g>
+    <path class="trait semelle" transform="translate(306 96)" d="M20,0 C34,0 40,14 40,30 C40,48 34,58 33,70 C32,86 30,100 20,100 C10,100 8,86 7,70 C6,58 0,48 0,30 C0,14 6,0 20,0 Z"/>
+    <text class="texte" x="300" y="218" text-anchor="middle">Supinateur</text>
+  </g>
+</svg>
