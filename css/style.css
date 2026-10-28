@@ -25,6 +25,7 @@
   --texte-sur-or: #1a1814;         /* texte des boutons dorés */
   --ombre: 0 12px 40px rgba(60, 45, 20, 0.08);            /* ombre douce : les cartes "flottent" */
   --ombre-premiere: 0 20px 50px rgba(60, 45, 20, 0.12);   /* ombre plus marquée de la carte n°1 */
+  --reflet-or: rgba(201, 163, 91, 0.28);                  /* reflet qui traverse la carte n°1 */
   --arrondi: 4px;                  /* coins à peine arrondis : plus élégant */
   --police-titres: "Playfair Display", Georgia, serif;
   --police-texte: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -54,6 +55,7 @@
     --texte-sur-or: #0d0d0f;
     --ombre: 0 20px 50px rgba(0, 0, 0, 0.5);
     --ombre-premiere: 0 0 0 1px rgba(201, 163, 91, 0.25), 0 30px 60px rgba(0, 0, 0, 0.6);
+    --reflet-or: rgba(232, 200, 130, 0.18);
   }
 }
 
@@ -602,10 +604,78 @@ footer {
   animation-delay: calc(var(--i, 0) * 0.1s);
 }
 
-/* La carte n°1 est mise en avant avec un contour doré et une ombre plus marquée. */
+/* La carte n°1 est mise en avant avec un contour doré et une ombre plus marquée.
+   Elle a sa propre animation d'entrée, plus marquée que les autres (voir plus bas). */
 .carte-premiere {
   border: 1px solid var(--couleur-principale);
   box-shadow: var(--ombre-premiere);
+  position: relative;             /* sert de repère au reflet doré (::after) */
+  overflow: hidden;               /* le reflet ne dépasse pas de la carte */
+  animation: entree-premiere 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+/* Les autres cartes attendent que la n°1 soit arrivée avant d'apparaître. */
+.carte-resultat:not(.carte-premiere) {
+  animation-delay: calc(0.5s + var(--i, 0) * 0.1s);
+}
+
+/* 1. La carte n°1 monte, grossit un tout petit peu trop, puis se pose. */
+@keyframes entree-premiere {
+  0% {
+    opacity: 0;
+    transform: translateY(28px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 2. Un reflet doré traverse la carte une fois, comme sur un objet précieux.
+   ::after crée un calque vide par-dessus la carte : c'est lui qui bouge. */
+.carte-premiere::after {
+  content: "";
+  position: absolute;
+  inset: 0;                       /* couvre toute la carte */
+  background: linear-gradient(110deg, transparent 35%, var(--reflet-or) 50%, transparent 65%);
+  transform: translateX(-100%);   /* au départ, caché à gauche */
+  pointer-events: none;           /* les clics passent à travers */
+  animation: reflet 1.3s ease-in-out 0.8s both;
+}
+
+@keyframes reflet {
+  to {
+    transform: translateX(100%);  /* ressort à droite */
+  }
+}
+
+/* 3. Le rond « 1 » apparaît d'un coup et lance une onde dorée autour de lui. */
+.carte-premiere .rang {
+  animation: halo-rang 1.4s ease-out 0.7s both;
+}
+
+@keyframes halo-rang {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+    box-shadow: 0 0 0 0 var(--couleur-principale);
+  }
+  30% {
+    transform: scale(1.18);
+    opacity: 1;
+  }
+  45% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 16px transparent;
+  }
 }
 
 /* L'en-tête de la carte : numéro, nom et prix sur une même ligne. */
