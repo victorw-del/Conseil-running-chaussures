@@ -9,7 +9,7 @@
 /* ---------- 1. Le nom de la copie ----------
    Si tu modifies beaucoup le site, change ce numéro (v2, v3…) :
    l'ancienne copie sera alors effacée et remplacée. */
-const NOM_DE_LA_COPIE = "la-chaussure-parfaite-v1";
+const NOM_DE_LA_COPIE = "ma-paire-v4";
 
 // Les fichiers enregistrés dès l'installation de l'appli.
 const FICHIERS = [

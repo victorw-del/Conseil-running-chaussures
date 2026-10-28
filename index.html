@@ -5,28 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trouver la bonne paire de chaussures</title>
-    <meta name="description" content="Quelle paire de chaussures de course à pied choisir ? Réponds à 10 questions (niveau, foulée, terrain, poids…) et découvre gratuitement les 5 chaussures de running faites pour toi.">
-    <!-- Pour Google et les réseaux sociaux.
-         canonical : l'adresse officielle de la page, pour que Google n'en garde qu'une.
-         og:… : le nom, le titre et le texte affichés quand on partage le lien. -->
-    <link rel="canonical" href="https://victorw-del.github.io/La-Chaussure-Parfaite/">
-    <meta property="og:site_name" content="La Chaussure Parfaite">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="fr_FR">
-    <meta property="og:url" content="https://victorw-del.github.io/La-Chaussure-Parfaite/">
-    <meta property="og:title" content="Trouver la bonne paire de chaussures">
-    <meta property="og:description" content="Réponds à 10 questions et découvre gratuitement les 5 chaussures de running faites pour toi.">
-    <!-- Donne à Google le nom du site, pour qu'il affiche « La Chaussure Parfaite »
-         au-dessus du lien dans les résultats de recherche. -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "La Chaussure Parfaite",
-        "url": "https://victorw-del.github.io/La-Chaussure-Parfaite/",
-        "inLanguage": "fr"
-      }
-    </script>
+    <meta name="description" content="Réponds à quelques questions (niveau, foulée, terrain, poids…) et découvre les 5 chaussures de running qui te correspondent, expliquées comme par un vendeur spécialisé.">
     <!-- Indique au navigateur que le site existe en version claire ET sombre. -->
     <meta name="color-scheme" content="light dark">
     <!-- Pour l'appli de téléphone : la fiche de l'appli (nom, icône, couleurs),
@@ -35,11 +14,11 @@
     <meta name="theme-color" content="#1a1814" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0d0d0f" media="(prefers-color-scheme: dark)">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="La Chaussure Parfaite">
+    <meta name="apple-mobile-web-app-title" content="Ma paire">
     <link rel="apple-touch-icon" href="icones/icone-180.png">
-    <!-- L'icône de l'onglet (favicon) : la même que l'appli. Google l'affiche aussi
-         à gauche du nom du site dans ses résultats (il lui faut un vrai fichier image). -->
-    <link rel="icon" href="icones/icone-192.png" type="image/png" sizes="192x192">
+        <!-- L'icône de l'onglet (favicon). Ici, un emoji chaussure dessiné en SVG directement dans le lien :
+         pas besoin de fichier image. -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👟</text></svg>">
     <!-- Les polices viennent de Google Fonts (gratuites) : "Playfair Display" pour les titres,
          "Inter" pour le texte.
          Les deux "preconnect" font gagner un peu de temps au chargement. -->
@@ -59,7 +38,7 @@
         <!-- L'illustration du coureur en particules (fichier images/coureur.svg).
              alt="" : elle est décorative, les lecteurs d'écran la sautent. -->
         <img class="illustration-coureur" src="images/coureur.svg" alt="" width="400" height="280">
-        <h1>La Chaussure Parfaite</h1>
+        <h1>Trouver la bonne paire de chaussures</h1>
         <p class="accueil-texte">Réponds à quelques questions, comme avec un vendeur en magasin, et découvre les 5 chaussures les plus adaptées à ta façon de courir.</p>
 
         <!-- <ol> = liste numérotée : les 3 étapes du site. -->
@@ -327,23 +306,6 @@
         <h2>Important</h2>
         <p>Ce site donne un <strong>conseil</strong>, pas un avis médical. En cas de douleur ou de blessure, consulte un médecin ou un podologue avant de choisir tes chaussures.</p>
       </aside>
-
-      <!-- ========== GUIDE ==========
-           Un petit texte qui répond à la question que les gens tapent sur Google.
-           Google lit ce texte pour savoir de quoi parle le site. -->
-      <section id="guide">
-        <h2>Quelle paire de chaussures de course à pied choisir ?</h2>
-        <p>Il n'existe pas de meilleure chaussure pour tout le monde : la bonne paire dépend de ta façon de courir. Voici ce qui compte le plus.</p>
-        <h3>Ta foulée</h3>
-        <p>Si ton pied s'écrase vers l'intérieur (pronateur), une chaussure stable le soutient. Si ta foulée est neutre ou supinatrice, une chaussure neutre suffit. L'usure de tes anciennes semelles donne un bon indice.</p>
-        <h3>Le terrain</h3>
-        <p>Sur la route, on cherche de l'amorti et de la souplesse. Sur les chemins, une chaussure de trail accroche mieux grâce à ses crampons et protège le pied des cailloux.</p>
-        <h3>Ton poids et tes distances</h3>
-        <p>Plus tu es lourd ou plus tu cours longtemps, plus l'amorti compte. Pour aller vite sur des courses courtes, une chaussure légère et dynamique est plus agréable.</p>
-        <h3>Le drop</h3>
-        <p>C'est la différence de hauteur entre le talon et l'avant du pied. Un drop élevé (8 à 12 mm) soulage les mollets ; un drop faible demande plus d'habitude.</p>
-        <p><a href="#questionnaire">Réponds au questionnaire</a> : il tient compte de tout cela et te propose les 5 paires qui te correspondent le mieux.</p>
-      </section>
 
     </main>
 
