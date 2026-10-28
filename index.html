@@ -11,18 +11,20 @@
     <!-- Pour l'appli de téléphone : la fiche de l'appli (nom, icône, couleurs),
          la couleur de la barre du téléphone et l'icône pour les iPhone. -->
     <link rel="manifest" href="manifest.webmanifest">
-    <meta name="theme-color" content="#e8590c">
+    <meta name="theme-color" content="#1a1814" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0d0d0f" media="(prefers-color-scheme: dark)">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Ma paire">
     <link rel="apple-touch-icon" href="icones/icone-180.png">
         <!-- L'icône de l'onglet (favicon). Ici, un emoji chaussure dessiné en SVG directement dans le lien :
          pas besoin de fichier image. -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👟</text></svg>">
-    <!-- La police des titres, "Outfit", vient de Google Fonts (gratuite).
+    <!-- Les polices viennent de Google Fonts (gratuites) : "Playfair Display" pour les titres,
+         "Inter" pour le texte.
          Les deux "preconnect" font gagner un peu de temps au chargement. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
     <!-- Relie la page à sa feuille de style. href = le chemin du fichier CSS. -->
         <link rel="stylesheet" href="css/style.css">
   </head>
@@ -30,10 +32,9 @@
   <body>
 
     <!-- ===================== EN-TÊTE : L'ACCUEIL =====================
-         Un grand bandeau orange qui présente le site en 3 étapes. -->
+         Un grand bandeau noir et or qui présente le site en 3 étapes. -->
     <header>
       <div class="accueil">
-        <p class="accueil-emoji" aria-hidden="true">👟</p>
         <h1>Trouver la bonne paire de chaussures</h1>
         <p class="accueil-texte">Réponds à quelques questions, comme avec un vendeur en magasin, et découvre les 5 chaussures les plus adaptées à ta façon de courir.</p>
 
