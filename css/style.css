@@ -1,5 +1,5 @@
 /* =========================================================
-   FEUILLE DE STYLE DU SITE "LA CHAUSSURE PARFAITE"
+   FEUILLE DE STYLE DU SITE "TROUVER LA BONNE PAIRE DE CHAUSSURES"
    ========================================================= */
 
 /* ---------- 1. Les variables ----------
@@ -185,7 +185,7 @@ header {
 
 /* ::after écrit une petite ligne en majuscules espacées en haut du bandeau. */
 .accueil::after {
-  content: "Conseil running · 2026";
+  content: "Conseil running · Édition 2026";
   position: absolute;
   top: 28px;
   left: 0;
@@ -524,34 +524,6 @@ a:focus-visible {
 #avertissement h2 {
   margin-top: 16px;
   font-size: 1.1rem;
-}
-
-/* Le petit guide en bas de l'accueil : une carte simple, comme le reste du site. */
-#guide {
-  background-color: var(--couleur-carte);
-  border: 1px solid var(--couleur-bordure);
-  border-radius: var(--arrondi);
-  padding: 8px 20px 12px;
-  margin: 32px 0;
-}
-
-#guide h2 {
-  font-size: 1.3rem;
-}
-
-#guide h3 {
-  margin: 18px 0 4px;
-  font-size: 1rem;
-  color: var(--couleur-principale);
-}
-
-#guide p {
-  margin-top: 4px;
-}
-
-#guide a {
-  color: var(--couleur-principale);
-  font-weight: 600;
 }
 
 /* ---------- 12. Le pied de page ---------- */
