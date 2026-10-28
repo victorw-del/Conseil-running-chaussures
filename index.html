@@ -186,25 +186,32 @@
           </fieldset>
 
           <!-- ----- Question 7 : la foulée (pronation) -----
-               <small> affiche un texte d'aide plus discret. -->
+               <small> affiche un texte d'aide plus discret.
+               Pas d'icônes ici : le schéma explique déjà les réponses. -->
           <fieldset>
             <legend>7. Comment ton pied se pose-t-il ?</legend>
             <p><small>Astuce : regarde l'usure de tes anciennes chaussures. Usées côté intérieur : plutôt pronateur. Côté extérieur : plutôt supinateur. Usure centrée : neutre.</small></p>
+            <!-- Le schéma des 3 types de foulée (fichier images/foulee.svg).
+                 <figure> regroupe une image et sa légende (<figcaption>). -->
+            <figure class="schema-foulee">
+              <img src="images/foulee.svg" alt="Schéma : pied neutre, usure au centre de la semelle ; pronateur, le pied s'écrase vers l'intérieur et la semelle s'use côté intérieur ; supinateur, le pied roule vers l'extérieur et la semelle s'use côté extérieur." width="360" height="228">
+              <figcaption>En haut, les pieds vus de dos. En bas, les semelles vues de dessus : la zone dorée montre où elles s'usent.</figcaption>
+            </figure>
             <div class="choix">
               <input type="radio" id="foulee-neutre" name="foulee" value="neutre" required>
-              <label for="foulee-neutre"><span class="icone" aria-hidden="true">🎯</span>Neutre</label>
+              <label for="foulee-neutre">Neutre</label>
             </div>
             <div class="choix">
               <input type="radio" id="foulee-pronateur" name="foulee" value="pronateur">
-              <label for="foulee-pronateur"><span class="icone" aria-hidden="true">↘️</span>Pronateur (le pied s'écrase vers l'intérieur)</label>
+              <label for="foulee-pronateur">Pronateur (le pied s'écrase vers l'intérieur)</label>
             </div>
             <div class="choix">
               <input type="radio" id="foulee-supinateur" name="foulee" value="supinateur">
-              <label for="foulee-supinateur"><span class="icone" aria-hidden="true">↙️</span>Supinateur (le pied roule vers l'extérieur)</label>
+              <label for="foulee-supinateur">Supinateur (le pied roule vers l'extérieur)</label>
             </div>
             <div class="choix">
               <input type="radio" id="foulee-inconnue" name="foulee" value="inconnue">
-              <label for="foulee-inconnue"><span class="icone" aria-hidden="true">🤔</span>Je ne sais pas</label>
+              <label for="foulee-inconnue">Je ne sais pas</label>
             </div>
           </fieldset>
 
