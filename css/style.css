@@ -185,7 +185,7 @@ header {
 
 /* ::after écrit une petite ligne en majuscules espacées en haut du bandeau. */
 .accueil::after {
-  content: "La Bonne Paire · Édition 2026";
+  content: "La Chaussure Parfaite";
   position: absolute;
   top: 28px;
   left: 0;

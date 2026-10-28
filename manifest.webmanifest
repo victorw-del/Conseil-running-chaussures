@@ -1,6 +1,6 @@
 {
-  "name": "La Bonne Paire",
-  "short_name": "La Bonne Paire",
+  "name": "La Chaussure Parfaite",
+  "short_name": "La Chaussure Parfaite",
   "description": "Réponds à quelques questions et découvre les 5 chaussures de running qui te correspondent.",
   "lang": "fr",
   "start_url": "./index.html",
