@@ -533,8 +533,10 @@ a:focus-visible {
   font-size: 1.1rem;
 }
 
-/* Le petit guide en bas de l'accueil : une carte simple, comme le reste du site. */
-#guide {
+/* Le petit guide en bas de l'accueil, et les blocs de la page Mentions légales :
+   une carte simple, comme le reste du site. */
+#guide,
+.bloc-texte {
   background-color: var(--couleur-carte);
   border: 1px solid var(--couleur-bordure);
   border-radius: var(--arrondi);
@@ -542,21 +544,25 @@ a:focus-visible {
   margin: 32px 0;
 }
 
-#guide h2 {
+#guide h2,
+.bloc-texte h2 {
   font-size: 1.3rem;
 }
 
-#guide h3 {
+#guide h3,
+.bloc-texte h3 {
   margin: 18px 0 4px;
   font-size: 1rem;
   color: var(--couleur-principale);
 }
 
-#guide p {
+#guide p,
+.bloc-texte p {
   margin-top: 4px;
 }
 
-#guide a {
+#guide a,
+.bloc-texte a {
   color: var(--couleur-principale);
   font-weight: 600;
 }
@@ -566,6 +572,11 @@ footer {
   color: var(--couleur-texte-doux);
   font-size: 0.85rem;
   padding-bottom: 40px;
+}
+
+/* Le lien vers la page Mentions légales, discret comme le reste du pied de page. */
+footer a {
+  color: inherit;
 }
 
 /* ---------- 13. Adaptation aux grands écrans ----------
