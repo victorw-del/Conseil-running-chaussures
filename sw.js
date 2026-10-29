@@ -9,13 +9,14 @@
 /* ---------- 1. Le nom de la copie ----------
    Si tu modifies beaucoup le site, change ce numéro (v2, v3…) :
    l'ancienne copie sera alors effacée et remplacée. */
-const NOM_DE_LA_COPIE = "ma-paire-v6";
+const NOM_DE_LA_COPIE = "ma-paire-v7";
 
 // Les fichiers enregistrés dès l'installation de l'appli.
 const FICHIERS = [
   "./",
   "./index.html",
   "./resultats.html",
+  "./mentions-legales.html",
   "./css/style.css",
   "./js/app.js",
   "./js/appli.js",
