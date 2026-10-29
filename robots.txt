@@ -1,0 +1,6 @@
+# Règles pour les robots des moteurs de recherche (Google, Bing…).
+# Tout le site peut être visité ; le plan du site est indiqué en dessous.
+User-agent: *
+Allow: /
+
+Sitemap: https://lachaussureparfaite.fr/sitemap.xml
