@@ -353,6 +353,16 @@
           <button type="submit" id="bouton-envoyer">Voir mes chaussures</button>
           </div>
 
+          <!-- ----- Le récapitulatif des réponses -----
+               Il s'affiche quand on revient des résultats pour changer une réponse.
+               app.js le remplit : une ligne par question, un clic pour la modifier. -->
+          <div id="recapitulatif" class="recapitulatif" tabindex="-1" hidden>
+            <h3>Tes réponses</h3>
+            <p><small>Choisis la réponse à changer : pas besoin de tout refaire.</small></p>
+            <ul id="liste-reponses" class="liste-reponses"></ul>
+            <button type="submit">Voir mes chaussures</button>
+          </div>
+
           <!-- Les boutons pour passer d'une question à l'autre.
                app.js les affiche et y range aussi le bouton « Voir mes chaussures ».
                type="button" : ils n'envoient pas le formulaire. -->
@@ -403,8 +413,11 @@
     <!-- Installe l'appli de téléphone (voir js/appli.js). -->
     <script src="js/appli.js"></script>
     <!-- Le compteur de visites GoatCounter : il compte les pages vues, sans cookie
-         et sans garder l'adresse IP. Les chiffres sont sur lachaussureparfaite.goatcounter.com. -->
+         et sans garder l'adresse IP. Les chiffres sont sur lachaussureparfaite.goatcounter.com.
+         On envoie toujours l'adresse « / », sans les réponses qu'elle peut contenir
+         quand on revient des résultats pour les modifier. -->
     <script data-goatcounter="https://lachaussureparfaite.goatcounter.com/count"
+            data-goatcounter-settings='{"path": "/"}'
             async src="//gc.zgo.at/count.js"></script>
   </body>
 </html>

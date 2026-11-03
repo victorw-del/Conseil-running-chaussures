@@ -6,6 +6,7 @@
    - d'afficher les questions une par une, avec un glissement entre chacune ;
    - d'adapter les tranches de poids au parcours homme ou femme ;
    - de remplir la barre de progression au fil des réponses ;
+   - d'afficher le récapitulatif, pour changer une réponse sans tout refaire ;
    - d'envoyer les réponses vers la page des résultats.
    ========================================================= */
 
@@ -22,6 +23,8 @@ const boutonPrecedent = document.getElementById("bouton-precedent");
 const boutonSuivant = document.getElementById("bouton-suivant");
 const boutonEnvoyer = document.getElementById("bouton-envoyer");
 const zoneQuestionnaire = document.getElementById("questionnaire");
+const recapitulatif = document.getElementById("recapitulatif");
+const listeReponses = document.getElementById("liste-reponses");
 
 // Chaque <fieldset> est une question : ce sont les étapes du questionnaire.
 const etapes = Array.from(formulaire.querySelectorAll("fieldset"));
@@ -84,6 +87,9 @@ function estRepondue(etape) {
 
 /* ---------- 5. La barre de progression et les boutons ---------- */
 let etapeActuelle = 0;
+// "retouche" : on vient du récapitulatif pour changer une réponse.
+// Après la réponse, on y retourne au lieu de passer à la question suivante.
+let retouche = false;
 
 function mettreAJourNavigation() {
   const total = etapes.length;
@@ -98,8 +104,10 @@ function mettreAJourNavigation() {
   boutonPrecedent.classList.toggle("invisible", etapeActuelle === 0);
 
   // Sur la dernière question, "Suivant" laisse sa place à "Voir mes chaussures".
-  boutonSuivant.hidden = derniere;
-  boutonEnvoyer.hidden = !derniere;
+  // Pendant une retouche, "Suivant" devient "Valider" et ramène au récapitulatif.
+  boutonSuivant.textContent = retouche ? "Valider" : "Suivant";
+  boutonSuivant.hidden = derniere && !retouche;
+  boutonEnvoyer.hidden = !derniere || retouche;
 
   // On ne peut avancer que si la question a sa réponse.
   boutonSuivant.disabled = !estRepondue(etapes[etapeActuelle]);
@@ -108,18 +116,16 @@ function mettreAJourNavigation() {
 
 
 /* ---------- 6. Passer d'une question à l'autre ----------
-   L'ancienne question glisse et s'efface, puis la nouvelle arrive de l'autre côté.
-   Le sens du glissement dépend du sens : vers l'avant ou vers l'arrière. */
-function allerA(index) {
-  if (index === etapeActuelle || index < 0 || index >= etapes.length) {
-    return;
-  }
-  const sens = index > etapeActuelle ? "avance" : "recule";
-  const ancienne = etapes[etapeActuelle];
-  const nouvelle = etapes[index];
-  etapeActuelle = index;
+   L'ancienne vue glisse et s'efface, puis la nouvelle arrive de l'autre côté.
+   Le sens du glissement dépend du sens : vers l'avant ou vers l'arrière.
+   Une "vue" est une question (un <fieldset>) ou le récapitulatif. */
+let vueActuelle = null;
 
-  // 1. L'ancienne question sort.
+function changerVue(nouvelle, sens, avantEntree) {
+  const ancienne = vueActuelle;
+  vueActuelle = nouvelle;
+
+  // 1. L'ancienne vue sort.
   ancienne.classList.remove("entree-avance", "entree-recule");
   ancienne.classList.add("sortie-" + sens);
 
@@ -127,26 +133,128 @@ function allerA(index) {
   setTimeout(function () {
     ancienne.hidden = true;
     ancienne.classList.remove("sortie-avance", "sortie-recule");
-    etapes.forEach(function (etape) {
-      if (etape !== nouvelle) {
-        etape.hidden = true;
+    etapes.concat(recapitulatif).forEach(function (vue) {
+      if (vue !== nouvelle) {
+        vue.hidden = true;
       }
     });
+    avantEntree();
     nouvelle.hidden = false;
     nouvelle.classList.add("entree-" + sens);
-    mettreAJourNavigation();
 
     // Si le haut du questionnaire est sorti de l'écran (téléphone), on y remonte.
     if (zoneQuestionnaire.getBoundingClientRect().top < 0) {
       zoneQuestionnaire.scrollIntoView({ behavior: mouvementReduit ? "auto" : "smooth" });
     }
-    // Le focus va sur la nouvelle question : un lecteur d'écran la lit tout de suite.
+    // Le focus va sur la nouvelle vue : un lecteur d'écran la lit tout de suite.
     nouvelle.focus({ preventScroll: true });
   }, DUREE_SORTIE);
 }
 
+function allerA(index) {
+  const memeQuestion = index === etapeActuelle && vueActuelle === etapes[index];
+  if (memeQuestion || index < 0 || index >= etapes.length) {
+    return;
+  }
+  const sens = index > etapeActuelle || vueActuelle === recapitulatif ? "avance" : "recule";
+  etapeActuelle = index;
+  changerVue(etapes[index], sens, function () {
+    navigation.hidden = false;
+    progression.hidden = false;
+    mettreAJourNavigation();
+  });
+}
 
-/* ---------- 7. Mettre le questionnaire en route ---------- */
+
+/* ---------- 7. Le récapitulatif ----------
+   Une ligne par question : la question, la réponse donnée, et "Modifier".
+   Un clic sur la ligne ouvre la question ; une fois répondue, on revient ici. */
+
+// Le texte de la question, sans son numéro ni ses précisions entre parenthèses :
+// "2. Quel est ton niveau ?" -> "Quel est ton niveau ?"
+function texteQuestion(etape) {
+  return etape.querySelector("legend").textContent
+    .replace(/^\d+\.\s*/, "")      // le numéro du début
+    .replace(/\s*\([^)]*\)/, "")    // "(plusieurs choix possibles)"
+    .replace(/\s*:$/, "")            // les deux-points de la fin
+    .trim();
+}
+
+// Le texte de la réponse, tel qu'il est écrit dans la case cochée ou la liste.
+function texteReponse(etape) {
+  const liste = etape.querySelector("select");
+  if (liste) {
+    return liste.value ? liste.selectedOptions[0].textContent : "";
+  }
+  const cochees = Array.from(etape.querySelectorAll("input:checked"));
+  const textes = cochees.map(function (champ) {
+    return etape.querySelector(`label[for="${champ.id}"]`).textContent.trim();
+  });
+  // Les blessures : aucune case cochée est une vraie réponse.
+  if (textes.length === 0 && etape.querySelector('input[type="checkbox"]')) {
+    return "Aucune";
+  }
+  return textes.join(", ");
+}
+
+function remplirRecapitulatif() {
+  listeReponses.innerHTML = etapes.map(function (etape, index) {
+    return `
+      <li>
+        <button type="button" class="ligne-reponse" data-etape="${index}">
+          <span class="ligne-question">${texteQuestion(etape)}</span>
+          <span class="ligne-valeur">${texteReponse(etape)}</span>
+          <span class="ligne-modifier" aria-hidden="true">Modifier</span>
+        </button>
+      </li>`;
+  }).join("");
+}
+
+function afficherRecapitulatif() {
+  retouche = true;
+  changerVue(recapitulatif, "avance", function () {
+    remplirRecapitulatif();
+    navigation.hidden = true;
+    // Le récapitulatif a son propre titre : la barre de progression se retire.
+    progression.hidden = true;
+  });
+}
+
+// Un clic sur une ligne ouvre la question correspondante.
+listeReponses.addEventListener("click", function (evenement) {
+  const ligne = evenement.target.closest(".ligne-reponse");
+  if (ligne) {
+    allerA(Number(ligne.dataset.etape));
+  }
+});
+
+
+/* ---------- 8. Reprendre des réponses déjà données ----------
+   En revenant des résultats par « Modifier mes réponses », les réponses sont
+   dans l'adresse de la page (index.html?sexe=femme&niveau=debutant...).
+   On coche les mêmes cases, puis on efface les réponses de l'adresse. */
+function reprendreReponses() {
+  const reponses = new URLSearchParams(window.location.search);
+  if (!reponses.get("sexe")) {
+    return;
+  }
+  // Le sexe d'abord : il choisit les tranches de poids proposées.
+  preparerParcours(reponses.get("sexe"));
+  reponses.forEach(function (valeur, nom) {
+    formulaire.querySelectorAll(`[name="${nom}"]`).forEach(function (champ) {
+      if (champ.tagName === "SELECT") {
+        champ.value = valeur;
+      } else if (champ.value === valeur) {
+        champ.checked = true;
+      }
+    });
+  });
+  // L'adresse redevient « index.html#questionnaire », sans les réponses.
+  history.replaceState(null, "", window.location.pathname + window.location.hash);
+}
+
+
+/* ---------- 9. Mettre le questionnaire en route ---------- */
 function demarrer() {
   // La classe "mode-etapes" active la présentation question par question dans le CSS.
   formulaire.classList.add("mode-etapes");
@@ -157,29 +265,48 @@ function demarrer() {
   navigation.hidden = false;
   // Le bouton "Voir mes chaussures" rejoint "Précédent" et "Suivant".
   navigation.append(boutonEnvoyer);
+  // Le récapitulatif aussi peut recevoir le focus quand il apparaît.
+  recapitulatif.tabIndex = -1;
 
-  // Si le navigateur a gardé des réponses (bouton "Retour"), on reprend
-  // à la première question sans réponse.
+  // Si le navigateur a gardé des réponses (bouton "Retour"), on prépare le bon parcours.
   const sexeDejaCoche = document.querySelector('input[name="sexe"]:checked');
   if (sexeDejaCoche) {
     preparerParcours(sexeDejaCoche.value);
   }
-  const premiereSansReponse = etapes.findIndex(function (etape) {
-    return !estRepondue(etape);
-  });
-  etapeActuelle = premiereSansReponse === -1 ? etapes.length - 1 : premiereSansReponse;
+  // Si on revient des résultats pour modifier, on reprend les réponses de l'adresse.
+  reprendreReponses();
 
-  etapes.forEach(function (etape, index) {
-    etape.hidden = index !== etapeActuelle;
+  etapes.forEach(function (etape) {
+    etape.hidden = true;
     // tabindex="-1" : la question peut recevoir le focus quand elle apparaît.
     etape.tabIndex = -1;
   });
-  mettreAJourNavigation();
+
+  // Toutes les réponses sont là : on montre le récapitulatif.
+  // Sinon, on reprend à la première question sans réponse.
+  const premiereSansReponse = etapes.findIndex(function (etape) {
+    return !estRepondue(etape);
+  });
+  if (premiereSansReponse === -1) {
+    retouche = true;
+    remplirRecapitulatif();
+    recapitulatif.hidden = false;
+    vueActuelle = recapitulatif;
+    navigation.hidden = true;
+    // Le récapitulatif a son propre titre : la barre de progression se retire.
+    progression.hidden = true;
+  } else {
+    etapeActuelle = premiereSansReponse;
+    etapes[etapeActuelle].hidden = false;
+    vueActuelle = etapes[etapeActuelle];
+    mettreAJourNavigation();
+  }
 }
 
 
-/* ---------- 8. Réagir aux réponses ----------
-   Après un clic sur une réponse, on passe tout seul à la question suivante.
+/* ---------- 10. Réagir aux réponses ----------
+   Après un clic sur une réponse, on passe tout seul à la question suivante
+   (ou on revient au récapitulatif, si on était venu en changer une).
    Mais pas si la personne parcourt les réponses avec les flèches du clavier :
    elle avance alors avec le bouton "Suivant". */
 let viaFleches = false;
@@ -199,26 +326,43 @@ formulaire.addEventListener("change", function (evenement) {
 
   const avanceSeule = !viaFleches && (champ.type === "radio" || champ.tagName === "SELECT");
   const depuis = etapeActuelle;
-  if (avanceSeule && depuis < etapes.length - 1 && champ.value) {
+  const peutAvancer = retouche || depuis < etapes.length - 1;
+  if (avanceSeule && peutAvancer && champ.value) {
     setTimeout(function () {
       // On n'avance que si la personne n'a pas déjà changé de question entre-temps.
-      if (etapeActuelle === depuis) {
-        allerA(depuis + 1);
+      if (etapeActuelle === depuis && vueActuelle === etapes[depuis]) {
+        suite();
       }
     }, PAUSE_AVANT_SUITE);
   }
 });
 
-boutonSuivant.addEventListener("click", function () {
-  allerA(etapeActuelle + 1);
-});
+// Après une réponse : la question suivante, ou le récapitulatif pendant une retouche.
+// Si un changement a vidé une autre réponse (le poids, quand on change de sexe),
+// on va d'abord la redemander.
+function suite() {
+  if (!retouche) {
+    allerA(etapeActuelle + 1);
+    return;
+  }
+  const manquante = etapes.findIndex(function (etape) {
+    return !estRepondue(etape);
+  });
+  if (manquante === -1) {
+    afficherRecapitulatif();
+  } else {
+    allerA(manquante);
+  }
+}
+
+boutonSuivant.addEventListener("click", suite);
 
 boutonPrecedent.addEventListener("click", function () {
   allerA(etapeActuelle - 1);
 });
 
 
-/* ---------- 9. Envoyer les réponses ----------
+/* ---------- 11. Envoyer les réponses ----------
    On part vers resultats.html en emportant les réponses dans l'adresse de la page.
    Exemple : resultats.html?sexe=femme&niveau=debutant&km=15a30...
    URLSearchParams fabrique cette fin d'adresse à partir du formulaire. */
@@ -226,9 +370,10 @@ formulaire.addEventListener("submit", function (evenement) {
   evenement.preventDefault();
 
   // La touche Entrée sur une question (pas la dernière) passe simplement à la suivante.
-  if (etapeActuelle < etapes.length - 1) {
+  const surQuestion = vueActuelle !== recapitulatif;
+  if (surQuestion && (retouche || etapeActuelle < etapes.length - 1)) {
     if (estRepondue(etapes[etapeActuelle])) {
-      allerA(etapeActuelle + 1);
+      suite();
     }
     return;
   }
@@ -252,5 +397,5 @@ formulaire.addEventListener("submit", function (evenement) {
 });
 
 
-/* ---------- 10. Démarrage ---------- */
+/* ---------- 12. Démarrage ---------- */
 demarrer();

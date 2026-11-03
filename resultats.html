@@ -56,6 +56,9 @@
       <section class="bandeau-resultats">
         <h1 id="titre-resultats" tabindex="-1">Tes 5 chaussures idéales</h1>
         <p id="resume-profil">Calcul de tes recommandations…</p>
+        <!-- resultats.js ajoute les réponses à l'adresse de ce lien : le questionnaire
+             s'ouvre déjà rempli, sur le récapitulatif. -->
+        <a class="lien-modifier lien-modifier-bandeau" href="index.html#questionnaire">Modifier mes réponses</a>
       </section>
 
       <!-- ========== LES CARTES ==========
@@ -63,9 +66,11 @@
            aria-live="polite" : les lecteurs d'écran annoncent le contenu quand il arrive. -->
       <section id="resultats" aria-live="polite"></section>
 
-      <!-- Le bouton pour tout recommencer : un simple lien vers le questionnaire, vide. -->
+      <!-- Deux façons de repartir : changer une ou deux réponses (le questionnaire
+           s'ouvre déjà rempli), ou tout recommencer avec un questionnaire vide. -->
       <p class="zone-recommencer">
-        <a class="bouton-recommencer" href="index.html">Recommencer le questionnaire</a>
+        <a class="lien-modifier bouton-recommencer" href="index.html#questionnaire">Modifier mes réponses</a>
+        <a class="lien-recommencer" href="index.html">Tout recommencer</a>
       </p>
 
       <!-- ========== AVERTISSEMENT ========== -->
