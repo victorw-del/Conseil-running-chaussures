@@ -316,6 +316,11 @@ async function afficherPage() {
 
   resumeProfil.textContent = resumeDuProfil(reponses);
 
+  // « Modifier mes réponses » emporte les réponses : le questionnaire s'ouvrira déjà rempli.
+  document.querySelectorAll(".lien-modifier").forEach(function (lien) {
+    lien.href = "index.html" + window.location.search + "#questionnaire";
+  });
+
   // Cas 2 : le fichier des chaussures n'a pas pu être chargé.
   const chargementReussi = await chargerChaussures();
   if (!chargementReussi || chaussures.length === 0) {
