@@ -79,13 +79,20 @@
     </svg>
 
     <!-- ===================== EN-TÊTE : L'ACCUEIL =====================
-         Un grand bandeau noir et or qui présente le site en 3 étapes. -->
-    <header>
+         Un grand bandeau noir et or, sur toute la hauteur de l'écran.
+         La classe "hero" le fait aller d'un bord à l'autre de la page. -->
+    <header class="hero">
       <div class="accueil">
+        <p class="surtitre">Conseil running · Édition 2026</p>
         <!-- L'illustration du coureur en particules (fichier images/coureur.svg).
+             Le <span> qui l'entoure sert au reflet doré qui passe sur les particules.
              alt="" : elle est décorative, les lecteurs d'écran la sautent. -->
-        <img class="illustration-coureur" src="images/coureur.svg" alt="" width="400" height="280">
-        <h1>Trouver la bonne paire de chaussures</h1>
+        <span class="cadre-coureur">
+          <img class="illustration-coureur" src="images/coureur.svg" alt="" width="400" height="280">
+        </span>
+        <!-- Chaque mot est dans deux <span> : le CSS fait monter les mots un par un
+             (--m = la place du mot, pour le décalage). -->
+        <h1><span class="mot"><span style="--m: 0">Trouver</span></span> <span class="mot"><span style="--m: 1">la</span></span> <span class="mot"><span style="--m: 2">bonne</span></span> <span class="mot"><span style="--m: 3">paire</span></span> <span class="mot"><span style="--m: 4">de</span></span> <span class="mot"><span style="--m: 5">chaussures</span></span></h1>
         <p class="accueil-texte">Réponds à quelques questions, comme avec un vendeur en magasin, et découvre les 5 chaussures les plus adaptées à ta façon de courir.</p>
 
         <!-- <ol> = liste numérotée : les 3 étapes du site. -->
@@ -97,6 +104,9 @@
 
         <!-- Un lien vers la première question, habillé en bouton. -->
         <a class="bouton-commencer" href="#questionnaire">Commencer</a>
+
+        <!-- Le petit trait animé en bas, qui invite à descendre. Purement décoratif. -->
+        <span class="indice-defilement" aria-hidden="true"></span>
       </div>
     </header>
 
@@ -107,11 +117,11 @@
       <section id="questionnaire">
         <h2>Ton profil de coureur</h2>
 
-        <!-- La barre de progression. Elle reste collée en haut de l'écran pendant
-             qu'on descend, et app.js la remplit au fur et à mesure des réponses.
-             "hidden" la cache tant que le sexe n'est pas choisi. -->
+        <!-- La barre de progression : app.js indique la question en cours
+             et remplit la barre au fur et à mesure des réponses.
+             "hidden" la cache tant que le JavaScript n'a pas préparé le questionnaire. -->
         <div id="progression" class="progression" hidden>
-          <p id="progression-texte">1 réponse sur 10</p>
+          <p id="progression-texte">Question 1 sur 11</p>
           <div class="progression-fond">
             <div id="progression-barre" class="progression-barre"></div>
           </div>
@@ -124,8 +134,8 @@
         <form id="formulaire">
 
           <!-- ----- Question 1 : le sexe -----
-               C'est elle qui choisit le parcours (homme ou femme) : la suite du questionnaire
-               reste cachée tant qu'on n'a pas répondu, et seules les chaussures du bon
+               C'est elle qui choisit le parcours (homme ou femme) : on ne peut pas passer
+               à la suite sans y répondre, et seules les chaussures du bon
                modèle (homme ou femme) seront proposées.
                La classe "choix-deux" place les deux réponses côte à côte. -->
           <fieldset>
@@ -340,10 +350,16 @@
           </fieldset>
 
           <!-- Le bouton d'envoi. type="submit" signifie : "envoie le formulaire". -->
-          <button type="submit">Voir mes chaussures</button>
-
+          <button type="submit" id="bouton-envoyer">Voir mes chaussures</button>
           </div>
 
+          <!-- Les boutons pour passer d'une question à l'autre.
+               app.js les affiche et y range aussi le bouton « Voir mes chaussures ».
+               type="button" : ils n'envoient pas le formulaire. -->
+          <div id="navigation-etapes" class="navigation-etapes" hidden>
+            <button type="button" id="bouton-precedent" class="bouton-secondaire">Précédent</button>
+            <button type="button" id="bouton-suivant">Suivant</button>
+          </div>
         </form>
       </section>
 
@@ -382,6 +398,8 @@
         <!-- Charge le JavaScript. On le place en bas de la page pour que tout le HTML
          soit déjà construit quand le script démarre (sinon il ne trouverait pas le formulaire). -->
     <script src="js/app.js"></script>
+    <!-- Les effets communs aux pages : apparitions au défilement, transitions entre les pages. -->
+    <script src="js/effets.js"></script>
     <!-- Installe l'appli de téléphone (voir js/appli.js). -->
     <script src="js/appli.js"></script>
     <!-- Le compteur de visites GoatCounter : il compte les pages vues, sans cookie

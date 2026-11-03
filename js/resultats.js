@@ -2,7 +2,7 @@
    RESULTATS.JS : LA PAGE DES RÉSULTATS (page resultats.html)
    1. On relit les réponses dans l'adresse de la page.
    2. On calcule le top 5 avec les fonctions de recommandation.js.
-   3. On affiche une carte par chaussure.
+   3. On affiche une carte par chaussure, après un court écran d'analyse.
    ========================================================= */
 
 
@@ -10,6 +10,11 @@
 const zoneResultats = document.getElementById("resultats");
 const titreResultats = document.getElementById("titre-resultats");
 const resumeProfil = document.getElementById("resume-profil");
+const voileAnalyse = document.getElementById("voile-analyse");
+const texteAnalyse = document.getElementById("texte-analyse");
+
+// Si l'appareil demande moins d'animations : pas d'écran d'analyse ni de compteur.
+const mouvementReduit = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 
 /* ---------- 2. Relire les réponses dans l'adresse ----------
@@ -81,10 +86,11 @@ function listeHTML(phrases) {
 
 // Une jauge de 5 cases, dont "note" cases colorées. Exemple : jauge("Amorti", 3).
 // role="img" et aria-label : un lecteur d'écran lit « Amorti : 3 sur 5 ».
+// --c donne au CSS la place de la case : elles se remplissent l'une après l'autre.
 function jauge(nom, note) {
   let cases = "";
   for (let i = 1; i <= 5; i++) {
-    cases += `<span class="${i <= note ? "case pleine" : "case"}"></span>`;
+    cases += `<span class="${i <= note ? "case pleine" : "case"}" style="--c: ${i}"></span>`;
   }
   return `
     <div class="jauge">
@@ -174,7 +180,7 @@ function carteChaussure(resultat, position, reponses) {
       ${photo}
 
       <div class="pastilles">
-        <span class="score-badge">${resultat.score} % de correspondance</span>
+        <span class="score-badge"><span class="score-valeur" aria-hidden="true" data-score="${resultat.score}">${resultat.score}</span><span class="lecteur">${resultat.score}</span> % de correspondance</span>
         ${pastilles(c)}
       </div>
 
@@ -199,12 +205,110 @@ function carteChaussure(resultat, position, reponses) {
 }
 
 
-/* ---------- 7. Afficher la page ---------- */
+/* ---------- 7. Les animations de la page ---------- */
+
+// Attendre un certain temps (en millisecondes) : await attendre(500).
+function attendre(duree) {
+  return new Promise(function (suite) {
+    setTimeout(suite, duree);
+  });
+}
+
+// L'écran d'analyse affiche trois phrases l'une après l'autre, puis s'efface.
+async function jouerAnalyse() {
+  if (mouvementReduit) {
+    return;
+  }
+  await attendre(500);
+  texteAnalyse.textContent = `Comparaison de ${chaussures.length} modèles…`;
+  await attendre(500);
+  texteAnalyse.textContent = "Sélection de tes meilleures paires…";
+  await attendre(450);
+}
+
+function retirerVoile() {
+  voileAnalyse.classList.add("parti");
+  // Une fois effacé, on le retire de la page.
+  setTimeout(function () {
+    voileAnalyse.remove();
+  }, mouvementReduit ? 0 : 600);
+}
+
+// Le pourcentage de correspondance compte de 0 jusqu'au score, en ralentissant à la fin.
+function compterScore(element, retard) {
+  const cible = Number(element.dataset.score);
+  const duree = 900;
+  element.textContent = "0";
+  setTimeout(function () {
+    const depart = performance.now();
+    function etape(maintenant) {
+      const avancement = Math.min((maintenant - depart) / duree, 1);
+      const adouci = 1 - Math.pow(1 - avancement, 3);
+      element.textContent = Math.round(cible * adouci);
+      if (avancement < 1) {
+        requestAnimationFrame(etape);
+      }
+    }
+    requestAnimationFrame(etape);
+  }, retard);
+}
+
+// Les cartes attendent d'être à l'écran pour apparaître (classe "visible").
+// Celles qu'on découvre en descendant arrivent presque tout de suite, sans long décalage.
+function animerCartes() {
+  const cartes = zoneResultats.querySelectorAll(".carte-resultat");
+
+  // Une fois arrivée, une carte peut se soulever au survol de la souris (classe "posee").
+  zoneResultats.addEventListener("animationend", function (evenement) {
+    const nom = evenement.animationName;
+    if (evenement.target.classList.contains("carte-resultat") && (nom === "apparition" || nom === "entree-premiere")) {
+      evenement.target.classList.add("posee");
+    }
+  });
+
+  if (mouvementReduit || !("IntersectionObserver" in window)) {
+    cartes.forEach(function (carte) {
+      carte.classList.add("visible", "posee");
+    });
+    return;
+  }
+
+  zoneResultats.classList.add("cartes-animees");
+  const debut = performance.now();
+  const observateur = new IntersectionObserver(function (entrees) {
+    entrees.forEach(function (entree) {
+      if (!entree.isIntersecting) {
+        return;
+      }
+      const carte = entree.target;
+      const tardive = performance.now() - debut > 1200;
+      if (tardive) {
+        // Colonne de gauche (0) ou de droite (1) : celle de droite arrive un tout petit peu après.
+        const colonne = Number(carte.style.getPropertyValue("--i")) % 2;
+        carte.style.setProperty("--i", colonne);
+        carte.style.setProperty("--base-jauges", "0.3s");
+        carte.style.animationDelay = `${colonne * 0.12}s`;
+      }
+      carte.classList.add("visible");
+      const retard = parseFloat(getComputedStyle(carte).animationDelay) * 1000 + 250;
+      compterScore(carte.querySelector(".score-valeur"), retard);
+      observateur.unobserve(carte);
+    });
+  }, { rootMargin: "0px 0px -10% 0px" });
+
+  cartes.forEach(function (carte) {
+    observateur.observe(carte);
+  });
+}
+
+
+/* ---------- 8. Afficher la page ---------- */
 async function afficherPage() {
   const reponses = lireReponses();
 
   // Cas 1 : il manque des réponses (page ouverte sans passer par le questionnaire).
   if (!reponsesCompletes(reponses)) {
+    retirerVoile();
     titreResultats.textContent = "Il manque tes réponses";
     resumeProfil.textContent = "Remplis d'abord le questionnaire pour découvrir tes chaussures.";
     return;
@@ -215,12 +319,17 @@ async function afficherPage() {
   // Cas 2 : le fichier des chaussures n'a pas pu être chargé.
   const chargementReussi = await chargerChaussures();
   if (!chargementReussi || chaussures.length === 0) {
+    retirerVoile();
     titreResultats.textContent = "Oups";
     resumeProfil.textContent = "Les chaussures n'ont pas pu être chargées. Recharge la page et réessaie.";
     return;
   }
 
   const meilleures = recommander(reponses);
+
+  // Le calcul est instantané : l'écran d'analyse laisse juste le temps de souffler.
+  await jouerAnalyse();
+  retirerVoile();
 
   // On garde un petit contrôle dans la console, utile pour vérifier les scores.
   console.table(meilleures.map(function (resultat) {
@@ -256,8 +365,18 @@ async function afficherPage() {
   // On place le "focus" sur le titre : une personne qui navigue au clavier
   // ou avec un lecteur d'écran arrive directement sur les résultats.
   titreResultats.focus();
+
+  animerCartes();
+  revelerAuDefilementSiPossible(zoneResultats.querySelectorAll(".conseil-essai"));
+}
+
+// effets.js fournit l'apparition au défilement ; on vérifie qu'il est bien chargé.
+function revelerAuDefilementSiPossible(elements) {
+  if (window.revelerAuDefilement) {
+    window.revelerAuDefilement(elements);
+  }
 }
 
 
-/* ---------- 8. Démarrage ---------- */
+/* ---------- 9. Démarrage ---------- */
 afficherPage();
