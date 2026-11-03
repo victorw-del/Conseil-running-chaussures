@@ -26,6 +26,8 @@
   --ombre: 0 12px 40px rgba(60, 45, 20, 0.08);            /* ombre douce : les cartes "flottent" */
   --ombre-premiere: 0 20px 50px rgba(60, 45, 20, 0.12);   /* ombre plus marquée de la carte n°1 */
   --reflet-or: rgba(201, 163, 91, 0.28);                  /* reflet qui traverse la carte n°1 */
+  --ombre-survol: 0 28px 60px rgba(60, 45, 20, 0.16);     /* ombre d'une carte soulevée par la souris */
+  --douceur: cubic-bezier(0.2, 0.8, 0.2, 1);              /* la courbe des mouvements : rapide puis tout en douceur */
   --arrondi: 4px;                  /* coins à peine arrondis : plus élégant */
   --police-titres: "Playfair Display", Georgia, serif;
   --police-texte: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -56,6 +58,7 @@
     --ombre: 0 20px 50px rgba(0, 0, 0, 0.5);
     --ombre-premiere: 0 0 0 1px rgba(201, 163, 91, 0.25), 0 30px 60px rgba(0, 0, 0, 0.6);
     --reflet-or: rgba(232, 200, 130, 0.18);
+    --ombre-survol: 0 0 0 1px rgba(201, 163, 91, 0.35), 0 34px 70px rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -64,6 +67,12 @@
    Sans ça, les calculs de taille deviennent vite casse-tête. Le * veut dire "tous les éléments". */
 * {
   box-sizing: border-box;
+}
+
+/* L'attribut "hidden" cache toujours l'élément, même si une autre règle
+   lui donne un "display" (les boutons, par exemple). */
+[hidden] {
+  display: none !important;
 }
 
 /* Quand on clique sur "Commencer", la page glisse doucement jusqu'aux questions. */
@@ -114,10 +123,60 @@ footer {
 }
 
 /* Les éléments qui apparaissent en douceur. */
-.accueil,
-#suite-questions fieldset,
 .bandeau-resultats {
-  animation: apparition 0.5s ease-out both;
+  animation: apparition 0.6s var(--douceur) both;
+}
+
+/* Les blocs qui apparaissent quand on descend dans la page.
+   effets.js leur donne la classe "revele", puis "visible" quand ils arrivent à l'écran. */
+.revele {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s var(--douceur), transform 0.9s var(--douceur);
+}
+
+.revele.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Le fondu entre les pages ----------
+   Les navigateurs récents enchaînent les pages du site en fondu, tout seuls :
+   l'ancienne page s'efface et la nouvelle monte doucement. */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: page-sortie 0.3s ease-in both;
+}
+
+::view-transition-new(root) {
+  animation: page-entree 0.55s var(--douceur) both;
+}
+
+@keyframes page-sortie {
+  to {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+}
+
+@keyframes page-entree {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+/* Pour les autres navigateurs, effets.js ajoute la classe "depart" juste avant de changer de page. */
+body {
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+body.depart {
+  opacity: 0;
+  transform: translateY(-8px);
 }
 
 /* Si la personne a demandé moins d'animations dans les réglages de son appareil,
@@ -133,16 +192,38 @@ footer {
   html {
     scroll-behavior: auto;
   }
+
+  /* Pas de fondu entre les pages, et les blocs sont visibles tout de suite. */
+  @view-transition {
+    navigation: none;
+  }
+
+  .revele {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Pas d'écran d'analyse sur la page des résultats. */
+  .voile-analyse {
+    display: none;
+  }
 }
 
 /* ---------- 6. L'accueil ----------
-   Le grand bandeau noir en haut de la page du questionnaire, avec un fin cadre doré. */
+   Le grand bandeau noir et or en haut de la page du questionnaire. Il occupe tout
+   l'écran, d'un bord à l'autre ; ses éléments apparaissent l'un après l'autre. */
 header {
   padding-top: 20px;
 }
 
+/* Sur l'accueil, l'en-tête n'a plus de largeur maximale : il va d'un bord à l'autre. */
+.hero {
+  max-width: none;
+  padding: 0;
+}
+
 .accueil {
-  position: relative;           /* pour placer le cadre et la petite ligne du haut (voir plus bas) */
+  position: relative;           /* pour placer le cadre doré et le petit trait du bas */
   padding: 60px 22px 44px;
   border: 1px solid var(--bordure-bandeau);
   border-radius: var(--arrondi);
@@ -151,21 +232,86 @@ header {
   background: var(--fond-bandeau);
 }
 
-/* L'illustration du coureur, centrée au-dessus du titre.
-   Elle arrive en glissant un peu depuis la gauche, comme s'il entrait en courant. */
+/* La version plein écran.
+   100svh = toute la hauteur visible de l'écran (même sur téléphone, barre d'adresse comprise).
+   Le fond empile trois couches : une lueur qui suit la souris (--x, --y, donnés par effets.js),
+   une lueur dorée fixe au centre, puis un noir chaud. */
+.hero .accueil {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 20px 40px;
+  border: 0;
+  border-bottom: 1px solid rgba(201, 163, 91, 0.25);
+  border-radius: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(600px circle at var(--x, 50%) var(--y, 30%), rgba(230, 200, 138, 0.09), transparent 60%),
+    radial-gradient(1000px 640px at 50% 32%, rgba(201, 163, 91, 0.13), transparent 70%),
+    #121110;
+}
+
+/* ::before ajoute un fin cadre doré, à l'intérieur du bandeau. Il se dessine en fondu.
+   pointer-events: none : le cadre ne gêne pas les clics sur le bouton. */
+.accueil::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(201, 163, 91, 0.3);
+  pointer-events: none;
+  animation: apparition-simple 1.6s ease 0.2s both;
+}
+
+@keyframes apparition-simple {
+  from {
+    opacity: 0;
+  }
+}
+
+/* La petite ligne en majuscules espacées tout en haut. */
+.surtitre {
+  margin: 0 0 18px;
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--or-sur-bandeau);
+  animation: apparition 0.9s var(--douceur) 0.1s both;
+}
+
+/* Le coureur en particules. Il arrive en glissant depuis la gauche,
+   comme s'il entrait en courant, puis flotte doucement. */
+.cadre-coureur {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 10px;
+  animation:
+    entree-coureur 1.3s var(--douceur) 0.15s both,
+    flotte 7s ease-in-out 1.5s infinite;
+}
+
 .illustration-coureur {
   display: block;
   width: 100%;
-  max-width: 340px;
   height: auto;                   /* garde les proportions du dessin */
-  margin: 0 auto 8px;
-  animation: entree-coureur 1s ease-out both;
+}
+
+/* Sur un écran peu haut (petit ordinateur portable), le coureur est un peu plus petit
+   pour que le bouton "Commencer" reste visible sans descendre. */
+@media (max-height: 820px) and (min-width: 700px) {
+  .cadre-coureur {
+    max-width: 300px;
+  }
 }
 
 @keyframes entree-coureur {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-60px);
   }
   to {
     opacity: 1;
@@ -173,27 +319,35 @@ header {
   }
 }
 
-/* ::before ajoute un fin cadre doré, 10px à l'intérieur du bandeau.
-   pointer-events: none : le cadre ne gêne pas les clics sur le bouton. */
-.accueil::before {
-  content: "";
-  position: absolute;
-  inset: 10px;
-  border: 1px solid rgba(201, 163, 91, 0.35);
-  pointer-events: none;
+@keyframes flotte {
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
-/* ::after écrit une petite ligne en majuscules espacées en haut du bandeau. */
-.accueil::after {
-  content: "Conseil running · Édition 2026";
+/* Un reflet de lumière passe sur les particules, de temps en temps.
+   Le "mask" découpe le reflet à la forme du dessin : seules les particules s'allument. */
+.cadre-coureur::after {
+  content: "";
   position: absolute;
-  top: 28px;
-  left: 0;
-  right: 0;
-  font-size: 0.7rem;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: var(--or-sur-bandeau);
+  inset: 0;
+  background: linear-gradient(100deg, transparent 42%, rgba(255, 242, 210, 0.95) 50%, transparent 58%);
+  background-size: 300% 100%;
+  background-position: 120% 0;
+  -webkit-mask: url("../images/coureur.svg") center / contain no-repeat;
+  mask: url("../images/coureur.svg") center / contain no-repeat;
+  pointer-events: none;
+  animation: reflet-particules 6s ease-in-out 1.8s infinite;
+}
+
+@keyframes reflet-particules {
+  0% {
+    background-position: 120% 0;
+  }
+  35%,
+  100% {
+    background-position: -20% 0;
+  }
 }
 
 h1 {
@@ -205,10 +359,43 @@ h1 {
   color: #f3efe6;
 }
 
+/* Le grand titre de l'accueil. clamp() : au moins 2,2rem sur téléphone,
+   au plus 4,4rem sur grand écran, et entre les deux selon la largeur. */
+.hero h1 {
+  max-width: 12em;
+  margin: 0 auto 18px;
+  font-size: clamp(2.2rem, 6.4vw, 4.4rem);
+  line-height: 1.05;
+}
+
+/* Chaque mot est une petite fenêtre (overflow: hidden) dans laquelle le mot monte. */
+.mot {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 0.08em;         /* pour ne pas couper le bas des lettres */
+}
+
+.mot > span {
+  display: inline-block;
+  animation: mot-monte 1s var(--douceur) both;
+  animation-delay: calc(0.45s + var(--m, 0) * 0.08s);
+}
+
+@keyframes mot-monte {
+  from {
+    transform: translateY(110%);
+  }
+  to {
+    transform: none;
+  }
+}
+
 .accueil-texte {
   margin: 0 auto;
   max-width: 34em;
   color: #a39e93;
+  animation: apparition 0.9s var(--douceur) 1s both;
 }
 
 /* Les 3 étapes, côte à côte. display: flex aligne les éléments sur une ligne. */
@@ -216,10 +403,10 @@ h1 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;              /* passent à la ligne si l'écran est trop étroit */
-  gap: 10px 18px;
+  gap: 10px 22px;
   list-style: none;             /* enlève les numéros automatiques de la liste */
   padding: 0;
-  margin: 22px 0;
+  margin: 28px 0;
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.15em;       /* lettres espacées */
@@ -227,11 +414,17 @@ h1 {
   color: var(--or-sur-bandeau);
 }
 
+/* Les étapes arrivent l'une après l'autre. */
 .etapes li {
   display: flex;
   align-items: center;
   gap: 8px;
+  animation: apparition 0.7s var(--douceur) both;
 }
+
+.etapes li:nth-child(1) { animation-delay: 1.15s; }
+.etapes li:nth-child(2) { animation-delay: 1.25s; }
+.etapes li:nth-child(3) { animation-delay: 1.35s; }
 
 /* Le numéro de l'étape dans un rond au contour doré. */
 .etape-numero {
@@ -248,7 +441,7 @@ h1 {
 /* Le bouton "Commencer" : doré, en majuscules espacées. */
 .bouton-commencer {
   display: inline-block;
-  padding: 16px 40px;
+  padding: 18px 48px;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -257,11 +450,47 @@ h1 {
   background: var(--degrade);
   border-radius: 2px;
   text-decoration: none;
-  transition: transform 0.15s;
+  animation: apparition 0.8s var(--douceur) 1.5s both;
 }
 
-.bouton-commencer:hover {
-  transform: scale(1.04);
+/* Le petit trait sous le bouton : une goutte dorée y descend en boucle. */
+.indice-defilement {
+  position: relative;
+  display: block;
+  width: 6px;
+  height: 52px;
+  margin: 36px auto 0;
+  overflow: hidden;
+  animation: apparition-simple 1s ease 2s both;
+}
+
+.indice-defilement::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(rgba(201, 163, 91, 0), rgba(201, 163, 91, 0.6));
+}
+
+.indice-defilement::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: -14px;
+  width: 4px;
+  height: 14px;
+  border-radius: 2px;
+  background: #e6c88a;
+  animation: goutte 2.4s ease-in-out 2.2s infinite;
+}
+
+@keyframes goutte {
+  70%,
+  100% {
+    transform: translateY(70px);
+  }
 }
 
 h2 {
@@ -271,14 +500,9 @@ h2 {
 }
 
 /* ---------- 7. La barre de progression ----------
-   position: sticky la garde collée en haut de l'écran quand on descend. */
+   Au-dessus de la question en cours : « Question 3 sur 11 » et une fine barre dorée. */
 .progression {
-  position: sticky;
-  top: 0;
-  z-index: 10;                  /* passe au-dessus des questions */
-  padding: 10px 0 12px;
-  margin-bottom: 8px;
-  background-color: var(--couleur-fond);
+  padding: 4px 0 14px;
 }
 
 .progression p {
@@ -302,7 +526,7 @@ h2 {
   height: 100%;
   border-radius: 999px;
   background: linear-gradient(90deg, var(--couleur-principale), var(--couleur-secondaire));
-  transition: width 0.4s ease;
+  transition: width 0.6s var(--douceur);
 }
 
 /* ---------- 8. Les blocs de questions ----------
@@ -324,6 +548,114 @@ legend {
   margin-bottom: 12px;
   font-size: 1.1rem;
   font-weight: 600;
+}
+
+/* ---------- Le questionnaire, une question à la fois ----------
+   app.js ajoute la classe "mode-etapes" au formulaire et n'affiche qu'une question.
+   Elle devient une grande carte, avec une ombre douce. */
+.mode-etapes fieldset {
+  padding: 26px 20px 18px;
+  margin: 0;
+  box-shadow: var(--ombre);
+}
+
+.mode-etapes legend {
+  font-size: 1.3rem;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+/* La question reçoit le focus quand elle apparaît (pour les lecteurs d'écran) : pas de contour. */
+fieldset:focus {
+  outline: none;
+}
+
+/* Pendant un glissement, la question dépasse un peu sur le côté :
+   overflow-x: clip coupe ce qui dépasse, sans barre de défilement. */
+#questionnaire {
+  overflow-x: clip;
+}
+
+/* Les glissements entre deux questions (classes ajoutées par app.js).
+   En avançant, l'ancienne question part à gauche et la nouvelle arrive par la droite ;
+   en reculant, c'est l'inverse. */
+.entree-avance {
+  animation: entree-avance 0.5s var(--douceur) both;
+}
+
+.entree-recule {
+  animation: entree-recule 0.5s var(--douceur) both;
+}
+
+.sortie-avance {
+  animation: sortie-avance 0.24s ease-in both;
+}
+
+.sortie-recule {
+  animation: sortie-recule 0.24s ease-in both;
+}
+
+@keyframes entree-avance {
+  from {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+}
+
+@keyframes entree-recule {
+  from {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+}
+
+@keyframes sortie-avance {
+  to {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+}
+
+@keyframes sortie-recule {
+  to {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+}
+
+/* Dans la question qui arrive, les réponses apparaissent l'une après l'autre. */
+.entree-avance .choix,
+.entree-recule .choix,
+.entree-avance select,
+.entree-recule select {
+  animation: apparition 0.5s var(--douceur) both;
+  animation-delay: 0.08s;
+}
+
+.entree-avance .choix:nth-of-type(2), .entree-recule .choix:nth-of-type(2) { animation-delay: 0.13s; }
+.entree-avance .choix:nth-of-type(3), .entree-recule .choix:nth-of-type(3) { animation-delay: 0.18s; }
+.entree-avance .choix:nth-of-type(4), .entree-recule .choix:nth-of-type(4) { animation-delay: 0.23s; }
+.entree-avance .choix:nth-of-type(5), .entree-recule .choix:nth-of-type(5) { animation-delay: 0.28s; }
+
+/* Les boutons "Précédent", "Suivant" et "Voir mes chaussures", sous la question. */
+.navigation-etapes {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.navigation-etapes button {
+  width: auto;
+  flex: 1;
+}
+
+.navigation-etapes .bouton-secondaire {
+  flex: 0 0 auto;
+}
+
+/* "Précédent" sur la première question : invisible, mais il garde sa place. */
+.invisible {
+  visibility: hidden;
 }
 
 /* Ce qui suit la question repart bien en dessous d'elle. */
@@ -357,19 +689,24 @@ fieldset p {
   border: 1px solid var(--couleur-bordure);
   border-radius: 2px;
   cursor: pointer;                /* le curseur devient une petite main au survol */
-  transition: border-color 0.15s, background-color 0.15s, transform 0.1s;
+  transition: border-color 0.25s, background-color 0.25s, box-shadow 0.35s, transform 0.15s;
 }
 
-.choix label:hover {
-  border-color: var(--couleur-principale);
+/* Au survol, la case se teinte d'or très léger.
+   color-mix mélange deux couleurs : ici, moitié or pâle, moitié transparent. */
+@media (hover: hover) {
+  .choix label:hover {
+    border-color: var(--couleur-principale);
+    background-color: color-mix(in srgb, var(--couleur-pale) 50%, transparent);
+  }
 }
 
 .choix label:active {
   transform: scale(0.98);         /* la case "s'enfonce" un peu quand on appuie */
 }
 
-/* Le bouton rond ou la case à cocher, centré verticalement à gauche de la case.
-   accent-color le colore avec notre or. */
+/* Le bouton rond (ou la case à cocher), redessiné aux couleurs du site.
+   appearance: none enlève le dessin du navigateur ; on le remplace par un rond à fin contour. */
 .choix input {
   position: absolute;
   left: 16px;
@@ -378,8 +715,39 @@ fieldset p {
   width: 20px;
   height: 20px;
   margin: 0;
-  accent-color: var(--couleur-principale);
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1.5px solid var(--bordure-pastille);
+  border-radius: 50%;
+  background-color: var(--couleur-carte);
   cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.choix input[type="checkbox"] {
+  border-radius: 3px;
+}
+
+/* Coché : un rond doré entouré d'un anneau, qui "rebondit" en apparaissant.
+   "scale" fait grossir sans toucher au "transform" qui centre la case. */
+.choix input:checked {
+  border-color: var(--couleur-principale);
+  background-color: var(--couleur-principale);
+  box-shadow: inset 0 0 0 4px var(--couleur-pale);
+  animation: rebond 0.4s cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+
+/* La case à cocher cochée : une coche foncée sur fond doré. */
+.choix input[type="checkbox"]:checked {
+  box-shadow: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3.2L15 6.8' fill='none' stroke='%231a1814' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 100%;
+}
+
+@keyframes rebond {
+  from {
+    scale: 0.5;
+  }
 }
 
 /* Le pictogramme doré de la réponse (dessin en trait fin, voir le haut d'index.html). */
@@ -387,6 +755,7 @@ fieldset p {
   display: inline-flex;
   flex-shrink: 0;                 /* le dessin garde sa taille même si le texte est long */
   color: var(--couleur-principale);
+  transition: transform 0.35s cubic-bezier(0.3, 1.6, 0.5, 1);
 }
 
 .icone svg {
@@ -394,12 +763,27 @@ fieldset p {
   height: 26px;
 }
 
-/* La réponse choisie : contour doré et fond or pâle.
+/* La réponse choisie : contour doré, fond or pâle, et une onde dorée qui s'élargit.
    Le + veut dire "le <label> placé juste après la case cochée". */
 .choix input:checked + label {
   border-color: var(--couleur-principale);
   background-color: var(--couleur-pale);
   font-weight: 600;
+  box-shadow: 0 0 0 1px var(--couleur-principale);
+  animation: onde 0.7s ease-out;
+}
+
+.choix input:checked + label .icone {
+  transform: scale(1.15);
+}
+
+@keyframes onde {
+  from {
+    box-shadow: 0 0 0 1px var(--couleur-principale), 0 0 0 0 rgba(201, 163, 91, 0.45);
+  }
+  to {
+    box-shadow: 0 0 0 1px var(--couleur-principale), 0 0 0 12px rgba(201, 163, 91, 0);
+  }
 }
 
 /* Au clavier (touche Tab), la case qui a le focus reçoit un contour bien visible. */
@@ -479,14 +863,29 @@ select {
   border-radius: 2px;
   background-color: var(--couleur-carte);
   cursor: pointer;
+  /* La flèche du navigateur est remplacée par un chevron doré, à droite. */
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 44px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 6l5 5 5-5' fill='none' stroke='%23b8914a' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 14px;
+  transition: border-color 0.25s, box-shadow 0.25s;
 }
 
 select:hover {
   border-color: var(--couleur-principale);
 }
 
-/* ---------- 10. Le bouton ----------
-   Doré, en majuscules espacées, comme le bouton "Commencer". */
+select:focus {
+  border-color: var(--couleur-principale);
+  box-shadow: 0 0 0 3px rgba(201, 163, 91, 0.2);
+}
+
+/* ---------- 10. Les boutons ----------
+   Dorés, en majuscules espacées. Au survol, ils se soulèvent un peu
+   et un reflet de lumière les traverse. */
 button {
   display: block;
   width: 100%;
@@ -501,12 +900,86 @@ button {
   border: none;
   border-radius: 2px;
   cursor: pointer;
-  transition: transform 0.15s;  /* anime doucement le changement ci-dessous */
 }
 
-/* :hover = quand la souris survole le bouton. Il grossit très légèrement. */
-button:hover {
-  transform: scale(1.02);
+/* Le reflet : un calque (::after) qui traverse le bouton au survol.
+   "translate" soulève le bouton sans gêner ses animations d'apparition. */
+button:not(.bouton-secondaire),
+.bouton-commencer,
+.bouton-recommencer {
+  position: relative;
+  overflow: hidden;
+  transition: translate 0.3s var(--douceur), box-shadow 0.3s, opacity 0.3s;
+}
+
+button:not(.bouton-secondaire)::after,
+.bouton-commencer::after,
+.bouton-recommencer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.45) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.8s var(--douceur);
+  pointer-events: none;
+}
+
+button:not(.bouton-secondaire):hover,
+.bouton-commencer:hover,
+.bouton-recommencer:hover {
+  translate: 0 -2px;
+  box-shadow: 0 12px 28px rgba(168, 130, 63, 0.35);
+}
+
+button:not(.bouton-secondaire):hover::after,
+.bouton-commencer:hover::after,
+.bouton-recommencer:hover::after {
+  transform: translateX(120%);
+}
+
+/* "Suivant" tant que la question n'a pas de réponse : pâle et sans effet. */
+button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  translate: none;
+  box-shadow: none;
+}
+
+button:disabled::after {
+  display: none;
+}
+
+/* "Précédent" : un bouton discret, à fin contour. */
+.bouton-secondaire {
+  width: auto;
+  padding: 18px 22px;
+  color: var(--couleur-texte-doux);
+  background: transparent;
+  border: 1px solid var(--couleur-bordure);
+  transition: color 0.25s, border-color 0.25s;
+}
+
+.bouton-secondaire:hover {
+  color: var(--couleur-principale);
+  border-color: var(--couleur-principale);
+}
+
+/* "Voir mes chaussures", quand tout est répondu : une onde dorée l'entoure doucement. */
+#bouton-envoyer.pret {
+  animation: appel 2.4s ease-in-out infinite;
+}
+
+@keyframes appel {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(201, 163, 91, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(201, 163, 91, 0);
+  }
 }
 
 /* :focus-visible = quand on arrive sur un élément au clavier (touche Tab).
@@ -596,6 +1069,14 @@ footer a {
   h1 {
     font-size: 2.8rem;
   }
+
+  .mode-etapes fieldset {
+    padding: 34px 32px 26px;
+  }
+
+  .mode-etapes legend {
+    font-size: 1.55rem;
+  }
 }
 
 /* =========================================================
@@ -668,8 +1149,27 @@ footer a {
   box-shadow: var(--ombre);
   /* Les cartes apparaissent l'une après l'autre : la carte n° i attend i × 0,1 s.
      --i est donné par resultats.js. calc() fait le calcul. */
-  animation: apparition 0.5s ease-out both;
+  animation: apparition 0.6s var(--douceur) both;
   animation-delay: calc(var(--i, 0) * 0.1s);
+  transition: translate 0.4s var(--douceur), box-shadow 0.4s, border-color 0.4s;
+}
+
+/* Une fois arrivée (classe "posee", donnée par resultats.js), la carte se soulève
+   au survol de la souris. "(hover: hover)" : seulement sur les écrans avec une souris. */
+@media (hover: hover) {
+  .carte-resultat.posee:hover {
+    translate: 0 -6px;
+    box-shadow: var(--ombre-survol);
+    border-color: var(--couleur-principale);
+  }
+}
+
+/* Tant qu'une carte n'est pas arrivée à l'écran, ses animations attendent
+   (resultats.js lui donne la classe "visible" quand on la voit). */
+.cartes-animees .carte-resultat:not(.visible),
+.cartes-animees .carte-resultat:not(.visible) *,
+.cartes-animees .carte-resultat:not(.visible)::after {
+  animation-play-state: paused;
 }
 
 /* La carte n°1 est mise en avant avec un contour doré et une ombre plus marquée.
@@ -830,6 +1330,21 @@ footer a {
   color: var(--couleur-principale);
 }
 
+/* Le chiffre qui compte jusqu'au score : des chiffres de même largeur, pour qu'il ne tremble pas. */
+.score-valeur {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Un texte lu par les lecteurs d'écran, mais invisible à l'écran. */
+.lecteur {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 /* Les pastilles sont discrètes ; seule "Stable" est dorée, car c'est une info importante. */
 .pastille {
   border: 1px solid var(--bordure-pastille);
@@ -880,6 +1395,21 @@ footer a {
 
 .case.pleine {
   background: linear-gradient(90deg, var(--couleur-principale), var(--couleur-secondaire));
+  transform-origin: left;
+  /* Les cases dorées se remplissent l'une après l'autre (--c = la place de la case),
+     un peu après l'arrivée de la carte. */
+  animation: remplit 0.45s var(--douceur) both;
+  animation-delay: calc(var(--base-jauges, 0.85s) + var(--i, 0) * 0.1s + var(--c, 0) * 0.09s);
+}
+
+.carte-premiere .case.pleine {
+  --base-jauges: 0.6s;
+}
+
+@keyframes remplit {
+  from {
+    transform: scaleX(0);
+  }
 }
 
 .jauge-note {
@@ -941,11 +1471,13 @@ footer a {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   text-decoration: none;
-  transition: background-color 0.15s, color 0.15s;
+  /* Au survol, l'or remplit le bouton de gauche à droite. */
+  background: linear-gradient(var(--couleur-principale), var(--couleur-principale)) no-repeat left / 0% 100%;
+  transition: background-size 0.4s var(--douceur), color 0.3s;
 }
 
 .lien-fiche:hover {
-  background-color: var(--couleur-principale);
+  background-size: 100% 100%;
   color: var(--texte-sur-or);
 }
 
@@ -979,11 +1511,87 @@ footer a {
   background: var(--degrade);
   border-radius: 2px;
   text-decoration: none;
-  transition: transform 0.15s;
 }
 
-.bouton-recommencer:hover {
-  transform: scale(1.03);
+/* ---------- L'écran d'analyse ----------
+   Il couvre toute la page un court instant : le logo respire au centre de deux anneaux
+   dorés qui tournent, puis tout s'efface (classe "parti", donnée par resultats.js). */
+.voile-analyse {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  padding: 20px;
+  text-align: center;
+  color: #e6c88a;
+  background:
+    radial-gradient(800px 500px at 50% 42%, rgba(201, 163, 91, 0.14), transparent 70%),
+    #121110;
+  transition: opacity 0.6s ease, visibility 0.6s;
+}
+
+.voile-analyse.parti {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.anneau-analyse {
+  position: relative;
+  width: 132px;
+  height: 132px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.anneau-analyse::before,
+.anneau-analyse::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 163, 91, 0.18);
+}
+
+.anneau-analyse::before {
+  inset: 0;
+  border-top-color: #e6c88a;
+  animation: tourne 1.2s linear infinite;
+}
+
+.anneau-analyse::after {
+  inset: 12px;
+  border-bottom-color: #c9a35b;
+  animation: tourne 1.8s linear infinite reverse;
+}
+
+.anneau-analyse img {
+  width: 64px;
+  height: 64px;
+  animation: respire 1.6s ease-in-out infinite;
+}
+
+@keyframes tourne {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes respire {
+  50% {
+    transform: scale(1.08);
+    opacity: 0.75;
+  }
+}
+
+.texte-analyse {
+  margin: 0;
+  font-family: var(--police-titres);
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
 }
 
 /* ---------- Sur grand écran : deux cartes par ligne ----------

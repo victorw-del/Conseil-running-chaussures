@@ -25,10 +25,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Sans JavaScript, l'écran d'analyse ne s'effacerait jamais : on le cache. -->
+    <noscript><style>.voile-analyse { display: none; }</style></noscript>
   </head>
 
   <!-- La classe "page-resultats" permet au CSS d'élargir cette page et de la rendre plus spectaculaire. -->
   <body class="page-resultats">
+
+    <!-- L'écran d'analyse : il s'affiche un court instant pendant le calcul,
+         puis s'efface pour laisser apparaître les chaussures (voir resultats.js).
+         aria-hidden : les lecteurs d'écran l'ignorent, ils reçoivent directement les résultats. -->
+    <div id="voile-analyse" class="voile-analyse" aria-hidden="true">
+      <div class="anneau-analyse">
+        <img src="images/logo.svg" alt="" width="64" height="64">
+      </div>
+      <p id="texte-analyse" class="texte-analyse">Analyse de ton profil…</p>
+    </div>
 
     <!-- ===================== EN-TÊTE ===================== -->
     <header>
@@ -76,6 +88,8 @@
     <script src="js/resultats.js"></script>
     <!-- Installe l'appli de téléphone (voir js/appli.js). -->
     <script src="js/appli.js"></script>
+    <!-- Les effets communs aux pages : apparitions au défilement, transitions entre les pages. -->
+    <script src="js/effets.js"></script>
     <!-- Le compteur de visites GoatCounter : il compte les pages vues, sans cookie
          et sans garder l'adresse IP. Les chiffres sont sur lachaussureparfaite.goatcounter.com.
          Ici, on envoie toujours la même adresse « /resultats.html », sans les réponses
